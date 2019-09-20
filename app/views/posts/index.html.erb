@@ -1,0 +1,6 @@
+<h2>All posts</h2>
+<% @posts.each do |x| %>
+  <%= x.expression %>
+<% end %>
+
+<%= link_to "New post", new_post_path(@post) %>
