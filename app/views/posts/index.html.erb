@@ -1,6 +1,14 @@
 <h2>All posts</h2>
-<% @posts.each do |x| %>
-  <%= x.expression %>
+<% @posts.each do |post| %>
+<div class="expression-card">
+  <ul>
+    <li><%= post.expression %></li>
+    <li><%= post.reading %></li>
+    <li><%= post.meaning %></li>
+  </ul>
+  <%= link_to "Edit post", edit_post_path(post) %>
+</div>
 <% end %>
-
-<%= link_to "New post", new_post_path(@post) %>
+<% if user_signed_in? %>
+  <%= link_to "New post", new_post_path(@post) %>
+<% end %>
