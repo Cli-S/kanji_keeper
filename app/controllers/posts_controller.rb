@@ -5,12 +5,16 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def new
     @post = Post.new
   end
 
   def create
-    @post = Post.new(user_params)
+    @post = Post.new(post_params)
     @post.save!
     redirect_to root_path
   end
@@ -20,9 +24,17 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def update
+    @user = current_user
+    @post = Post.find(params[:id])
+    @post.update!(post_params)
+
+    redirect_to posts_path
+  end
+
   private
 
-  def user_params
+  def post_params # only for when you create new things
     params.require(:post).permit(:expression, :reading, :meaning, :content)
   end
 end

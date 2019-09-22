@@ -1,10 +1,10 @@
 <h2>Create a new post</h2>
-<%= form_for(@post) do |x| %>
+<%= form_for(@post) do |post| %>
   <ul>
-    <li><%= x.text_field :expression, :placeholder => "Japanese expression" %></li>
-    <li><%= x.text_field :reading, :placeholder => "Furigana or reading" %></li>
-    <li><%= x.text_field :meaning, :placeholder => "English meaning"%></li>
-    <li><%= x.text_field :content, :placeholder => "Additional comments" %></li>
+    <li><%= post.text_field :expression, :placeholder => "Japanese expression" %></li>
+    <li><%= post.text_field :reading, :placeholder => "Furigana or reading" %></li>
+    <li><%= post.text_field :meaning, :placeholder => "English meaning"%></li>
+    <li><%= post.text_field :content, :placeholder => "Additional comments" %></li>
   </ul>
-  <%= x.submit %>
+  <%= post.submit %>
 <% end %>

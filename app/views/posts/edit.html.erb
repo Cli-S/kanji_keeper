@@ -1,0 +1,12 @@
+<h2>Edit your post</h2>
+<div class="expression-card">
+  <%= form_for(@post) do |post| %>
+    <ul>
+      <li><%= post.text_field :expression, :placeholder => "Japanese expression" %></li>
+      <li><%= post.text_field :reading, :placeholder => "Furigana or reading" %></li>
+      <li><%= post.text_field :meaning, :placeholder => "English meaning"%></li>
+      <li><%= post.text_field :content, :placeholder => "Additional comments" %></li>
+    </ul>
+    <%= post.submit %>
+  <% end %>
+</div>
