@@ -28,8 +28,14 @@ class PostsController < ApplicationController
     @user = current_user
     @post = Post.find(params[:id])
     @post.update!(post_params)
+    redirect_to root_path
+  end
 
-    redirect_to posts_path
+  def destroy
+    @user = current_user
+    @post = Post.find(params[:id])
+    @post.destroy!
+    redirect_to root_path
   end
 
   private
