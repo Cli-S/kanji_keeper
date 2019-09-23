@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.2'
 
+gem 'dotenv-rails', groups: [:development, :test] # looks for .env secret file
 gem 'devise'
 gem 'carrierwave', '~> 2.0'
 gem 'cloudinary'
