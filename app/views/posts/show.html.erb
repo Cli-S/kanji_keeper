@@ -1,0 +1,24 @@
+<div>
+  <ul>
+    <li><%= @post.expression %></li>
+    <li><%= @post.reading %></li>
+    <li><%= @post.meaning %></li>
+    <li><%= @post.content %></li>
+    <li><%= image_tag(@post.photo.to_s) %></li>
+  </ul>
+</div>
+<div>
+  <h1>Comments (<%= @post.comments.count %>)</h1>
+  <ul>
+  <% @post.comments.each do |comment| %>
+    <li><%= comment.user.username %>: <%= comment.content %></br><%= comment.created_at.strftime('%d/%M/%Y') %></li>
+  <% end %>
+  </ul>
+</div>
+<div>
+  <h1>Post a comment</h1>
+  <%= form_for([@post, @comment]) do |f| %>
+    <%= f.text_field :content %>
+    <%= f.submit %>
+  <% end %>
+</div>
