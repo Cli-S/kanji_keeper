@@ -7,6 +7,7 @@
     <li><%= post.reading %></li>
     <li><%= post.meaning %></li>
     <li><%= post.content %></li>
+    <li><%= image_tag(post.photo.to_s) %></li>
   </ul>
   <% if user_signed_in? && current_user == post.user %> 
     <%= link_to "Edit", edit_post_path(post) %>
