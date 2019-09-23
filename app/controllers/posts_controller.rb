@@ -15,13 +15,15 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
     @post.save!
     redirect_to root_path
   end
 
   def edit
-    @user = current_user
-    @post = Post.find(params[:id])
+    if current_user == Post.find(params[:id]).user
+      @post = Post.find(params[:id])
+    end
   end
 
   def update
@@ -32,10 +34,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @user = current_user
-    @post = Post.find(params[:id])
-    @post.destroy!
-    redirect_to root_path
+    if current_user == Post.find(params[:id]).user
+      @post = Post.find(params[:id])
+      @post.destroy!
+      redirect_to root_path
+    end
   end
 
   private
