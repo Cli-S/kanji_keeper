@@ -2,6 +2,7 @@
 <% @posts.each do |post| %>
 <div class="expression-card">
   <ul>
+    <li><%= post.user.username %></li>
     <li><%= post.expression %></li>
     <li><%= post.reading %></li>
     <li><%= post.meaning %></li>

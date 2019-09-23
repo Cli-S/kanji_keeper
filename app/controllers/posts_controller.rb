@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   private
 
   def post_params # only for when you create new things
-    params.require(:post).permit(:expression, :reading, :meaning, :content)
+    params.require(:post).permit(:expression, :reading, :meaning, :content, :photo)
   end
 end
 
