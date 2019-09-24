@@ -11,7 +11,7 @@
   <h1>Comments (<%= @post.comments.count %>)</h1>
   <ul>
   <% @post.comments.each do |comment| %>
-    <li><%= comment.user.username %>: <%= comment.content %></br><%= comment.created_at.strftime('%d/%M/%Y') %></li>
+    <li><%= comment.user.username %>: <%= comment.content %></br><%= comment.created_at.strftime("%d/%m/%Y") %></li>
   <% end %>
   </ul>
 </div>
