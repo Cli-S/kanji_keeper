@@ -1,4 +1,10 @@
 <div>
+  <% before_fav = @post.favorites.find { |fav| fav.user_id = current_user.id }  %>
+  <% if before_fav %>
+    <%= link_to "Unfavorite", post_favorite_path(@post, before_fav), method: :delete %>
+  <% else %>
+    <%= link_to "Favorite", post_favorites_path(@post), method: :post %>
+  <% end %>
   <ul>
     <li><%= @post.expression %></li>
     <li><%= @post.reading %></li>
@@ -6,6 +12,10 @@
     <li><%= @post.content %></li>
     <li><%= image_tag(@post.photo.to_s) %></li>
   </ul>
+  <% if user_signed_in? && current_user == @post.user %> 
+    <%= link_to "Edit", edit_post_path(@post) %>
+    <%= link_to "Delete", post_path(@post), method: :delete %>
+  <% end %>
 </div>
 <div>
   <h1>Comments (<%= @post.comments.count %>)</h1>

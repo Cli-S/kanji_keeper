@@ -1,6 +1,7 @@
 <h2>All posts</h2>
 <% @posts.each do |post| %>
 <div class="expression-card">
+  <p><%= post.favorites.count %> favorites</p>
   <ul>
     <li><%= post.user.username %></li>
     <li><%= post.expression %></li>
@@ -17,3 +18,4 @@
 <% if user_signed_in? %>
   <%= link_to "New post", new_post_path() %>
 <% end %>
+ 
