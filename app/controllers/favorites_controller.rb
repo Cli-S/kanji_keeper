@@ -2,6 +2,10 @@ class FavoritesController < ApplicationController
   before_action :find_post
   before_action :find_favorite, only: [:destroy]
 
+  def index
+    @posts.favorites.where(user_id: current_user.id)
+  end
+
   def create
     if !already_favorited? 
       @post.favorites.create(user_id: current_user.id)
