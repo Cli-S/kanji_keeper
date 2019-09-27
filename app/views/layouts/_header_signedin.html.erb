@@ -1,2 +1,2 @@
 <%= link_to 'logout', destroy_user_session_path, method: :delete %>
-<%= link_to 'your favorites', post_favorite_path(@user) %>
+<%= link_to 'your favorites', user_favorites_path(current_user) %>
