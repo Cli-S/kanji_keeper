@@ -29,10 +29,10 @@ class PostsController < ApplicationController
   end
 
   def update
-    @user = current_user
-    @post = Post.find(params[:id])
-    @post.update!(post_params)
-    redirect_to root_path
+    if current_user == Post.find(params[:id]).user
+      @post.update!(post_params)
+      redirect_to root_path
+    end
   end
 
   def destroy

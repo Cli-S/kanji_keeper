@@ -5,9 +5,8 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
     resources :favorites, only: [:create, :show, :destroy]
   end
-  resources :users, only: [] do
-    resources :favorites, only: [:index]
-  end
+  resources :favorites, only: [:index]
+
 =begin 
   (same thing as nested routes)
     resources :posts

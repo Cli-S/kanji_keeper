@@ -1,9 +1,9 @@
 class FavoritesController < ApplicationController
-  before_action :find_post
+  before_action :find_post, except: [:index]
   before_action :find_favorite, only: [:destroy]
 
   def index
-    @posts.favorites.where(user_id: current_user.id)
+    @posts = current_user.favorite_posts
   end
 
   def create
