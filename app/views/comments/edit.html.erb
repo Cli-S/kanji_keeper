@@ -1,0 +1,7 @@
+<h2>Edit your comment</h2>
+<div>
+  <%= form_for([@post, @comment]) do |f| %>
+    <%= f.text_field :content, :placeholder => "Comment" %>
+    <%= f.submit %>
+  <% end %>
+</div>
