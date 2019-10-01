@@ -1,4 +1,4 @@
-<div>
+<div class="kanji-card">
   <p><%= @post.user.username %></p>
   <% before_fav = @post.favorites.find { |fav| fav.user_id == current_user.id }  %>
   <% if before_fav %>
@@ -7,8 +7,7 @@
     <%= link_to "Favorite", post_favorites_path(@post), method: :post %>
   <% end %>
   <ul>
-    <li><%= @post.expression %></li>
-    <li><%= @post.reading %></li>
+    <li><span class="furigana-card add-furigana"><%= @post.expression %></span></li>
     <li><%= @post.meaning %></li>
     <% unless @post.content.blank? %>
       <li><%= @post.content %></li>

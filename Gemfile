@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.2'
 
+gem 'webpacker'
 gem 'dotenv-rails', groups: [:development, :test] # looks for .env secret file
 gem 'devise'
 gem 'cloudinary', '~> 1.9.1'

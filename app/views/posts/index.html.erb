@@ -1,21 +1,18 @@
-<%= image_tag(current_user.avatar.to_s) %>
-
 <h2>All posts</h2>
 <% @posts.each do |post| %>
-<div class="expression-card">
+<div class="kanji-card">
   <p><%= post.user.username %></p>
-  <p><%= post.favorites.count %> favorites</p>
+  <% unless post.photo.blank? %>
+      <li><%= image_tag(post.photo.to_s) %></li>
+  <% end %>
   <ul>
-    <li><%= post.expression %></li>
-    <li><%= post.reading %></li>
+    <li><span class="furigana-card add-furigana"><%= post.expression %></span></li>
     <li><%= post.meaning %></li>
     <% unless post.content.blank? %>
       <li><%= post.content %></li>
     <% end %>
-    <% unless post.photo.blank? %>
-      <li><%= image_tag(post.photo.to_s) %></li>
-    <% end %>
   </ul>
+  <p><%= post.favorites.count %> favorites</p>
   <%= link_to "Comment", post_path(post) %>
   <% if user_signed_in? && current_user == post.user %> 
     <%= link_to "Edit", edit_post_path(post) %>

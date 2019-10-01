@@ -3,7 +3,6 @@
   <%= form_for(@post) do |f| %>
     <ul>
       <li><%= f.text_field :expression, :placeholder => "Japanese expression" %></li>
-      <li><%= f.text_field :reading, :placeholder => "Furigana or reading" %></li>
       <li><%= f.text_field :meaning, :placeholder => "English meaning"%></li>
       <li><%= f.text_field :content, :placeholder => "Additional comments" %></li>
     </ul>
