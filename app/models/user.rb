@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :comments
   has_many :favorites, dependent: :destroy
   has_many :favorite_posts, through: :favorites, source: :post
-  mount_uploader :photo, PhotoUploader
+  mount_uploader :avatar, PhotoUploader
 end
