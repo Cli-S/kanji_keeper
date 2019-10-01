@@ -24,14 +24,19 @@
 </div>
 <div>
   <h1>Comments (<%= @post.comments.count %>)</h1>
-  <ul>
   <% @post.comments.each do |comment| %>
-    <%= comment.user.username %>:</br>
-    <%= comment.content %></br><%= comment.created_at.strftime("%d/%m/%Y") %>
+    <%= comment.user.username %>: <br/>
+    <%= comment.content %></li><br/>
+    <% if comment.updated_at != comment.created_at %>
+      <%= comment.created_at.strftime("%d/%m/%Y") %> (edited)
+    <% else %>
+      <%= comment.created_at.strftime("%d/%m/%Y") %>
+    <% end %>
     <%= link_to "Edit", edit_post_comment_path(@post, comment) %>
     <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
+    <br/>
+    <br/>
   <% end %>
-  </ul>
 </div>
 <div>
   <h1>Post a comment</h1>
