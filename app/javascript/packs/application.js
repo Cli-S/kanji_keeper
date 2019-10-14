@@ -19,3 +19,10 @@ kuroshiro.init(new KuromojiAnalyzer({ dictPath: "/dict" })).then(async () => {
   })
 });
 
+
+fetch('https://kanjiapi.dev/v1/kanji/all').then(r => r.json()).then((allKanji) => {
+  const today = new Date;
+  const numberOfTheDay = parseInt(`${today.getDate()}${today.getMonth()}${today.getFullYear()}`);
+  const randomKanji = allKanji[numberOfTheDay % allKanji.length];
+  console.log(randomKanji);
+});
