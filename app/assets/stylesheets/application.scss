@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'KanjiStrokeOrder';
+  src: font-url('KanjiStrokeOrders_v4.002.ttf');
+}
+
+.stroke-order {
+  font-family: 'KanjiStrokeOrder';
+  font-size: 100px;
+  margin: 0px;
+}

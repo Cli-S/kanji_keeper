@@ -20,12 +20,14 @@ kuroshiro.init(new KuromojiAnalyzer({ dictPath: "/dict" })).then(async () => {
   
   const insertFurigana = document.querySelector('.needs-furi');
   const insertDefinition = document.querySelector('.word-definition');
-  const insertKunOn = document.querySelector('.failed-furi');
+  const insertKun = document.querySelector('.kunyomi');
+  const insertOn = document.querySelector('.onyomi');
+  const insertStroke = document.querySelector('.stroke-order')
   const domParser = new DOMParser();
   
   fetch('https://kanjiapi.dev/v1/kanji/all').then(r => r.json()).then(async (allKanji) => {
     const today = new Date;
-    const numberOfTheDay = parseInt(`${today.getDate()+1}${today.getMonth()}${today.getFullYear()}`);
+    const numberOfTheDay = parseInt(`${today.getDate()}${today.getMonth()}${today.getFullYear()}`);
     const randomKanji = allKanji[numberOfTheDay % allKanji.length];
 //  const dailyConversion = await kuroshiro.convert(randomKanji, { to: "hiragana", mode: "furigana" });
 //  const selectedFurigana = domParser.parseFromString(dailyConversion, "text/html").querySelector("rt").innerText;
@@ -39,15 +41,15 @@ kuroshiro.init(new KuromojiAnalyzer({ dictPath: "/dict" })).then(async () => {
       insertFurigana.innerHTML += randomKanji;
       definition['kun_readings'].forEach((element) => {
         const kunyomi = element;
-        insertKunOn.innerHTML += `<p>Kun readings: ${kunyomi}</p>`;
+        insertKun.innerHTML += `<p>${kunyomi}</p>`;
       });
       definition['on_readings'].forEach((element) => {
         const onyomi = element;
-        insertKunOn.innerHTML += `<p>On readings: ${onyomi}</p>`;
+        insertOn.innerHTML += `<p>${onyomi}</p>`;
       });
       definition['meanings'].forEach((element) => {
         const kanjiDef = element;
-        insertDefinition.innerHTML += `<li>${kanjiDef}</li>`;
+        insertDefinition.innerHTML += `<p>- ${kanjiDef}</p>`;
       });
     });
   });
