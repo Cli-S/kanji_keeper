@@ -16,13 +16,30 @@ kuroshiro.init(new KuromojiAnalyzer({ dictPath: "/dict" })).then(async () => {
       furiganafy.innerHTML = result;
       element.classList.add('has-furigana');
     }
-  })
-});
-
-
-fetch('https://kanjiapi.dev/v1/kanji/all').then(r => r.json()).then((allKanji) => {
-  const today = new Date;
-  const numberOfTheDay = parseInt(`${today.getDate()}${today.getMonth()}${today.getFullYear()}`);
-  const randomKanji = allKanji[numberOfTheDay % allKanji.length];
-  console.log(randomKanji);
-});
+  });
+  
+  const insertFurigana = document.querySelector('.needs-furi');
+  const insertDefinition = document.querySelector('.word-definition');
+  const domParser = new DOMParser();
+  
+  fetch('https://kanjiapi.dev/v1/kanji/all').then(r => r.json()).then(async (allKanji) => {
+    const today = new Date;
+    const numberOfTheDay = parseInt(`${today.getDate()}${today.getMonth()}${today.getFullYear()}`);
+    const randomKanji = allKanji[numberOfTheDay % allKanji.length];
+    const dailyConversion = await kuroshiro.convert(randomKanji, { to: "hiragana", mode: "furigana" });
+    const selectedFurigana = domParser.parseFromString(dailyConversion, "text/html").querySelector("rt").innerText;
+    const kanjiChecker = Kuroshiro.Util.isHiragana(selectedFurigana);
+    if (kanjiChecker == true) {
+      insertFurigana.innerHTML += dailyConversion;
+    } else {
+      insertFurigana.innerHTML += randomKanji;
+    }
+    fetch(`https://kanjiapi.dev/v1/words/${randomKanji}`).then(r => r.json()).then((definition) => {
+      console.log(definition)
+      definition.forEach((element) => {
+        const kanjiDef = element['meanings'][0]['glosses'][0];
+        insertDefinition.innerHTML += `<p>${kanjiDef}</p>`;
+      });
+    });
+  });
+});  
