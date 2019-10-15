@@ -1,0 +1,7 @@
+<div id="sidebar">
+  <% if user_signed_in? %>
+    <%= link_to "New post", new_post_path() %>
+    <%= link_to 'My favorites', favorites_path %>
+    <%= link_to "My posts", user_posts_path(current_user) %>
+  <% end %>
+</div>
