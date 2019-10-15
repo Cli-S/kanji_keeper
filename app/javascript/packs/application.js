@@ -28,7 +28,7 @@ kuroshiro.init(new KuromojiAnalyzer({ dictPath: "/dict" })).then(async () => {
   
   fetch('https://kanjiapi.dev/v1/kanji/joyo').then(r => r.json()).then(async (allKanji) => {
     const today = new Date;
-    const numberOfTheDay = parseInt(`${today.getDate()+1}${today.getMonth()}${today.getFullYear()}`);
+    const numberOfTheDay = parseInt(`${today.getDate()}${today.getMonth()}${today.getFullYear()}`);
     const randomKanji = allKanji[numberOfTheDay % allKanji.length];
 //  const dailyConversion = await kuroshiro.convert(randomKanji, { to: "hiragana", mode: "furigana" });
 //  const selectedFurigana = domParser.parseFromString(dailyConversion, "text/html").querySelector("rt").innerText;
@@ -48,10 +48,12 @@ kuroshiro.init(new KuromojiAnalyzer({ dictPath: "/dict" })).then(async () => {
         const onyomi = element;
         insertOn.innerHTML += `<p>${onyomi}</p>`;
       });
-      definition['meanings'].forEach((element) => {
-        const kanjiDef = element;
-        insertDefinition.innerHTML += `<p>- ${kanjiDef}</p>`;
-      });
+      // const kanjiDef = [];
+      // definition['meanings'].forEach((element) => {
+      //   kanjiDef.push(element);
+      // });
+      const joiningDef = definition['meanings'].join(', ');
+      insertDefinition.innerHTML += `${joiningDef}`;
     });
     insertJisho.innerHTML += `<a href="https://jisho.org/search?utf8=✓&keyword=${randomKanji}">Learn more</a>`
   });

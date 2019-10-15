@@ -20,7 +20,9 @@
       <li><%= post.content %></li>
     <% end %>
   </ul>
+  <p><%= time_ago_in_words(post.created_at) %> ago</p>
   <p><%= post.favorites.count %> favorites</p>
+  <p><%= post.comments.count %> comments</p>
   <%= link_to "Comment", post_path(post) %>
   <% if user_signed_in? && current_user == post.user %> 
     <%= link_to "Edit", edit_post_path(post) %>
@@ -38,6 +40,6 @@
   <p class="needs-furi stroke-order"></p>
   <p class="kunyomi">Kun readings: </p>
   <p class="onyomi">On readings: </p>
-  <p class="word-definition">Definitions:</p>
+  <p class="word-definition">Definition: </p>
   <p class="jisho-url"></p>
 </div>
