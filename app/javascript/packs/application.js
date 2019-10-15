@@ -22,7 +22,8 @@ kuroshiro.init(new KuromojiAnalyzer({ dictPath: "/dict" })).then(async () => {
   const insertDefinition = document.querySelector('.word-definition');
   const insertKun = document.querySelector('.kunyomi');
   const insertOn = document.querySelector('.onyomi');
-  const insertStroke = document.querySelector('.stroke-order')
+  const insertStroke = document.querySelector('.stroke-order');
+  const insertJisho = document.querySelector('.jisho-url');
   const domParser = new DOMParser();
   
   fetch('https://kanjiapi.dev/v1/kanji/all').then(r => r.json()).then(async (allKanji) => {
@@ -52,5 +53,6 @@ kuroshiro.init(new KuromojiAnalyzer({ dictPath: "/dict" })).then(async () => {
         insertDefinition.innerHTML += `<p>- ${kanjiDef}</p>`;
       });
     });
+    insertJisho.innerHTML += `<a href="https://jisho.org/search?utf8=✓&keyword=${randomKanji}">Learn more</a>`
   });
 });  
