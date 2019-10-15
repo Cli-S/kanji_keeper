@@ -26,35 +26,37 @@ kuroshiro.init(new KuromojiAnalyzer({ dictPath: "/dict" })).then(async () => {
   const insertJisho = document.querySelector('.jisho-url');
   const domParser = new DOMParser();
   
-  fetch('https://kanjiapi.dev/v1/kanji/joyo').then(r => r.json()).then(async (allKanji) => {
-    const today = new Date;
-    const numberOfTheDay = parseInt(`${today.getDate()}${today.getMonth()}${today.getFullYear()}`);
-    const randomKanji = allKanji[numberOfTheDay % allKanji.length];
-//  const dailyConversion = await kuroshiro.convert(randomKanji, { to: "hiragana", mode: "furigana" });
-//  const selectedFurigana = domParser.parseFromString(dailyConversion, "text/html").querySelector("rt").innerText;
-//  const kanjiChecker = Kuroshiro.Util.isHiragana(selectedFurigana);
-//    if (kanjiChecker == true) {
-//      insertFurigana.innerHTML += dailyConversion;
-//    } else {
-//      insertFurigana.innerHTML += randomKanji;
-//    }
-    fetch(`https://kanjiapi.dev/v1/kanji/${randomKanji}`).then(r => r.json()).then((definition) => {
-      insertFurigana.innerHTML += randomKanji;
-      definition['kun_readings'].forEach((element) => {
-        const kunyomi = element;
-        insertKun.innerHTML += `<p>${kunyomi}</p>`;
+  if (insertJisho !== null) {
+    fetch('https://kanjiapi.dev/v1/kanji/joyo').then(r => r.json()).then(async (allKanji) => {
+      const today = new Date;
+      const numberOfTheDay = parseInt(`${today.getDate()}${today.getMonth()}${today.getFullYear()}`);
+      const randomKanji = allKanji[numberOfTheDay % allKanji.length];
+  //  const dailyConversion = await kuroshiro.convert(randomKanji, { to: "hiragana", mode: "furigana" });
+  //  const selectedFurigana = domParser.parseFromString(dailyConversion, "text/html").querySelector("rt").innerText;
+  //  const kanjiChecker = Kuroshiro.Util.isHiragana(selectedFurigana);
+  //    if (kanjiChecker == true) {
+  //      insertFurigana.innerHTML += dailyConversion;
+  //    } else {
+  //      insertFurigana.innerHTML += randomKanji;
+  //    }
+      fetch(`https://kanjiapi.dev/v1/kanji/${randomKanji}`).then(r => r.json()).then((definition) => {
+        insertFurigana.innerHTML += randomKanji;
+        definition['kun_readings'].forEach((element) => {
+          const kunyomi = element;
+          insertKun.innerHTML += `<p>${kunyomi}</p>`;
+        });
+        definition['on_readings'].forEach((element) => {
+          const onyomi = element;
+          insertOn.innerHTML += `<p>${onyomi}</p>`;
+        });
+        // const kanjiDef = [];
+        // definition['meanings'].forEach((element) => {
+        //   kanjiDef.push(element);
+        // });
+        const joiningDef = definition['meanings'].join(', ');
+        insertDefinition.innerHTML += `${joiningDef}`;
       });
-      definition['on_readings'].forEach((element) => {
-        const onyomi = element;
-        insertOn.innerHTML += `<p>${onyomi}</p>`;
-      });
-      // const kanjiDef = [];
-      // definition['meanings'].forEach((element) => {
-      //   kanjiDef.push(element);
-      // });
-      const joiningDef = definition['meanings'].join(', ');
-      insertDefinition.innerHTML += `${joiningDef}`;
+      insertJisho.innerHTML += `<a href="https://jisho.org/search?utf8=✓&keyword=${randomKanji}">Learn more</a>`
     });
-    insertJisho.innerHTML += `<a href="https://jisho.org/search?utf8=✓&keyword=${randomKanji}">Learn more</a>`
-  });
+  }
 });  

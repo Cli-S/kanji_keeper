@@ -2,9 +2,9 @@
   <p><%= @post.user.username %></p>
   <% before_fav = @post.favorites.find { |fav| fav.user_id == current_user.id }  %>
   <% if before_fav %>
-    <%= link_to "Unfavorite", post_favorite_path(@post, before_fav), method: :delete %>
+    <%= link_to "Unfavorite", post_favorite_path(@post, before_fav, { redirect_to: post_path(@post) }), method: :delete %>
   <% else %>
-    <%= link_to "Favorite", post_favorites_path(@post), method: :post %>
+    <%= link_to "Favorite", post_favorites_path(@post, { redirect_to: post_path(@post) }), method: :post %>
   <% end %>
   <ul>
     <li><span class="furigana-card add-furigana"><%= @post.expression %></span></li>

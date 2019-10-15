@@ -10,14 +10,20 @@ class FavoritesController < ApplicationController
     if !already_favorited? 
       @post.favorites.create(user_id: current_user.id)
     end
-    redirect_to post_path(@post)
+
+    if params["redirect_to"].present?
+      redirect_to params["redirect_to"]
+    end
   end
 
   def destroy
     if already_favorited?
       @favorite.destroy
     end
-    redirect_to post_path(@post)
+
+    if params["redirect_to"].present?
+      redirect_to params["redirect_to"]
+    end
   end
 
   private

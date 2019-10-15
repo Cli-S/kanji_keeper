@@ -2,12 +2,15 @@
 <% @posts.each do |post| %>
 <div class="kanji-card">
   <p><%= post.user.username %></p>
+  <% unless post.user.avatar.blank? %>
+      <li><%= image_tag(post.user.avatar.to_s) %></li>
+  <% end %>
   <% if user_signed_in? && current_user == post.user %> 
     <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
     <% if before_fav %>
-      <%= link_to "Unfavorite", post_favorite_path(post, before_fav), method: :delete %>
+      <%= link_to "Unfavorite", post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete %>
     <% else %>
-      <%= link_to "Favorite", post_favorites_path(post), method: :post %>
+      <%= link_to "Favorite", post_favorites_path(post, { redirect_to: root_path }), method: :post %>
     <% end %>
   <% end %>
   <% unless post.photo.blank? %>
