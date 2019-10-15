@@ -5,6 +5,12 @@
   <% unless post.photo.blank? %>
       <li><%= image_tag(post.photo.to_s) %></li>
   <% end %>
+  <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
+  <% if before_fav %>
+    <%= link_to "Unfavorite", post_favorite_path(post, before_fav), method: :delete %>
+  <% else %>
+    <%= link_to "Favorite", post_favorites_path(post), method: :post %>
+  <% end %>
   <ul>
     <li><span class="furigana-card add-furigana"><%= post.expression %></span></li>
     <li><%= post.meaning %></li>
@@ -20,9 +26,12 @@
   <% end %>
 </div>
 <% end %>
-<% if user_signed_in? %>
-  <%= link_to "New post", new_post_path() %>
-<% end %>
+<div id="sidebar">
+  <% if user_signed_in? %>
+    <%= link_to "New post", new_post_path() %>
+    <%= link_to "My posts", user_posts_path(current_user) %>
+  <% end %>
+</div>
 <div id="daily-kanji">
   <h2>Daily Kanji</h2>
   <p class="needs-furi stroke-order"></p>

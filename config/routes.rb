@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :favorites, only: [:create, :show, :destroy]
   end
   resources :favorites, only: [:index]
-
+  get '/user/:id/posts', to: 'posts#user_posts', as: 'user_posts'
 =begin 
   (same thing as nested routes)
     resources :posts
