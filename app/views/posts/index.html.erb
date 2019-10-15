@@ -2,9 +2,6 @@
 <% @posts.each do |post| %>
 <div class="kanji-card">
   <p><%= post.user.username %></p>
-  <% unless post.photo.blank? %>
-      <li><%= image_tag(post.photo.to_s) %></li>
-  <% end %>
   <% if user_signed_in? && current_user == post.user %> 
     <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
     <% if before_fav %>
@@ -12,6 +9,9 @@
     <% else %>
       <%= link_to "Favorite", post_favorites_path(post), method: :post %>
     <% end %>
+  <% end %>
+  <% unless post.photo.blank? %>
+      <li><%= image_tag(post.photo.to_s) %></li>
   <% end %>
   <ul>
     <li><span class="furigana-card add-furigana"><%= post.expression %></span></li>
