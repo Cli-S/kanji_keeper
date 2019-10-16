@@ -10,10 +10,66 @@
 }
 
 .logo-font {
-  font-family: 'KanjiStrokeOrder';
-  font-size: 60px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 a:link {
   text-decoration: none; 
+}
+
+.kanji-nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  padding: 30px;
+}
+
+.nav-hack {
+  width: 150px;
+  text-align: right;
+}
+
+.home-layout {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.all-posts {
+ width: 70%;
+ margin-right: 100px;
+ margin-left: 40px;
+}
+
+.sidebar-layout {
+  width: 30%;
+  margin-right: 40px;
+}
+
+body {
+  background-color: red;
+}
+
+.kanji-card {
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.top-card {
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.no-pic-post {
+  display: flex;
 }

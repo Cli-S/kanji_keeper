@@ -1,48 +1,67 @@
-<h2>All posts</h2>
-<% @posts.each do |post| %>
-<div class="kanji-card">
-  <p><%= post.user.username %></p>
-  <% unless post.user.avatar.blank? %>
-      <li><%= image_tag(post.user.avatar.to_s) %></li>
-  <% end %>
-  <% if user_signed_in? && current_user == post.user %> 
-    <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
-    <% if before_fav %>
-      <%= link_to "Unfavorite", post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete %>
-    <% else %>
-      <%= link_to "Favorite", post_favorites_path(post, { redirect_to: root_path }), method: :post %>
+<div class="home-layout">
+  <div class="all-posts"> 
+    <h2>All posts</h2>
+    <% @posts.each do |post| %>
+    <div class="kanji-card">
+      <%# unless post.photo.blank? %>
+        <%# image_tag(post.photo.to_s, :class => "post-image") %>
+      <%# end %>
+      <% if post.photo.blank? %>
+        <div class="no-pic-post">
+          <p><%= post.user.username %></p>
+          <% if user_signed_in? %> 
+            <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
+            <% if before_fav %>
+              <%= link_to "Unfavorite", post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete %>
+            <% else %>
+              <%= link_to "Favorite", post_favorites_path(post, { redirect_to: root_path }), method: :post %>
+            <% end %>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="top-card" div style="background-image: url(<%= post.photo.to_s %>);">
+        <p><%= post.user.username %></p>
+        <% if user_signed_in? %> 
+          <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
+          <% if before_fav %>
+            <%= link_to "Unfavorite", post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete %>
+          <% else %>
+            <%= link_to "Favorite", post_favorites_path(post, { redirect_to: root_path }), method: :post %>
+          <% end %>
+        <% end %>
+      </div>
+      <% end %>
+      <ul>
+        <li><span class="furigana-card add-furigana"><%= post.expression %></span></li>
+        <li><%= post.meaning %></li>
+        <% unless post.content.blank? %>
+          <li><%= post.content %></li>
+        <% end %>
+      </ul>
+      <p><%= time_ago_in_words(post.created_at) %> ago</p>
+      <p><%= post.favorites.count %> favorites</p>
+      <p><%= post.comments.count %> comments</p>
+      <%= link_to "Comment", post_path(post) %>
+      <% if user_signed_in? && current_user == post.user %> 
+        <%= link_to "Edit", edit_post_path(post) %>
+        <%= link_to "Delete", post_path(post), method: :delete %>
+      <% end %>
+    </div>
     <% end %>
-  <% end %>
-  <% unless post.photo.blank? %>
-      <li><%= image_tag(post.photo.to_s) %></li>
-  <% end %>
-  <ul>
-    <li><span class="furigana-card add-furigana"><%= post.expression %></span></li>
-    <li><%= post.meaning %></li>
-    <% unless post.content.blank? %>
-      <li><%= post.content %></li>
-    <% end %>
-  </ul>
-  <p><%= time_ago_in_words(post.created_at) %> ago</p>
-  <p><%= post.favorites.count %> favorites</p>
-  <p><%= post.comments.count %> comments</p>
-  <%= link_to "Comment", post_path(post) %>
-  <% if user_signed_in? && current_user == post.user %> 
-    <%= link_to "Edit", edit_post_path(post) %>
-    <%= link_to "Delete", post_path(post), method: :delete %>
-  <% end %>
-</div>
-<% end %>
-<div id="sidebar">
-  <% if user_signed_in? %>
-      <%= render 'layouts/sidebar' %>
-  <% end %>
-</div>
-<div id="daily-kanji">
-  <h2>Daily Kanji</h2>
-  <p class="needs-furi stroke-order"></p>
-  <p class="kunyomi">Kun readings: </p>
-  <p class="onyomi">On readings: </p>
-  <p class="word-definition">Definition: </p>
-  <p class="jisho-url"></p>
+  </div>
+  <div class="sidebar-layout">
+    <div id="sidebar">
+      <% if user_signed_in? %>
+          <%= render 'layouts/sidebar' %>
+      <% end %>
+    </div>
+    <div id="daily-kanji">
+      <h2>Daily Kanji</h2>
+      <p class="needs-furi stroke-order"></p>
+      <p class="kunyomi">Kun readings: </p>
+      <p class="onyomi">On readings: </p>
+      <p class="word-definition">Definition: </p>
+      <p class="jisho-url"></p>
+    </div>
+  </div>
 </div>

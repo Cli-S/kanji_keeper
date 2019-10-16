@@ -1,2 +1,15 @@
-<%= link_to 'kanji keeper', root_path, class: 'logo-font' %>
-<%= link_to 'logout', destroy_user_session_path, method: :delete %>
+<ul class="navbar-nav">
+  <div class="kanji-nav">
+    <%= link_to 'kanji keeper', root_path, class: 'logo-font' %>
+    <li class="nav-item dropdown btn-group">
+      <a class="nav-link nav-hack" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        menu
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <%= link_to 'my account', edit_user_registration_path, class: 'dropdown-item' %>
+        <%= link_to 'logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+      </div>
+    </li>
+  </div>
+</ul>
+
