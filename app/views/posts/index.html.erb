@@ -8,7 +8,28 @@
       <%# end %>
       <% if post.photo.blank? %>
         <div class="no-pic-post">
-          <p><%= post.user.username %></p>
+          <div class="top-card-features">
+            <% unless post.user.avatar.blank? %>
+              <%= image_tag(post.user.avatar.to_s, :class => 'avatar') %>
+              <% end %>
+            <%= post.user.username %>
+            <% if user_signed_in? %> 
+              <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
+              <% if before_fav %>
+                <%= link_to "Unfavorite", post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete, :class => "top-fav" %>
+              <% else %>
+                <%= link_to "Favorite", post_favorites_path(post, { redirect_to: root_path }), method: :post, :class => "top-fav" %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      <% else %>
+      <div class="top-card" div style="background-image: url(<%= post.photo.to_s %>);">
+        <div class="top-card-features">
+          <% unless post.user.avatar.blank? %>
+            <%= image_tag(post.user.avatar.to_s, :class => "avatar") %>
+          <% end %>
+          <%= post.user.username %>
           <% if user_signed_in? %> 
             <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
             <% if before_fav %>
@@ -18,17 +39,6 @@
             <% end %>
           <% end %>
         </div>
-      <% else %>
-        <div class="top-card" div style="background-image: url(<%= post.photo.to_s %>);">
-        <p><%= post.user.username %></p>
-        <% if user_signed_in? %> 
-          <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
-          <% if before_fav %>
-            <%= link_to "Unfavorite", post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete %>
-          <% else %>
-            <%= link_to "Favorite", post_favorites_path(post, { redirect_to: root_path }), method: :post %>
-          <% end %>
-        <% end %>
       </div>
       <% end %>
       <ul>
