@@ -1,9 +1,7 @@
-<div id="sidebar">
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
   <ul>
     <li><%= link_to "New post", new_post_path() %></li>
     <li><%= link_to 'My favorites', favorites_path %></li>
     <li><%= link_to 'My posts', user_posts_path(current_user) %></li>
   </ul>
-  <% end %>
-</div>
+<% end %>

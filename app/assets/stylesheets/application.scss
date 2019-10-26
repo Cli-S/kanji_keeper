@@ -18,6 +18,10 @@ a:link {
   text-decoration: none; 
 }
 
+ul {
+  list-style-type: none;
+}
+
 .kanji-nav {
   display: flex;
   justify-content: space-between;
@@ -33,18 +37,15 @@ a:link {
 .home-layout {
   display: flex;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 60px auto 0 auto;
 }
 
 .all-posts {
- width: 70%;
- margin-right: 100px;
- margin-left: 40px;
+ width: 60%;
 }
 
 .sidebar-layout {
-  width: 30%;
-  margin-right: 40px;
+  width: 39%;
 }
 
 .kanji-card {
@@ -68,6 +69,26 @@ a:link {
 
 .top-card-features {
   width: 100%;
+  padding: 25px 0px 0px 40px;
+}
+
+.big-kanji {
+  font-size: 30px;
+  margin: 0 0 15px 0;
+}
+
+.inner-card {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.bottom-card-padding {
+  padding: 32px 45px 30px 45px;
+}
+
+.card-bottom-info {
+  display: flex;
+  padding-top: 10px;
+  color: #949494;
 }
 
 .no-pic-post {
@@ -76,7 +97,27 @@ a:link {
 
 .avatar {
   vertical-align: middle;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
+}
+
+#daily-kanji {
+  text-align: right;
+}
+
+h2 {
+  padding: 0 32px 0 32px;
+}
+
+#under-kanji-title {
+  padding: 0 20px 0 20px;
+}
+
+#user-sidebar {
+  text-align: center;
+  padding: 0 32px 0 32px;
+  li {
+    padding: 12px;
+  }
 }

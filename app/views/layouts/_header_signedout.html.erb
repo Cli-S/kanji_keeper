@@ -1,3 +1,7 @@
-<%= link_to 'home', root_path %>
-<%= link_to "sign in", new_user_session_path  %>
-<%= link_to "sign up", new_user_registration_path  %>
+<div id="signed-out-nav" class="navbar-nav">
+  <div class="kanji-nav">
+    <%= link_to 'kanji keeper', root_path, class: 'logo-font' %>
+    <%= link_to "sign in", new_user_session_path  %>
+    <%= link_to "sign up", new_user_registration_path  %>
+  </div>
+</div>

@@ -1,6 +1,5 @@
 <div class="home-layout">
   <div class="all-posts"> 
-    <h2>All posts</h2>
     <% @posts.each do |post| %>
     <div class="kanji-card">
       <%# unless post.photo.blank? %>
@@ -41,37 +40,45 @@
         </div>
       </div>
       <% end %>
-      <ul>
-        <li><span class="furigana-card add-furigana"><%= post.expression %></span></li>
-        <li><%= post.meaning %></li>
-        <% unless post.content.blank? %>
-          <li><%= post.content %></li>
-        <% end %>
-      </ul>
-      <p><%= time_ago_in_words(post.created_at) %> ago</p>
-      <p><%= post.favorites.count %> favorites</p>
-      <p><%= post.comments.count %> comments</p>
-      <%= link_to "Comment", post_path(post) %>
-      <% if user_signed_in? && current_user == post.user %> 
-        <%= link_to "Edit", edit_post_path(post) %>
-        <%= link_to "Delete", post_path(post), method: :delete %>
-      <% end %>
+      <div class="bottom-card-padding">
+        <div class="inner-card">
+          <ul>
+            <li class="big-kanji"><span class="furigana-card add-furigana"><%= post.expression %></span></li>
+            <li><%= post.meaning %></li>
+            <% unless post.content.blank? %>
+              <li><%= post.content %></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="card-bottom-info">
+          <p><%= time_ago_in_words(post.created_at) %> ago</p>
+          <p><%= post.favorites.count %> favorites</p>
+          <p><%= post.comments.count %> comments</p>
+          <%= link_to "Comment", post_path(post) %>
+          <% if user_signed_in? && current_user == post.user %> 
+            <%= link_to "Edit", edit_post_path(post) %>
+            <%= link_to "Delete", post_path(post), method: :delete %>
+          <% end %>
+        </div>
+      </div>
     </div>
     <% end %>
   </div>
   <div class="sidebar-layout">
-    <div id="sidebar">
+    <div id="user-sidebar">
       <% if user_signed_in? %>
           <%= render 'layouts/sidebar' %>
       <% end %>
     </div>
     <div id="daily-kanji">
-      <h2>Daily Kanji</h2>
-      <p class="needs-furi stroke-order"></p>
-      <p class="kunyomi">Kun readings: </p>
-      <p class="onyomi">On readings: </p>
-      <p class="word-definition">Definition: </p>
-      <p class="jisho-url"></p>
+      <h2 id="kanji-title">Daily Kanji</h2>
+      <div id="under-kanji-title">
+        <p class="needs-furi stroke-order"></p>
+        <p class="kunyomi">Kun readings: </p>
+        <p class="onyomi">On readings: </p>
+        <p class="word-definition">Definition: </p>
+        <p class="jisho-url"></p>
+      </div>
     </div>
   </div>
 </div>
