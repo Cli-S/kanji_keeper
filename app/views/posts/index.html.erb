@@ -15,9 +15,9 @@
             <% if user_signed_in? %> 
               <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
               <% if before_fav %>
-                <%= link_to "Unfavorite", post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete, :class => "top-fav" %>
+                <%= link_to ('<i class="fas fa-heart"></i>').html_safe, post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete, :class => "top-fav" %>
               <% else %>
-                <%= link_to "Favorite", post_favorites_path(post, { redirect_to: root_path }), method: :post, :class => "top-fav" %>
+                <%= link_to ('<i class="far fa-heart"></i>').html_safe, post_favorites_path(post, { redirect_to: root_path }), method: :post, :class => "top-fav" %>
               <% end %>
             <% end %>
           </div>
@@ -32,9 +32,9 @@
           <% if user_signed_in? %> 
             <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
             <% if before_fav %>
-              <%= link_to "Unfavorite", post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete %>
+              <%= link_to ('<i class="fas fa-heart"></i>').html_safe, post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete %>
             <% else %>
-              <%= link_to "Favorite", post_favorites_path(post, { redirect_to: root_path }), method: :post %>
+              <%= link_to ('<i class="far fa-heart"></i>').html_safe, post_favorites_path(post, { redirect_to: root_path }), method: :post %>
             <% end %>
           <% end %>
         </div>
@@ -52,8 +52,8 @@
         </div>
         <div class="card-bottom-info">
           <p><%= time_ago_in_words(post.created_at) %> ago</p>
-          <p><%= post.favorites.count %> favorites</p>
-          <p><%= post.comments.count %> comments</p>
+          <p><i class="far fa-heart"></i> <span class="right-margin"><%= post.favorites.count %></span></p>
+          <p><i class="far fa-comment"></i> <span class="right-margin"><%= post.comments.count %></span></p>
           <%= link_to "Comment", post_path(post) %>
           <% if user_signed_in? && current_user == post.user %> 
             <%= link_to "Edit", edit_post_path(post) %>
