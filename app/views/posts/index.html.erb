@@ -8,10 +8,12 @@
       <% if post.photo.blank? %>
         <div class="no-pic-post">
           <div class="top-card-features">
-            <% unless post.user.avatar.blank? %>
-              <%= image_tag(post.user.avatar.to_s, :class => 'avatar') %>
+            <div>
+              <% unless post.user.avatar.blank? %>
+                <%= image_tag(post.user.avatar.to_s, :class => 'avatar') %>
               <% end %>
-            <%= post.user.username %>
+              <%= post.user.username %>
+            </div>
             <% if user_signed_in? %> 
               <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
               <% if before_fav %>
@@ -25,10 +27,12 @@
       <% else %>
       <div class="top-card" div style="background-image: url(<%= post.photo.to_s %>);">
         <div class="top-card-features">
-          <% unless post.user.avatar.blank? %>
-            <%= image_tag(post.user.avatar.to_s, :class => "avatar") %>
-          <% end %>
-          <%= post.user.username %>
+          <div>
+            <% unless post.user.avatar.blank? %>
+              <%= image_tag(post.user.avatar.to_s, :class => "avatar") %>
+            <% end %>
+            <%= post.user.username %>
+          </div>
           <% if user_signed_in? %> 
             <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
             <% if before_fav %>
@@ -40,6 +44,10 @@
         </div>
       </div>
       <% end %>
+      <div class="card-additional-info">
+        <p><i class="far fa-heart"></i> <span class="right-margin"><%= post.favorites.count %></span></p>
+        <p><i class="far fa-comment"></i> <span class="right-margin"><%= post.comments.count %></span></p>
+      </div>
       <div class="bottom-card-padding">
         <div class="inner-card">
           <ul>
@@ -50,15 +58,17 @@
             <% end %>
           </ul>
         </div>
-        <div class="card-bottom-info">
-          <p><%= time_ago_in_words(post.created_at) %> ago</p>
-          <p><i class="far fa-heart"></i> <span class="right-margin"><%= post.favorites.count %></span></p>
-          <p><i class="far fa-comment"></i> <span class="right-margin"><%= post.comments.count %></span></p>
-          <%= link_to "Comment", post_path(post) %>
-          <% if user_signed_in? && current_user == post.user %> 
-            <%= link_to "Edit", edit_post_path(post) %>
-            <%= link_to "Delete", post_path(post), method: :delete %>
-          <% end %>
+        <div class="card-buttons">
+          <div>
+            <%= link_to "Comment", post_path(post) %>
+            <% if user_signed_in? && current_user == post.user %> 
+              <%= link_to "Edit", edit_post_path(post) %>
+              <%= link_to "Delete", post_path(post), method: :delete %>
+            <% end %>
+          </div>
+          <div>
+            <span class="date-border"><%= time_ago_in_words(post.created_at).upcase %> AGO</span>
+          </div>
         </div>
       </div>
     </div>

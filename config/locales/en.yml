@@ -39,3 +39,6 @@ en:
         # The defaults are "about 1 hour" and "about %{count} hours"
         one: "1 hour"
         other: "%{count} hours"
+      about_x_months:
+        one: "1 month"
+        other: "%{count} months"
