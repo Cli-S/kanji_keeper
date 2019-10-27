@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <ul>
     <li class="sidebar-button-design all-buttons"><%= link_to "new post", new_post_path() %></li>
-    <li class="sidebar-button-design all-buttons"><%= link_to 'my favorites', favorites_path %></li>
-    <li class="sidebar-button-design all-buttons"><%= link_to 'my posts', user_posts_path(current_user) %></li>
+    <li class="sidebar-button-design lesser-buttons"><%= link_to 'my favorites', favorites_path %></li>
+    <li class="sidebar-button-design lesser-buttons"><%= link_to 'my posts', user_posts_path(current_user) %></li>
   </ul>
 <% end %>

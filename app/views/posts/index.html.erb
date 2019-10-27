@@ -77,11 +77,11 @@
     <% end %>
   </div>
   <div class="sidebar-layout">
-    <div id="user-sidebar">
       <% if user_signed_in? %>
+        <div id="user-sidebar">
           <%= render 'layouts/sidebar' %>
+        </div>
       <% end %>
-    </div>
     <div id="daily-kanji">
       <h2 id="kanji-title">daily kanji</h2>
       <div id="under-kanji-title">

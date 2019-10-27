@@ -7,6 +7,13 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+::selection {
+  background: #fcd6ca; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #fcd6ca; /* Gecko Browsers */
+}
+
 .stroke-order {
   font-family: 'KanjiStrokeOrder';
   font-size: 100px;
@@ -26,6 +33,10 @@ a {
   color: #FF768A;
 }
 
+a:hover {
+  color: #FF768A;
+}
+
 ul {
   list-style-type: none;
 }
@@ -34,7 +45,7 @@ ul {
   display: flex;
   justify-content: space-between;
   font-size: 25px;
-  padding: 30px;
+  padding: 40px;
 }
 
 .nav-signedout-space {
@@ -50,10 +61,15 @@ ul {
   text-align: right;
 }
 
+.dropdown-menu {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: none;
+}
+
 .home-layout {
   display: flex;
   max-width: 1000px;
-  margin: 60px auto 0 auto;
+  margin: 30px auto 0 auto;
 }
 
 .all-posts {
@@ -67,7 +83,7 @@ ul {
 .kanji-card {
   background-color: white;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(66, 66, 66, 0.2);
   margin-bottom: 40px;
   width: 100%;
 }
@@ -139,7 +155,7 @@ ul {
 }
 
 .link-margin {
-  margin-right: 7px;
+  margin-right: 10px;
 }
 
 .date-border {
@@ -164,10 +180,12 @@ ul {
 
 #daily-kanji {
   text-align: right;
+  margin-left: 85px;
+  padding-right: 40px;
 }
 
 h2 {
-  padding: 20px 32px 0 32px;
+  padding: 0 32px 0 32px;
 }
 
 #under-kanji-title {
@@ -176,7 +194,7 @@ h2 {
 
 #user-sidebar {
   text-align: center;
-  padding: 45px 45px 45px 45px;
+  padding: 0 45px 45px 45px;
   li {
     padding: 10px;
   }
@@ -184,9 +202,6 @@ h2 {
 
 .sidebar-button-design {
   font-size: 15px;
-  a {
-    color: white;
-  }
   margin: 0 0 12px 0;
 }
 
@@ -196,6 +211,9 @@ h2 {
   transition: all 0.2s ease 0s;
   cursor: pointer;
   border-radius: 5px;
+  a {
+    color: white;
+  }
 }
 
 .button-wrap {
@@ -211,3 +229,16 @@ h2 {
   transform: translateY(-2px);
 }
 
+.lesser-buttons {
+  border: 1px solid #FF768A;
+  box-shadow: 0px 8px 15px rgba(172, 171, 171, 0.1);
+  background-color: white;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.lesser-buttons:hover {
+  box-shadow: 0px 5px 10px #fcd6ca;
+  transform: translateY(-2px);
+}
