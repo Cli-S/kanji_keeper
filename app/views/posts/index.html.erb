@@ -52,7 +52,7 @@
         <div class="inner-card">
           <ul>
             <li class="big-kanji"><span class="furigana-card add-furigana"><%= post.expression %></span></li>
-            <li><%= post.meaning %></li>
+            <li class="meaning-padding"><%= post.meaning %></li>
             <% unless post.content.blank? %>
               <li><%= post.content %></li>
             <% end %>
@@ -60,11 +60,13 @@
         </div>
         <div class="card-buttons">
           <div>
-            <%= link_to "Comment", post_path(post) %>
-            <% if user_signed_in? && current_user == post.user %> 
-              <%= link_to "Edit", edit_post_path(post) %>
-              <%= link_to "Delete", post_path(post), method: :delete %>
-            <% end %>
+            <div class="button-wrap">
+              <span class="user-button all-buttons"><%= link_to "comment", post_path(post) %></span>
+              <% if user_signed_in? && current_user == post.user %> 
+                <span class="link-margin"><%= link_to "edit", edit_post_path(post) %></span>
+                <span class="link-margin"><%= link_to "delete", post_path(post), method: :delete %></span>
+              <% end %>
+            </div>
           </div>
           <div>
             <span class="date-border"><%= time_ago_in_words(post.created_at).upcase %> AGO</span>
@@ -81,7 +83,7 @@
       <% end %>
     </div>
     <div id="daily-kanji">
-      <h2 id="kanji-title">Daily Kanji</h2>
+      <h2 id="kanji-title">daily kanji</h2>
       <div id="under-kanji-title">
         <p class="needs-furi stroke-order"></p>
         <p class="kunyomi">Kun readings: </p>
