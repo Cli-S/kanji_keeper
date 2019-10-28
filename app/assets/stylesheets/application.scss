@@ -5,6 +5,7 @@
 
 body {
   font-family: 'Quicksand', sans-serif;
+  background-color: #f5f5f5;
 }
 
 ::selection {
@@ -21,8 +22,8 @@ body {
 }
 
 .logo-font {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 8px 0 8px 16px;
+  font-weight: 700;
 }
 
 a:link {
@@ -45,7 +46,21 @@ ul {
   display: flex;
   justify-content: space-between;
   font-size: 25px;
-  padding: 40px;
+  padding: 9px 20px;
+  background-color: white;
+  align-items: center;
+}
+
+.flex-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 15px;
+}
+
+.left-nav {
+  width: 129px;
+  text-align: right;
 }
 
 .nav-signedout-space {
@@ -53,12 +68,17 @@ ul {
 }
 
 .nav-right-space {
-  padding-right: 25px;
+  width: 115px;
 }
 
 .nav-hack {
-  width: 150px;
+  width: 95px;
   text-align: right;
+  font-size: 24px;
+}
+
+.thicc {
+  font-weight: 600;
 }
 
 .dropdown-menu {
@@ -80,12 +100,32 @@ ul {
   width: 39%;
 }
 
+.kanji-card-container {
+  position: relative;
+}
+
 .kanji-card {
   background-color: white;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(66, 66, 66, 0.2);
+  box-shadow: 0 0 15px rgba(66, 66, 66, 0.09);
   margin-bottom: 40px;
   width: 100%;
+
+  &:before, &:after {
+    content: ""; height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    -webkit-clip-path: polygon(0% 0%, 5%  100%, 10% 0%, 15%  100%, 20% 0%, 25% 100%, 30% 0%, 35%  100%, 40% 0%, 45%  100%, 50% 0%, 55%  100%, 60% 0%, 65%  100%, 70% 0%, 75%  100%, 80% 0%, 85%  100%, 90% 0%, 95%  100%, 100% 0%);
+  }
+  &:before {
+    background-color: #e1e1e1b0; // colour in the gaps between bumps
+    top: 0;
+  }
+  &:after {
+    background-color: white;
+    bottom: -2px;
+  }
 }
 
 .post-image {
@@ -123,7 +163,7 @@ ul {
 }
 
 .bottom-card-padding {
-  padding: 0 45px 30px 45px;
+  padding: 0 45px 0 45px;
 }
 
 .card-additional-info {
@@ -135,10 +175,11 @@ ul {
 }
 
 .card-buttons {
-  padding-top: 10px;
+  padding: 15px 0px;
   font-size: 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .right-margin {
@@ -151,7 +192,7 @@ ul {
   a {
     color: white;
   }
-  padding: 7px;
+  padding: 7px 14px;
 }
 
 .link-margin {
@@ -162,7 +203,7 @@ ul {
   display: flex;
   border-radius: 5px;
   border: 1px solid #949494;
-  padding: 3px;
+  padding: 3px 9px;
   font-size: 12px;
   justify-content: flex-end;
 }
@@ -192,17 +233,17 @@ h2 {
   padding: 0 20px 0 20px;
 }
 
-#user-sidebar {
+#new-post-button {
   text-align: center;
-  padding: 0 45px 45px 45px;
-  li {
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  div {
+    padding: 6px 20px 6px 20px;
   }
 }
 
-.sidebar-button-design {
+.navbar-post-button-design {
   font-size: 15px;
-  margin: 0 0 12px 0;
 }
 
 .all-buttons {
@@ -211,9 +252,7 @@ h2 {
   transition: all 0.2s ease 0s;
   cursor: pointer;
   border-radius: 5px;
-  a {
-    color: white;
-  }
+  color: white;
 }
 
 .button-wrap {
