@@ -148,6 +148,7 @@ ul {
 
 .big-kanji {
   font-size: 30px;
+  font-weight: 600;
 }
 
 .meaning-padding {
@@ -170,7 +171,7 @@ ul {
   display: flex;
   color: #949494;
   font-size: 12px;
-  padding: 20px 45px 0 45px;
+  padding: 10px 45px 0 45px;
   float: right;
 }
 
@@ -220,13 +221,11 @@ ul {
 }
 
 #daily-kanji {
-  text-align: right;
   margin-left: 85px;
-  padding-right: 40px;
 }
 
 h2 {
-  padding: 0 32px 0 32px;
+  padding-left: 22px;
 }
 
 #under-kanji-title {
@@ -246,7 +245,7 @@ h2 {
   font-size: 15px;
 }
 
-.all-buttons {
+.main-buttons {
   box-shadow: 0px 8px 15px rgba(204, 204, 204, 0.1);
   background-image: linear-gradient(to right, #FF768A, #F9A488);
   transition: all 0.2s ease 0s;
@@ -262,15 +261,13 @@ h2 {
   justify-content: center;
 }
 
-.all-buttons:hover {
+.main-buttons:hover {
   box-shadow: 0px 5px 10px #fcd6ca;
   color: #fff;
   transform: translateY(-2px);
 }
 
 .lesser-buttons {
-  border: 1px solid #FF768A;
-  box-shadow: 0px 8px 15px rgba(172, 171, 171, 0.1);
   background-color: white;
   transition: all 0.2s ease 0s;
   cursor: pointer;
@@ -278,6 +275,5 @@ h2 {
 }
 
 .lesser-buttons:hover {
-  box-shadow: 0px 5px 10px #fcd6ca;
   transform: translateY(-2px);
 }

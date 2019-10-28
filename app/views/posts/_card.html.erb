@@ -14,9 +14,9 @@
         <% if user_signed_in? %> 
           <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
           <% if before_fav %>
-            <%= link_to ('<i class="fas fa-heart"></i>').html_safe, post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete, :class => "top-fav" %>
+            <%= link_to ('<i class="fas fa-heart lesser-buttons"></i>').html_safe, post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete, :class => "top-fav" %>
           <% else %>
-            <%= link_to ('<i class="far fa-heart"></i>').html_safe, post_favorites_path(post, { redirect_to: root_path }), method: :post, :class => "top-fav" %>
+            <%= link_to ('<i class="far fa-heart lesser-buttons"></i>').html_safe, post_favorites_path(post, { redirect_to: root_path }), method: :post, :class => "top-fav" %>
           <% end %>
         <% end %>
       </div>
@@ -33,9 +33,9 @@
       <% if user_signed_in? %> 
         <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
         <% if before_fav %>
-          <%= link_to ('<i class="fas fa-heart"></i>').html_safe, post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete %>
+          <%= link_to ('<i class="fas fa-heart lesser-buttons"></i>').html_safe, post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete %>
         <% else %>
-          <%= link_to ('<i class="far fa-heart"></i>').html_safe, post_favorites_path(post, { redirect_to: root_path }), method: :post %>
+          <%= link_to ('<i class="far fa-heart lesser-buttons"></i>').html_safe, post_favorites_path(post, { redirect_to: root_path }), method: :post %>
         <% end %>
       <% end %>
     </div>
@@ -58,10 +58,10 @@
     <div class="card-buttons">
       <div>
         <div class="button-wrap">
-          <span class="user-button all-buttons"><%= link_to "comment", post_path(post) %></span>
+          <span class="user-button main-buttons"><%= link_to "comment", post_path(post) %></span>
           <% if user_signed_in? && current_user == post.user %> 
-            <span class="link-margin"><%= link_to "edit", edit_post_path(post) %></span>
-            <span class="link-margin"><%= link_to "delete", post_path(post), method: :delete %></span>
+            <span class="link-margin lesser-buttons"><%= link_to "edit", edit_post_path(post) %></span>
+            <span class="link-margin lesser-buttons"><%= link_to "delete", post_path(post), method: :delete %></span>
           <% end %>
         </div>
       </div>
