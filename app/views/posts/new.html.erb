@@ -5,6 +5,7 @@
     <li><%= f.text_field :meaning, :placeholder => "English meaning", :required => true %></li>
     <li><%= f.text_field :content, :placeholder => "Additional comments" %></li>
     <li><%= f.file_field :photo %></li>
+    <li>Private: <%= f.check_box :private %></li>
   </ul>
   <%= f.submit %>
 <% end %>

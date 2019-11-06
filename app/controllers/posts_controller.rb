@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.privates.order(created_at: :desc)
   end
 
   def show
@@ -45,13 +45,13 @@ class PostsController < ApplicationController
   end
 
   def user_posts
-    @posts = current_user.posts
+    @posts = current_user.posts.order(created_at: :desc)
   end
 
   private
 
   def post_params # only for when you create new things
-    params.require(:post).permit(:expression, :reading, :meaning, :content, :photo)
+    params.require(:post).permit(:expression, :reading, :meaning, :content, :photo, :private)
   end
 end
 

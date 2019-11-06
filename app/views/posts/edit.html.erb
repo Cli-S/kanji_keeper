@@ -5,6 +5,7 @@
       <li><%= f.text_field :expression, :placeholder => "Japanese expression" %></li>
       <li><%= f.text_field :meaning, :placeholder => "English meaning"%></li>
       <li><%= f.text_field :content, :placeholder => "Additional comments" %></li>
+      <li><li>Private: <%= f.check_box :private %></li></li>
     </ul>
     <%= f.submit %>
   <% end %>
