@@ -276,3 +276,36 @@ h2 {
 .lesser-buttons:hover {
   transform: translateY(-2px);
 }
+
+#subscription {
+  background-color: white;
+  padding: 50px;
+  margin-top:auto;
+  margin-bottom:auto;
+  text-align:center;
+}
+
+.inner-subscription {
+  margin-bottom: 25px;
+}
+
+#form-and-button {
+  display: flex;
+  margin-top:auto;
+  margin-bottom:auto;
+  justify-content: center;
+  margin: 30px;
+}
+
+#subscription-button {
+  background-color: #313840;
+  cursor: pointer;
+  border: solid 1px #313840;
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+
+#subscription-button:hover {
+  color: #fff;
+  transform: translateY(-1px);
+}
