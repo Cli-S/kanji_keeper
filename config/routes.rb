@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/faq', to: 'static_pages#faq'
+  get '/about', to: 'static_pages#about'
   devise_for :users
   root 'posts#index'
   resources :posts do
