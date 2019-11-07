@@ -44,6 +44,11 @@
   <div class="card-additional-info">
     <p><i class="far fa-heart"></i> <span class="right-margin"><%= post.favorites.count %></span></p>
     <p><i class="far fa-comment"></i> <span class="right-margin"><%= post.comments.count %></span></p>
+    <% if post.private %>
+      <p><i class="fas fa-lock"></i></p>
+    <% else %>
+      <p><i class="fas fa-unlock"></i></p>
+    <% end %>
   </div>
   <div class="bottom-card-padding">
     <div class="inner-card">

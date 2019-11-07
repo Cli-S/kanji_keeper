@@ -1,12 +1,8 @@
-<h2>Favorites</h2>
-<% @posts.each do |post| %>
-<div class="expression-card">
-  <ul>
-    <li><%= post.user.username %></li>
-    <li><%= post.expression %></li>
-    <li><%= post.reading %></li>
-    <li><%= post.meaning %></li>
-  </ul>
-  <%= link_to "Read more", post_path(post) %>
+<div class="my-posts-layout">
+  <h3 class="my-posts-header">favorites (<%= @posts.count %>)</h3>
+  <% @posts.each do |post| %>
+    <div class="kanji-card-container">
+      <%= render partial: "posts/card", locals: { post: post } %>
+    </div>
+  <% end %>
 </div>
-<% end %>
