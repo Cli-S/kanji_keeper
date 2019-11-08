@@ -1,6 +1,6 @@
 <body id="sign-in-body">
   <div class="signed-out-pages">
-    <h2 class="signed-out-header">welcome back!</h2>
+    <h2 class="signed-out-header">ウエルカム バック</h2>
     <div class="forms-layout">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field">
@@ -19,7 +19,7 @@
         <% end %>
       
         <div class="actions">
-          <%= f.submit "log in",:class => 'main-form-button' %>
+          <%= f.submit "log in", :class => 'main-form-button' %>
         </div>
       <% end %>
 
