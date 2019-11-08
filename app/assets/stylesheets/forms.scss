@@ -2,6 +2,10 @@ body#sign-in-body {
   background-color: white;
 }
 
+:focus {
+  outline: none;
+}
+
 .signed-out-pages {
   padding: 100px;
   text-align: center;

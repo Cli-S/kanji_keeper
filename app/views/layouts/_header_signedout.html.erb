@@ -1,6 +1,10 @@
 <div id="signed-out-nav" class="navbar-nav">
   <div class="kanji-nav">
-    <%= link_to 'kanji keeper', root_path, class: 'logo-font lesser-buttons' %>
+    <div class="logo-font lesser-buttons">
+      <%= link_to root_path do %>
+        kanji<%= image_tag "cherry-blossom.png", class: "cherry-logo", width: "10%" %>keeper
+      <% end %>
+    </div>
     <div class="flex-nav">
       <span class="nav-right-space thicc lesser-buttons"><%= link_to "sign in", new_user_session_path  %></span>
       <span class="thicc lesser-buttons"><%= link_to "sign up", new_user_registration_path  %></span>
