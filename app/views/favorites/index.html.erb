@@ -1,8 +1,10 @@
 <div class="my-posts-layout">
-  <h3 class="my-posts-header">favorites (<%= @posts.count %>)</h3>
+  <h3 class="my-posts-header">favorites</h3>
   <% @posts.each do |post| %>
     <div class="kanji-card-container">
-      <%= render partial: "posts/card", locals: { post: post } %>
+      <% if post.private == false %>
+        <%= render partial: "posts/card", locals: { post: post } %>
+      <% end %>
     </div>
   <% end %>
 </div>
