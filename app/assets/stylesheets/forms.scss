@@ -1,0 +1,59 @@
+.signed-out-pages {
+  padding: 100px;
+  text-align: center;
+  width: 100%;
+  background-color: white;
+}
+
+.forms-layout {
+  padding: 80px 40px 0 40px;
+}
+
+.form-field-design {
+  border-radius: 20px;
+  border: none;
+  padding: 7px;
+  width: 23%;
+  margin-bottom: 17px;
+  box-shadow: 0px 8px 15px rgba(204, 204, 204, 0.3);
+}
+
+::placeholder {
+  color: #c7c7c7;
+  text-align:center;
+}
+
+.remember-me {
+  margin-top: 40px;
+}
+
+.main-form-button {
+  border-radius: 20px;
+  width: 23%;
+  background-image: linear-gradient(to right, #FF768A, #F9A488);
+  border: none;
+  cursor: pointer;
+  padding: 7px;
+  color: white;
+  margin-top: 5px;
+}
+
+.main-form-button:hover {
+  box-shadow: 0px 5px 10px #fcd6ca;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.forgot-pass {
+  padding: 20px;
+  text-transform: uppercase;
+  a {
+    color: #969696;
+    font-weight: 600;
+    font-size: 12px;
+  }
+}
+
+.sign-up-now {
+  margin-top: 60px;
+}
