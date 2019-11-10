@@ -6,6 +6,11 @@
   src: font-url('KanjiStrokeOrders_v4.002.ttf');
 }
 
+#error_explanation {
+  text-align: center;
+  color: #FF768A;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
   background-color: #f5f5f5;

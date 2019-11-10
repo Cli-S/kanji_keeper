@@ -7,7 +7,7 @@ body#sign-in-body {
 }
 
 .signed-out-pages {
-  padding: 100px;
+  padding: 60px 50px 0 50px;
   text-align: center;
   width: 100%;
   background-color: white;
@@ -18,14 +18,13 @@ body#sign-in-body {
 }
 
 .fresh-forms-layout {
-  padding: 30px;
+  padding: 45px 30px 0 30px;
 }
 
 .avatar-field-design {
   border: none;
-  padding: 7px;
   width: 23%;
-  margin-bottom: 17px;
+  padding: 10px 0 10px 45px;
 }
 
 .form-field-design {
@@ -75,4 +74,8 @@ body#sign-in-body {
 
 .sign-up-now {
   margin-top: 60px;
+}
+
+.sign-in-pls {
+  margin-top: 50px;
 }
