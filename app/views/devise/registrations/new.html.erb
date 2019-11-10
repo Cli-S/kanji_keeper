@@ -3,24 +3,28 @@
     <h2 class="signed-out-header animated infinite pulse slower">create an account</h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <div class="fresh-forms-layout">
-          <div class="field">
+          <div class="field input-margin">
+            <span class="far fa-envelope fav-icon"></span>
             <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", :class => 'form-field-design form-width' %>
           </div>
 
-          <div class="field">
+          <div class="field input-margin">
+            <span class="far fa-user fav-icon"></span>
             <%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder: "username", :class => 'form-field-design form-width' %>
           </div>
 
-          <div class="field">
+          <div class="field input-margin">
+            <span class="fas fa-key fav-icon"></span>
             <%= f.password_field :password, autocomplete: "new-password", placeholder: "password", :class => 'form-field-design form-width' %>
           </div>
 
-          <div class="field">
+          <div class="field input-field">
+            <span class="fas fa-key fav-icon"></span>
             <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "passsword confirmation", :class => 'form-field-design form-width' %>
           </div>
 
           <div class="field">
-            user icon<br />
+            <div class="user-icon">user icon</div><br />
             <%= f.file_field :avatar, autofocus: true, :class => "avatar-field-design" %>
           </div>
 

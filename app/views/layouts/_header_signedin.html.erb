@@ -12,12 +12,12 @@
             <div class="navbar-post-button-design main-buttons">new post</div>
           <% end %>
         </div>
-        <span class="left-nav lesser-buttons thicc"><%= link_to 'my posts', user_posts_path(current_user) %></span>
         <span class="left-nav lesser-buttons thicc"><%= link_to 'favorites', favorites_path %></span>
         <a class="nav-link nav-hack" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-bars lesser-buttons"></i>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <%= link_to 'my profile', user_posts_path(current_user), class: 'dropdown-item' %> 
           <%= link_to 'my account', edit_user_registration_path, class: 'dropdown-item' %>
           <%= link_to 'logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
         </div>

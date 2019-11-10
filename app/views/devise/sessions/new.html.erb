@@ -3,11 +3,13 @@
     <h2 class="signed-out-header animated infinite pulse slower">ウエルカム バック</h2>
     <div class="forms-layout">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="field">
+        <div class="field input-margin">
+          <span class="far fa-envelope fav-icon"></span>
           <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", :class => 'form-field-design form-width' %>
         </div>
 
-        <div class="field">
+        <div class="field input-margin">
+          <span class="fas fa-key fav-icon"></span>
           <%= f.password_field :password, autocomplete: "current-password", placeholder: "password", :class => 'form-field-design form-width' %>
         </div>
 

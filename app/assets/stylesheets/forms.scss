@@ -24,21 +24,43 @@ body#sign-in-body {
 .avatar-field-design {
   border: none;
   width: 23%;
-  padding: 10px 0 10px 45px;
+  padding: 0 0 10px 45px;
 }
 
 .form-field-design {
   border-radius: 20px;
   border: none;
-  padding: 7px;
+  padding: 8px;
   width: 23%;
-  margin-bottom: 17px;
+  margin-bottom: 15px;
   box-shadow: 0px 8px 15px rgba(204, 204, 204, 0.3);
+}
+
+.input-margin {
+  margin: 1em;
+}
+
+.fav-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: -48px;
+  top: 2px;
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  opacity: 0.5;
+  color: #c7c7c7;
+}
+
+.user-icon {
+  padding-top: 2px;
 }
 
 ::placeholder {
   color: #c7c7c7;
   text-align:center;
+  padding-left: 5px;
+  font-size: 14px;
 }
 
 .remember-me {
