@@ -1,11 +1,15 @@
-<h2>Create a new post</h2>
-<%= form_for(@post) do |f| %>
-  <ul>
-    <li><%= f.text_field :expression, :placeholder => "Japanese expression", :required => true %></li>
-    <li><%= f.text_field :meaning, :placeholder => "English meaning", :required => true %></li>
-    <li><%= f.text_field :content, :placeholder => "Additional comments" %></li>
-    <li><%= f.file_field :photo %></li>
-    <li>Private: <%= f.check_box :private %></li>
-  </ul>
-  <%= f.submit %>
-<% end %>
+<div class="new-post-layout">
+  <div class="new-post-card">
+    <h2>Create a new post</h2>
+    <%= form_for(@post) do |f| %>
+      <ul>
+        <li><%= f.text_field :expression, :placeholder => "Japanese expression", :required => true %></li>
+        <li><%= f.text_field :meaning, :placeholder => "English meaning", :required => true %></li>
+        <li><%= f.text_field :content, :placeholder => "Additional comments" %></li>
+        <li><%= f.file_field :photo %></li>
+        <li>Private: <%= f.check_box :private %></li>
+      </ul>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

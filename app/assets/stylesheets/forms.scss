@@ -2,6 +2,12 @@ body#sign-in-body {
   background-color: white;
 }
 
+.field {
+  input {
+    text-align: center;
+  }
+}
+
 :focus {
   outline: none;
 }
@@ -32,7 +38,7 @@ body#sign-in-body {
   border: none;
   padding: 8px;
   width: 23%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   box-shadow: 0px 8px 15px rgba(204, 204, 204, 0.3);
 }
 
@@ -53,7 +59,7 @@ body#sign-in-body {
 }
 
 .user-icon {
-  padding-top: 2px;
+  padding-top: 5px;
 }
 
 ::placeholder {
