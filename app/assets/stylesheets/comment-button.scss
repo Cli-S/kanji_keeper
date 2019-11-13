@@ -1,0 +1,59 @@
+.theta .btn {
+  display: inline-block;
+  margin: 6px;
+  font-size: inherit;
+  line-height: 1;
+  padding: 0.7em 1.4em;
+  border-width: 2px;
+  border-style: solid;
+  background: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: bottom;
+  position: relative;
+  transform: translate(0.5em -0.4em);
+  transition: transform 0.2s;
+  font-weight: 600;
+}
+
+.theta .btn:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform: translate(0.6em, -0.3em);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.theta .btn-tetrary {
+  color: black;
+  border-color: #313840;
+}
+
+.theta .btn-tetrary:hover {
+  transform: translate(0.2em, -0.1em);
+}
+
+.theta .btn-tetrary:hover:before {
+  transform: translate(-0.4em, 0.4em);
+}
+
+.theta .btn-tetrary:active {
+  transform: translate(0, 0);
+  transition-duration: 0.1s;
+}
+
+.theta .btn-tetrary:active:before {
+  transition-duration: 0.1s;
+  transform: translate(0, 0);
+  background-color: #FFADBC;
+}
+
+.theta .btn-tetrary:before {
+  background-color: #FFADBC;
+}

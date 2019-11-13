@@ -39,7 +39,7 @@ body#sign-in-body {
   padding: 8px;
   width: 23%;
   margin-bottom: 10px;
-  box-shadow: 0px 8px 15px rgba(204, 204, 204, 0.3);
+  box-shadow: 0px 8px 15px rgba(138, 138, 138, 0.3);
 }
 
 .input-margin {
@@ -54,7 +54,13 @@ body#sign-in-body {
   display: inline-block;
   font-size: 14px;
   opacity: 0.5;
-  color: #c7c7c7;
+}
+
+.fav-icon:before {
+  background: -webkit-gradient(linear, left bottom, left top, from(#FF768A), to(#90cedb));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: initial; /* reset Font Awesome's display:inline-block */
 }
 
 .user-icon {
@@ -62,7 +68,7 @@ body#sign-in-body {
 }
 
 ::placeholder {
-  color: #c7c7c7;
+  color: #7F7F7F;
   text-align:center;
   padding-left: 5px;
   font-size: 14px;

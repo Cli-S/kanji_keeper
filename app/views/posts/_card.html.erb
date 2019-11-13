@@ -60,11 +60,11 @@
     </div>
     <div class="card-buttons">
       <div>
-        <div class="button-wrap">
-          <span class="user-button main-buttons"><%= link_to "comment", post_path(post) %></span>
+        <div class="theta">
+          <%= link_to "comment", post_path(post), class: 'btn btn-tetrary' %>
           <% if user_signed_in? && current_user == post.user %> 
-            <span class="link-margin lesser-buttons"><%= link_to "edit", edit_post_path(post) %></span>
-            <span class="link-margin lesser-buttons"><%= link_to "delete", post_path(post), method: :delete %></span>
+            <span class="link-margin lesser-buttons"><%= link_to "edit", edit_post_path(post), class: 'to-the-left' %></span>
+            <span class="link-margin lesser-buttons"><%= link_to "delete", post_path(post), method: :delete, class: 'to-the-left' %></span>
           <% end %>
         </div>
       </div>

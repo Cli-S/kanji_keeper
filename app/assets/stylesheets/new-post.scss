@@ -19,7 +19,7 @@ body {
   box-shadow: 0 0 15px rgba(66, 66, 66, 0.09);
   margin: 0 auto;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border-radius: 20px;
 }
 
@@ -54,7 +54,10 @@ body {
     background: #313840;
     border: 1px solid;
     color: white;
-    padding: 5px;
+    padding: 1px;
     width: 200px;
+    &:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
   }
 }

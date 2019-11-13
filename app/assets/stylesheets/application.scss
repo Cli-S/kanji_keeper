@@ -1,6 +1,8 @@
 @import "posts";
 @import "forms";
 @import "new-post";
+@import "user-profile";
+@import "comment-button";
 
 @font-face {
   font-family: 'KanjiStrokeOrder';
@@ -133,17 +135,26 @@ ul {
   font-size: 15px;
 }
 
-.big-nav-button {
-  width: 103px; 
-  color: white;
-  background: #313840;
-  padding: 4px;
-  transition: all 0.2s ease 0s;
-  cursor: pointer;
-  border-radius: 2px;
-  box-shadow: 0px 8px 15px rgba(204, 204, 204, 0.1);
-  a {
-    color: white;
+.cool-btn {
+  background: none;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  letter-spacing: inherit;
+  margin: 1em;
+  padding: 1em 2em;
+  text-transform: inherit;
+  transition: color 1s;
+  font: 700 11px/1 Montserrat, sans-serif;
+  letter-spacing: 0.125em;
+  text-align: center;
+  color: #313840;
+  width: 120px;
+}
+
+.btn-wow {
+  &:hover {
+    color: adjust-hue(#FF768A,0);
+    transform: translateY(-2px);
   }
 }
 
