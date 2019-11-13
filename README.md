@@ -4,9 +4,9 @@
 
 Features
 
-* Basic CRUD app with a favoriting feature for posts
+* Basic CRUD app with a favoriting and privating feature for posts
 
-* Front-end: HTML, CSS, JavaScript, Bootstrap 4
+* Front-end: HTML, CSS, JavaScript, Bootstrap 4, animate.css
 
 * Back-end: Ruby on Rails
 

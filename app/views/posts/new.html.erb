@@ -4,8 +4,8 @@
     <%= form_for(@post) do |f| %>
       <ul>
         <div class="jap-eng">
-          <li><%= f.text_field :expression, :placeholder => "Japanese expression", :required => true, :class => "new-post-margin new-post-each" %></li>
-          <li><%= f.text_field :meaning, :placeholder => "English meaning", :required => true, :class => "new-post-margin new-post-each" %></li>
+          <li><%= f.text_field :expression, :placeholder => "japanese expression", :required => true, :class => "new-post-margin new-post-each" %></li>
+          <li><%= f.text_field :meaning, :placeholder => "english meaning", :required => true, :class => "new-post-margin new-post-each" %></li>
         </div>
         <li><%= f.text_area :content, :class => "new-post-each big-blog" %></li>
         <div class="additional-info">

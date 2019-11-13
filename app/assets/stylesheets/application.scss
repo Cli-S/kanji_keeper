@@ -26,13 +26,16 @@ body {
 
 .stroke-order {
   font-family: 'KanjiStrokeOrder';
-  font-size: 100px;
+  font-size: 130px;
   margin: 0px;
 }
 
 .logo-font {
   padding: 8px 0 8px 16px;
   font-weight: 700;
+  a {
+    color: #313840;
+  }
 }
 
 a:link {
@@ -58,6 +61,9 @@ ul {
   padding: 9px 20px;
   align-items: center;
   padding-right: 24px;
+  a {
+    color: #313840;
+  }
 }
 
 .cherry-logo {
@@ -121,13 +127,30 @@ ul {
   text-align: center;
   display: flex;
   align-items: center;
-  div {
-    padding: 6px 20px 6px 20px;
-  }
 }
 
 .navbar-post-button-design {
   font-size: 15px;
+}
+
+.big-nav-button {
+  width: 103px; 
+  color: white;
+  background: #313840;
+  padding: 4px;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0px 8px 15px rgba(204, 204, 204, 0.1);
+  a {
+    color: white;
+  }
+}
+
+.big-nav-button:hover {
+  box-shadow: 0px 5px 10px white;
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .main-buttons {
@@ -140,6 +163,10 @@ ul {
   a {
     color: white;
   }
+}
+
+.fa-bars:before {
+  color: #313840;
 }
 
 .button-wrap {
