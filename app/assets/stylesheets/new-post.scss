@@ -42,7 +42,19 @@ body {
   padding-top: 20px;
 }
 
+.photo-input {
+  padding-bottom: 10px;
+}
+
 .new-post-button {
-  width: 50%;
+  width: 44%;
+  margin-top: 10px;
   margin: 0 auto;
+  input {
+    background: #313840;
+    border: 1px solid;
+    color: white;
+    padding: 5px;
+    width: 200px;
+  }
 }

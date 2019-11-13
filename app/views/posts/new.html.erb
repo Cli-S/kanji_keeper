@@ -1,6 +1,6 @@
 <div class="new-post-layout">
   <div class="new-post-card animated bounceIn delay-2s">
-    <h2 class="new-post-header">create a new post</h2>
+    <h2 class="new-post-header animated pulse infinite slow delay-3s">create a new post</h2>
     <%= form_for(@post) do |f| %>
       <ul>
         <div class="jap-eng">
@@ -9,12 +9,12 @@
         </div>
         <li><%= f.text_area :content, :class => "new-post-each big-blog" %></li>
         <div class="additional-info">
-          <li><%= f.file_field :photo %></li>
+          <li class="photo-input"><%= f.file_field :photo %></li>
           <li>Private: <%= f.check_box :private %></li>
         </div>
       </ul>
       <div class="new-post-button">
-        <%= f.submit %>
+        <%= f.submit "create post" %>
       </div>
     <% end %>
   </div>
