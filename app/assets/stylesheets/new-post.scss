@@ -1,11 +1,43 @@
 .new-post-layout {
-  padding: 100px 450px 0;
+/*  padding: 100px 450px 0; */
+}
+
+.new-post-header {
+  padding-bottom: 20px;
   text-align: center;
-  width: 100%;
 }
 
 .new-post-card {
+  width: 600px;
   background-color: white;
   padding: 60px;
   box-shadow: 0 0 15px rgba(66, 66, 66, 0.09);
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.new-post-margin {
+  margin-bottom: 20px;
+  height: 45px;
+}
+
+.new-post-each {
+  width: 400px;
+  border: 2px solid;
+  border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
+}
+
+.big-blog {
+  height: 300px;
+}
+
+.additional-info {
+  padding-top: 20px;
+}
+
+.new-post-button {
+  width: 50%;
+  margin: 0 auto;
 }

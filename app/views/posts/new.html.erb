@@ -1,15 +1,21 @@
 <div class="new-post-layout">
-  <div class="new-post-card">
-    <h2>Create a new post</h2>
+  <div class="new-post-card animated bounceIn delay-2s">
+    <h2 class="new-post-header">create a new post</h2>
     <%= form_for(@post) do |f| %>
       <ul>
-        <li><%= f.text_field :expression, :placeholder => "Japanese expression", :required => true %></li>
-        <li><%= f.text_field :meaning, :placeholder => "English meaning", :required => true %></li>
-        <li><%= f.text_field :content, :placeholder => "Additional comments" %></li>
-        <li><%= f.file_field :photo %></li>
-        <li>Private: <%= f.check_box :private %></li>
+        <div class="jap-eng">
+          <li><%= f.text_field :expression, :placeholder => "Japanese expression", :required => true, :class => "new-post-margin new-post-each" %></li>
+          <li><%= f.text_field :meaning, :placeholder => "English meaning", :required => true, :class => "new-post-margin new-post-each" %></li>
+        </div>
+        <li><%= f.text_area :content, :class => "new-post-each big-blog" %></li>
+        <div class="additional-info">
+          <li><%= f.file_field :photo %></li>
+          <li>Private: <%= f.check_box :private %></li>
+        </div>
       </ul>
-      <%= f.submit %>
+      <div class="new-post-button">
+        <%= f.submit %>
+      </div>
     <% end %>
   </div>
 </div>

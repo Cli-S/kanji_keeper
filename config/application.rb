@@ -17,6 +17,6 @@ module KanjiKeeper
     # the framework and any gems in your application.
     config.action_view.field_error_proc = Proc.new { |html_tag, instance| 
       html_tag
-    }
+    } # because icons in input forms would change when errors came up from registration from built-in wrapper
   end
 end

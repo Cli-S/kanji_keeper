@@ -100,6 +100,7 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+   color: #90cedb;
  }
  
  .right-margin {
@@ -121,8 +122,8 @@
  
  .date-border {
    display: flex;
-   border-radius: 5px;
-   border: 1px solid #949494;
+   border: 1px solid;
+   border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
    padding: 3px 9px;
    font-size: 12px;
    justify-content: flex-end;
