@@ -1,46 +1,35 @@
-<div class="kanji-card">
-  <p><%= @post.user.username %></p>
-  <% before_fav = @post.favorites.find { |fav| fav.user_id == current_user.id }  %>
-  <% if before_fav %>
-    <%= link_to "Unfavorite", post_favorite_path(@post, before_fav, { redirect_to: post_path(@post) }), method: :delete %>
-  <% else %>
-    <%= link_to "Favorite", post_favorites_path(@post, { redirect_to: post_path(@post) }), method: :post %>
-  <% end %>
-  <ul>
-    <li><span class="furigana-card add-furigana"><%= @post.expression %></span></li>
-    <li><%= @post.meaning %></li>
-    <% unless @post.content.blank? %>
-      <li><%= @post.content %></li>
-    <% end %>
-    <% unless @post.photo.blank? %>
-      <li><%= image_tag(@post.photo.to_s) %></li>
-    <% end %>
-  </ul>
-  <% if user_signed_in? && current_user == @post.user %> 
-    <%= link_to "Edit", edit_post_path(@post) %>
-    <%= link_to "Delete", post_path(@post), method: :delete %>
-  <% end %>
-</div>
-<div>
-  <h1>Comments (<%= @post.comments.count %>)</h1>
-  <% @post.comments.each do |comment| %>
-    <%= comment.user.username %>: <br/>
-    <%= comment.content %></li><br/>
-    <% if comment.updated_at != comment.created_at %>
-      <%= comment.created_at.strftime("%d/%m/%Y") %> (edited)
-    <% else %>
-      <%= comment.created_at.strftime("%d/%m/%Y") %>
-    <% end %>
-    <%= link_to "Edit", edit_post_comment_path(@post, comment) %>
-    <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
-    <br/>
-    <br/>
-  <% end %>
-</div>
-<div>
-  <h1>Post a comment</h1>
-  <%= form_for([@post, @comment]) do |f| %>
-    <%= f.text_field :content %>
-    <%= f.submit %>
-  <% end %>
+<div class="home-layout">
+  <div class="all-posts"> 
+    <div class="kanji-card-container">
+      <%= render partial: "card", locals: { post: @post } %>
+    </div>
+  </div>
+  <div class="old-and-new-comments">
+    <div class="post-comments">
+      <h3>Comments (<%= @post.comments.count %>)</h3>
+      <% @post.comments.each do |comment| %>
+        <% unless comment.user.avatar.blank? %>
+            <%= image_tag(comment.user.avatar.to_s, :class => 'avatar') %>
+          <% end %>
+        <%= comment.user.username %>: <br/>
+        <%= comment.content %></li><br/>
+        <% if comment.updated_at != comment.created_at %>
+          <%= comment.created_at.strftime("%d/%m/%Y") %> (edited)
+        <% else %>
+          <%= comment.created_at.strftime("%d/%m/%Y") %>
+        <% end %>
+        <%= link_to "Edit", edit_post_comment_path(@post, comment) %>
+        <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
+        <br/>
+        <br/>
+      <% end %>
+    </div>
+    <div class="post-a-comment">
+      <h3>Post a comment</h3>
+      <%= form_for([@post, @comment]) do |f| %>
+        <%= f.text_field :content %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
 </div>
