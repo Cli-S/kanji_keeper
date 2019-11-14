@@ -6,7 +6,9 @@
     <div class="no-pic-post">
       <div class="top-card-features">
         <div>
-          <% unless post.user.avatar.blank? %>
+          <% if post.user.avatar.blank? %>
+              <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
+          <% else %>
             <%= image_tag(post.user.avatar.to_s, :class => 'avatar') %>
           <% end %>
           <%= post.user.username %>
