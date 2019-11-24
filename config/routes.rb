@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'rooms/show'
   get '/faq', to: 'static_pages#faq'
   get '/about', to: 'static_pages#about'
   devise_for :users
@@ -9,6 +10,8 @@ Rails.application.routes.draw do
   end
   resources :favorites, only: [:index]
   get '/user/:id/posts', to: 'posts#user_posts', as: 'user_posts'
+
+  mount ActionCable.server, at: '/cable'
 =begin 
   (same thing as nested routes)
     resources :posts
