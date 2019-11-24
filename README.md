@@ -6,7 +6,7 @@ Features
 
 * Basic CRUD app with favoriting and privating features for posts
 
-* Front-end: HTML, CSS, JavaScript, Bootstrap 4, animate.css
+* Front-end: HTML, CSS, JavaScript, Bootstrap 4, animate.css, jQuery
 
 * Back-end: Ruby on Rails
 
@@ -22,5 +22,7 @@ Features
 
 * A few gems: CarrierWave for user upload files, Cloudinary for user image storage, Devise for authentication, ...
 
-Many new features to be added soon.
+* Real-time chat: Action Cable integrates full-duplex communications with WebSockets with the rest of the application. Since the connection is persistent, users can submit their messages at the same time and still see their respective messages appear immediately
+
+Many new features to be added soon
 ありがとう！
