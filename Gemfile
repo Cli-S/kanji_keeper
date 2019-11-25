@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.2'
-
+gem 'redis'
 gem 'webpacker'
 gem 'dotenv-rails', groups: [:development, :test] # looks for .env secret file
 gem 'devise'
