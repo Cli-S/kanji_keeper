@@ -4,11 +4,13 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
   devise_for :users
   root 'posts#index'
+  #root 'chat_rooms#index'
   resources :posts do
     resources :comments, only: [:create, :edit, :update, :destroy]
     resources :favorites, only: [:create, :show, :destroy]
   end
   resources :favorites, only: [:index]
+  resources :chat_rooms, only: [:new, :create, :show, :index]
   get '/user/:id/posts', to: 'posts#user_posts', as: 'user_posts'
 
   mount ActionCable.server, at: '/cable'

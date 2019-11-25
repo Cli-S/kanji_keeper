@@ -24,5 +24,5 @@ Features
 
 * Real-time chat: Action Cable integrates full-duplex communications with WebSockets with the rest of the application. Since the connection is persistent, users can submit their messages at the same time and still see their respective messages appear immediately
 
-Many new features to be added soon
+Many new features to be added soon.
 ありがとう！

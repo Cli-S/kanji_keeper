@@ -1,0 +1,7 @@
+<h1>Create a chat room</h1>
+<%= form_for @chat_room do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, autofocus: true %>
+
+  <%= f.submit "Add!" %>
+<% end %>
