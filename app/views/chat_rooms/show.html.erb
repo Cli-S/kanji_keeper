@@ -1,3 +1,11 @@
+<%# form_for(@chatroom_users) do |f| %>
+  <%# f.email_field :email, :placeholder => "invite a user", :required => true %>
+  <%# f.submit "add user to chat room" %>
+<%# end %>
+<%= form_with(url: "chat_rooms/chat_room_access", method: "post") do %>
+  <%= text_field_tag(:email) %>
+  <%= submit_tag("Add user by email") %>
+<% end %>
 <h1><%= @chat_room.title %></h1>
 <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
   <%= render @chat_room.messages %>

@@ -9,6 +9,7 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def speak(data)
+    current_user.inspect
     current_user.messages.create!(content: data['message'], chat_room_id: data['chat_room_id'])
   end
 end

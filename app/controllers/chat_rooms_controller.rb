@@ -24,6 +24,10 @@ class ChatRoomsController < ApplicationController
     @messages = Message.all
   end
 
+  def chat_room_accesses
+  
+  end
+
   private
 
   def chat_room_params
