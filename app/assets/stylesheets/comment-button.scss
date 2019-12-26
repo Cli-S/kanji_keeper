@@ -1,3 +1,10 @@
+.black-btn {
+  background-color: #313840 !important;
+  color: white !important;
+  width: 25% !important;
+  margin: 0.5em !important;
+}
+
 .theta .btn {
   display: inline-block;
   margin: 6px;
@@ -27,7 +34,7 @@
   width: 100%;
   z-index: -1;
   transform: translate(0.6em, -0.3em);
-  transition: transform 0.2s, background-color 0.2s;
+  transition: transform 0.2s, background-color 0.2s  !important;
 }
 
 .theta .btn-tetrary {
@@ -51,9 +58,9 @@
 .theta .btn-tetrary:active:before {
   transition-duration: 0.1s;
   transform: translate(0, 0);
-  background-color: #FFADBC;
+  background-color: #FFADBC !important;
 }
 
 .theta .btn-tetrary:before {
-  background-color: #FFADBC;
+  background-color: rgba(255, 173, 188, 0.8) !important;
 }

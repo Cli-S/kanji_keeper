@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ChatRoomAccessTest < ActiveSupport::TestCase
+class ChatRoomUsersControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

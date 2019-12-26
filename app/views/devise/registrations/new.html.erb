@@ -24,13 +24,13 @@
           </div>
 
           <div class="field">
-            <div class="user-icon">user icon</div><br />
+            <div class="user-icon">user icon:</div>
             <%= f.file_field :avatar, autofocus: true, :class => "avatar-field-design" %>
           </div>
-
-          <div class="actions">
+          <br />
+          <div class="actions theta">
             <%= render "devise/shared/error_messages", resource: resource %>
-            <%= f.submit "sign up!", :class => 'main-form-button' %>
+            <%= f.submit "sign up", :class => 'btn btn-tetrary black-btn' %>
           </div>
         </div>
       <% end %>

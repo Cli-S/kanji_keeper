@@ -1,7 +1,7 @@
 class ChatRoomsController < ApplicationController
 
   def index
-    @chat_rooms = ChatRoom.all
+    @chat_rooms = current_user.chat_rooms
   end
 
   def new
@@ -9,8 +9,11 @@ class ChatRoomsController < ApplicationController
   end
 
   def create
-    @chat_room = current_user.chat_rooms.build(chat_room_params)
-    if @chat_room.save
+    @chat_room = current_user.chat_rooms.new(chat_room_params)
+    @chat_room.user = current_user
+    @chat_room.chat_room_users.new(user: current_user)
+
+    if @chat_room.save!
       flash[:success] = 'Chat room added!'
       redirect_to chat_rooms_path
     else
@@ -20,12 +23,9 @@ class ChatRoomsController < ApplicationController
 
   def show
     @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
+    @chat_room_user = ChatRoomUser.new
     @message = Message.new
     @messages = Message.all
-  end
-
-  def chat_room_accesses
-  
   end
 
   private

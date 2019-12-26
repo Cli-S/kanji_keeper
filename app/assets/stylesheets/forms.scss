@@ -34,16 +34,15 @@ body#sign-in-body {
 }
 
 .form-field-design {
-  border-radius: 20px;
-  border: none;
   padding: 8px;
-  width: 23%;
-  margin-bottom: 10px;
-  box-shadow: 0px 8px 15px rgba(138, 138, 138, 0.3);
+  width: 25%;
+  margin-bottom: 5px;
+  border: 1px solid;
+  border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
 }
 
 .input-margin {
-  margin: 1em;
+  margin: 0.5em;
 }
 
 .fav-icon {
@@ -99,7 +98,7 @@ body#sign-in-body {
   padding: 20px;
   text-transform: uppercase;
   a {
-    color: #969696;
+    color: #90cedb;
     font-weight: 600;
     font-size: 12px;
   }
