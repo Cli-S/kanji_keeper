@@ -56,6 +56,7 @@
    background-size: cover;
    background-position: center;
    height: 300px;
+   color: white;
  }
  
  .top-card-features {
@@ -82,8 +83,14 @@
    }
  }
  
+ .italic-meaning {
+    font-style: italic;
+ }
+
  .card-content-alignment {
+   padding: 20px;
    text-align: right;
+   white-space: pre-wrap;
  }
  
  .bottom-card-padding {

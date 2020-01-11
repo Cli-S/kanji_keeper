@@ -24,7 +24,7 @@
       </div>
     </div>
   <% else %>
-  <div class="top-card" div style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= post.photo.to_s %>);">
+  <div class="top-card" div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= post.photo.to_s %>);">
     <div class="top-card-features">
       <div>
         <% unless post.user.avatar.blank? %>
@@ -54,9 +54,9 @@
     <div class="inner-card">
       <ul>
         <li class="big-kanji"><span class="furigana-card add-furigana"><%= post.expression %></span></li>
-        <li><%= post.meaning %></li>
+        <li class="italic-meaning"><%= post.meaning %></li>
         <% unless post.content.blank? %>
-          <li class="card-content-alignment"><%= post.content %></li>
+          <p class="card-content-alignment"><%= post.content %></p>
         <% end %>
       </ul>
     </div>

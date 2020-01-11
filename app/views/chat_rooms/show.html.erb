@@ -4,7 +4,7 @@
 <%# end %>
 
 <%= form_for([@chat_room, @chat_room_user]) do |f| %>
-  <%= select_tag "user_id", options_from_collection_for_select(User.all_except(current_user), "id", "username") %>
+  <%= select_tag "user_id", options_from_collection_for_select(User.all_except(current_user), "id", "username") %> 
   <%= f.submit "invite to chat" %>
 <% end %>
 
