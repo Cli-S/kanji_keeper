@@ -1,11 +1,16 @@
-<div class="my-posts-layout">
-  <h3 class="my-posts-header">
-    my posts (work in progress page)
-  </h3>
-  <% @posts.each do |post| %>
-    <div class="kanji-card-container">
-      <%= render partial: "card", locals: { post: post } %>
-    </div>
-  <% end %>
-    <%= link_to 'favorites', favorites_path %>
+<div class="profile-layout">
+  <div class="profile-sidebar">
+    <div>hi</div>
+  </div>
+  <div class="profile-posts-layout">
+    <h3 class="my-posts-header">
+      my posts (work in progress page)
+    </h3>
+    <% @posts.each do |post| %>
+      <div class="kanji-card-container">
+        <%= render partial: "card", locals: { post: post } %>
+      </div>
+    <% end %>
+      <%= link_to 'favorites', favorites_path %>
+  </div>
 </div>
