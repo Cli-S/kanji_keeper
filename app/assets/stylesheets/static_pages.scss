@@ -1,3 +1,33 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+mark {
+  background-color: #FDBBC7;
+}
+
+#faq-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#faq-content {
+  flex: 0 0 120px;
+}
+
+#faq-content h3 {
+  line-height: 2.5em;
+}
+
+.faq-line-height {
+  margin-top: 50px;
+}
+
+#cli-mushroom {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  width: 15%;
+}
