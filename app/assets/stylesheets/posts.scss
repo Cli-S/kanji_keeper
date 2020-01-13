@@ -158,3 +158,34 @@
    height: 35px;
    border-radius: 50%;
  }
+
+ // mobile
+
+ @media screen and (max-width: 800px) {
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .page-wrapper div:first-child {
+    order: 2;
+  }
+
+  .home-layout {
+    margin-top: 30px !important;
+  }
+
+  .sidebar-layout {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 50%; 
+  }
+
+  #daily-kanji {
+    margin-left: 0 !important;
+  }
+
+  .stroke-order {
+    font-size: 100px !important;
+  }
+}
