@@ -156,6 +156,10 @@ ul {
 
 #kanji-title {
   padding-left: 22px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 28px;
+  }
 }
 
 #under-kanji-title {

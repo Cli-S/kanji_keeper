@@ -80,7 +80,7 @@
   justify-content: space-between;
 
   @media screen and (max-width: 800px) {
-    flex-direction: row-reverse;
+    flex-direction: row, row-reverse;
   }
 }
  
@@ -140,12 +140,11 @@
 
   @media screen and (max-width: 390px) {
     font-size: 12px;
-    margin-left: 13px;
   }
 
   @media screen and (max-width: 800px) {
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: center, space-between;
   }
 }
  
