@@ -33,6 +33,10 @@ body {
   font-family: 'KanjiStrokeOrder';
   font-size: 130px;
   margin: 0px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 90px;
+  }
 }
 
 .logo-font {
@@ -114,10 +118,21 @@ ul {
   display: flex;
   max-width: 1000px;
   margin: 45px auto 0 auto;
+
+  @media screen and (max-width: 800px) {
+    margin-top: 30px;
+  }
 }
 
 #daily-kanji {
+  margin-bottom: 60px;
   margin-left: 85px;
+  position: sticky;
+  top: 50px;
+
+  @media screen and (max-width: 800px) {
+    margin-left: 0;
+  }
 }
 
 #kanji-title {
