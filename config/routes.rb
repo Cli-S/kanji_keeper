@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'rooms/show'
-  get '/faq', to: 'static_pages#faq'
-  get '/about', to: 'static_pages#about'
+  #get '/faq', to: 'static_pages#faq'
+  get '/contact', to: 'static_pages#contact'
+  #get '/about', to: 'static_pages#about'
   devise_for :users, controllers: { sessions: "users/sessions" }
   root 'posts#index'
   #root 'chat_rooms#index'
