@@ -45,6 +45,10 @@ body {
   a {
     color: #313840;
   }
+
+  @media screen and (max-width: 800px) {
+    padding: 0;
+  }
 }
 
 a:link {
@@ -73,6 +77,10 @@ ul {
   a {
     color: #313840;
   }
+
+  @media screen and (max-width: 486px) {
+    white-space: nowrap;
+  }
 }
 
 .cherry-logo {
@@ -97,6 +105,10 @@ ul {
 
 .nav-right-space {
   width: 115px;
+
+  @media screen and (max-width: 800px) {
+    width: 70px;
+  }
 }
 
 .nav-hack {

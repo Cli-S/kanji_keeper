@@ -4,6 +4,13 @@
 
 .all-posts {
   width: 60%;
+
+  @media screen and (max-width: 800px) {
+    margin: 0 auto;
+    max-width: 600px;
+    white-space: nowrap;
+    width: 100%;
+  }
  }
  
  .sidebar-layout {
