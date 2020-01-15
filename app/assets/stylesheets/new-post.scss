@@ -3,6 +3,14 @@ body {
   background-repeat: repeat;
 }
 
+html, body {
+  @media screen and (max-width: 360px) {
+    margin: 0;
+    padding: 0;
+    width: max-content;
+  }
+}
+
 .new-post-header {
   padding-bottom: 20px;
   text-align: center;
@@ -17,6 +25,17 @@ body {
   margin-top: 20px;
   margin-bottom: 30px;
   border-radius: 20px;
+  * {
+    box-sizing: border-box;
+  }
+  @media screen and (max-width: 650px) {
+    margin: 0 auto;
+    text-align: center;
+    width: 95%;
+    ul {
+      padding: 0;
+    } 
+  }
 }
 
 .new-post-margin {
@@ -28,6 +47,13 @@ body {
   width: 400px;
   border: 2px solid;
   border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
+
+  @media screen and (max-width: 650px) {
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;
+    width: 95%; 
+  }
 }
 
 .big-blog {
@@ -36,14 +62,18 @@ body {
 
 .additional-info {
   padding-top: 20px;
+
+  @media screen and (max-width: 650px) {
+    text-align: center;
+  }
 }
 
 .photo-input {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .new-post-button {
-  width: 44%;
+  width: 50%;
   margin-top: 10px;
   margin: 0 auto;
   input {
@@ -51,7 +81,7 @@ body {
     border: 1px solid;
     color: white;
     padding: 1px;
-    width: 200px;
+    width: 100%;
     &:hover {
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
