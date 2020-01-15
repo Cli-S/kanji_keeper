@@ -1,21 +1,12 @@
 .black-btn {
   background-color: #313840 !important;
   color: white !important;
-  width: 350px !important;
-  margin: 0.5em !important;
-
-  @media screen and (max-width: 800px) {
-    width: 350px !important;
-  }
-
-  @media screen and (max-width: 1050px) {
-    width: 350px !important;
-  }
+  width: 100% !important;
+//  margin: 0.5em !important;
 }
 
 .theta .btn {
   display: inline-block;
-  margin: 6px;
   font-size: inherit;
   line-height: 1;
   padding: 0.7em 1.4em;

@@ -5,10 +5,6 @@ body#sign-in-body {
 .field {
   margin: 0 auto;
   position: relative;
-  width: 350px;
-  input {
-    text-align: center;
-  }
 }
 
 :focus {
@@ -24,10 +20,14 @@ body#sign-in-body {
 
 .forms-layout {
   padding: 80px 40px 0 40px;
+  max-width: 396px;
+  margin: 0 auto;
 }
 
 .fresh-forms-layout {
   padding: 45px 30px 0 30px;
+  max-width: 396px;
+  margin: 0 auto;
 }
 
 .avatar-field-design {
@@ -38,18 +38,15 @@ body#sign-in-body {
 
 .form-field-design {
   padding: 8px;
-  width: 350px;
+  width: 100%;
   margin-bottom: 15px;
   border: 1px solid;
   border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
-
-  @media screen and (max-width: 800px) {
-    width: 350px;
-  }
-
-  @media screen and (max-width: 1050px) {
-    width: 350px !important;
-  }
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    }
 }
 
 .input-margin {
@@ -65,7 +62,8 @@ body#sign-in-body {
   font-size: 14px;
   opacity: 0.5;
   top: 13px;
-  left: 30px;
+  left: 20px;
+  padding-right: 15px;
 }
 
 .fav-icon:before {
@@ -96,11 +94,6 @@ body#sign-in-body {
 	overflow: hidden;
 	position: absolute;
   z-index: -1;
-}
-
-input {
-  box-sizing: border-box;
-  width: 350px;
 }
 
 ::placeholder {
