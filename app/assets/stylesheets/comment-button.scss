@@ -1,8 +1,16 @@
 .black-btn {
   background-color: #313840 !important;
   color: white !important;
-  width: 25% !important;
+  width: 350px !important;
   margin: 0.5em !important;
+
+  @media screen and (max-width: 800px) {
+    width: 350px !important;
+  }
+
+  @media screen and (max-width: 1050px) {
+    width: 350px !important;
+  }
 }
 
 .theta .btn {

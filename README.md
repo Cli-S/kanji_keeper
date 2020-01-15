@@ -24,5 +24,7 @@ Features
 
 * Real-time chat: Action Cable integrates full-duplex communications with WebSockets with the rest of the application. Since the connection is persistent, users can submit their messages at the same time and still see their respective messages appear immediately
 
+* *Kanji Keeper* is designed with responsive web design, which adapts the layout to the viewing environment by using CSS3 media queries
+
 Many new features to be added soon.
 ありがとう！
