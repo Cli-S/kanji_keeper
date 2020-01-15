@@ -47,6 +47,7 @@ body#sign-in-body {
     width: 100%;
     text-align: center;
     }
+  text-align: center;
 }
 
 .input-margin {
@@ -80,11 +81,15 @@ body#sign-in-body {
 .browser-avatar-label { // fake hidden button
   background-color: white;
   border: 1.5px dashed pink;
+  cursor: pointer;
+  font-weight: bold;
   // border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
   height: 50px;
   margin-top: 10px;
+  margin-bottom: 10px;
   padding: 10px;
   width: 50px;
+  z-index: 1;
 }
 
 .hidden-icon-input {

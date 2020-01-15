@@ -1,16 +1,23 @@
 .edit-user-account {
+  max-width: 396px;
+  margin: 0 auto;
+  padding: 45px 30px 0 30px;
   text-align: center;
 }
 
 .edit-account-header {
-  margin: 15px;
+  margin: 10px 10px 35px 10px;
 }
 
 .edit-account-form {
-  margin: 10px;
+  margin-bottom: 20px;
 }
 
 .cancel-account {
   margin: 30px;
   padding: 10px;
+}
+
+.needs-bottom-margin {
+  margin-bottom: 30px;
 }

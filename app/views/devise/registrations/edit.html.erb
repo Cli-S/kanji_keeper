@@ -33,8 +33,10 @@
     </div>
 
     <div class="field">
-      <div class="user-icon">user icon:</div>
-      <%= f.file_field :avatar, autofocus: true, :class => 'avatar-field-design' %>
+      <div class="user-icon">select a profile image:</div>
+      <label class="browser-avatar-label needs-bottom-margin">
+        <%= f.file_field :avatar, autofocus: true, :class => 'avatar-field-design hidden-icon-input' %>+
+      </label>
     </div>
 
     <div class="actions theta">

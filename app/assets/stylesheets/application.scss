@@ -79,7 +79,7 @@ ul {
   display: flex;
   justify-content: space-between;
   font-size: 25px;  
-  padding: 9px 36px 9px 20px;
+  padding: 15px 36px 9px 36px;
   align-items: center;
   a {
     color: #313840;
@@ -252,7 +252,26 @@ ul {
   text-align:center;
 }
 
+#contact {
+  a {
+    color: #313840;
+    cursor: pointer;;
+  }
+  background-color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+}
+
 .inner-subscription {
+  margin-bottom: 5px;
+  // margin-bottom: 25px;
+}
+
+.contact-link {
   margin-bottom: 25px;
 }
 
