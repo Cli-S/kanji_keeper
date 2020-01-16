@@ -1,3 +1,62 @@
 // Place all the styles related to the ChatRooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#chat-room-layout {
+  display: flex;
+}
+
+#chat-rooms-header {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#chat-list-and-box {
+  a {
+    color: #313840;
+    font-weight: bold;
+  }
+  background-color: white;
+  border: 1px solid #F5F5F5;
+  box-shadow: 0 0 15px rgba(66, 66, 66, 0.1);
+  //box-shadow: 0 0 15px rgba(66, 66, 66, 0.2);
+  // background-color: #FFBDC9;
+  //background-image: image-url("graph-paper.svg");
+  //background-repeat: repeat;
+  width: 35%;
+  margin-left: 50px;
+  text-align: center;
+}
+
+#new-chat-room-link {
+  margin: 20px; 
+  padding: 10px;
+  // border: 1.5px dashed #313840;
+  // border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
+}
+
+#chat-room-list {
+}
+
+.individual-chats {
+  //border-bottom: 1.5px dashed #313840;
+  // border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
+  margin: 20px;
+  padding: 20px;
+}
+
+#chat-box {
+  background-color: white;
+  border: 1px solid #F5F5F5;
+  box-shadow: 0 0 15px rgba(66, 66, 66, 0.1);
+  margin-right: 50px;
+  padding: 50px;
+  width: 100%;
+}
+
+#chat-messages-container {
+  // border: 1px solid;
+  height: 100%;
+  // border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
+  padding: 25px;
+}

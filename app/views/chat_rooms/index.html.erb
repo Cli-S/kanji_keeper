@@ -1,5 +1,14 @@
-<h1>All chat rooms</h1>
-<p><%= link_to 'new chat room', new_chat_room_path %></p>
-<ul>
-  <%= render @chat_rooms %>
-</ul>
+<h1 id="chat-rooms-header">chat rooms</h1>
+<div id="chat-room-layout">
+  <div id="chat-list-and-box">
+    <div id="new-chat-room-link">
+      <%= link_to 'new chat room', new_chat_room_path %>
+    </div>
+    <div id="chat-room-list">
+      <%= render @chat_rooms %>
+    </div>
+  </div>
+  <div id="chat-box">
+    <div id="chat-messages-container">test</div>
+  </div>
+</div>
