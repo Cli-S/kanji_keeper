@@ -18,13 +18,14 @@
   }
   background-color: white;
   border: 1px solid #F5F5F5;
-  box-shadow: 0 0 15px rgba(66, 66, 66, 0.1);
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
   //box-shadow: 0 0 15px rgba(66, 66, 66, 0.2);
   // background-color: #FFBDC9;
   //background-image: image-url("graph-paper.svg");
   //background-repeat: repeat;
   width: 35%;
-  margin-left: 50px;
+  margin-left: 100px;
   text-align: center;
 }
 
@@ -48,8 +49,9 @@
 #chat-box {
   background-color: white;
   border: 1px solid #F5F5F5;
-  box-shadow: 0 0 15px rgba(66, 66, 66, 0.1);
-  margin-right: 50px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-right: 100px;
   padding: 50px;
   width: 100%;
 }
