@@ -26,7 +26,10 @@
   //background-repeat: repeat;
   width: 35%;
   margin-left: 100px;
-  text-align: center;
+  text-align: left;
+  ul {
+    padding: 0;
+  }
 }
 
 #new-chat-room-link {
@@ -46,19 +49,33 @@
   padding: 20px;
 }
 
-#chat-box {
+#chat-box-and-type-here {
   background-color: white;
   border: 1px solid #F5F5F5;
-  border-bottom-right-radius: 20px;
+  // border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   margin-right: 100px;
-  padding: 50px;
-  width: 100%;
+  // padding: 50px 50px 0 25px;
+  position: relative;
+  width: 100%; 
+}
+
+#chat-box {
 }
 
 #chat-messages-container {
   // border: 1px solid;
   height: 100%;
   // border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
-  padding: 25px;
+  padding: 25px 25px 0 25px;
+}
+
+#chat-type-here {
+  background-color: red;
+  bottom: 0;
+  border-bottom-right-radius: 20px;
+  height: 15%;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
 }

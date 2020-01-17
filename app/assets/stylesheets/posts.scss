@@ -77,10 +77,6 @@
   padding: 25px 58px 0px 40px;
   display: flex;
   justify-content: space-between;
-
-  @media screen and (max-width: 800px) {
-    flex-direction: row, row-reverse;
-  }
 }
  
 .lock-margin {
@@ -202,12 +198,12 @@
 
  // mobile
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 801px) {
   .page-wrapper {
     display: flex;
     flex-direction: column;
   }
-  .page-wrapper div:first-child {
+  .home-layout div:first-child {
     order: 2;
   }
 }

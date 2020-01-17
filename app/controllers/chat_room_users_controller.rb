@@ -10,4 +10,9 @@ class ChatRoomUsersController < ApplicationController
 
     redirect_to chat_room_path(@chat_room)
   end
+
+  def destroy 
+    @chat_room_user = @chat_room.chat_room_users.where(user_id: current_user.id).destroy_all
+    redirect_to chat_rooms_path
+  end
 end

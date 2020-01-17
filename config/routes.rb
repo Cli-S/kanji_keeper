@@ -11,8 +11,11 @@ Rails.application.routes.draw do
     resources :favorites, only: [:create, :show, :destroy]
   end
   resources :favorites, only: [:index]
-  resources :chat_rooms, only: [:new, :create, :show, :index] do
-    resources :chat_room_users, only: [:create]
+  #resources :chat_rooms, only: [:new, :create, :show, :index] do
+    #resources :chat_room_users, only: [:create]
+  #end
+  resources :chat_rooms do
+    resource :chat_room_users
   end
   get '/user/:id/posts', to: 'posts#user_posts', as: 'user_posts'
 

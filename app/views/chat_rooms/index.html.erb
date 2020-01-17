@@ -5,10 +5,28 @@
       <%= link_to 'new chat room', new_chat_room_path %>  <i class="fas fa-plus-circle"></i>
     </div>
     <div id="chat-room-list">
-      <%= render @chat_rooms %>
+      <% @chat_rooms.each do |chat_room| %>
+      <div class="individual-chats">
+      <ul>
+        <li><%= link_to "#{chat_room.title}", chat_room %></li>
+        <%# link_to "#{chat_room.title}", chat_room_path(chat_room) %>
+        <li>
+          <%= link_to 'edit', edit_chat_room_path(chat_room) %>
+          <%= link_to 'destroy', chat_room, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'join', chat_room_chat_room_users_path(chat_room), method: :post %>
+          <%= link_to 'leave', chat_room_chat_room_users_path(chat_room), method: :delete %>
+        </li>
+      </ul>
+      </div>
+      <% end %>
     </div>
   </div>
-  <div id="chat-box">
-    <div id="chat-messages-container">test</div>
+  <div id="chat-box-and-type-here">
+    <div id="chat-box">
+      <div id="chat-messages-container">
+        <%=  %>
+      </div>
+    </div>
+    <div id="chat-type-here"></div>
   </div>
 </div>
