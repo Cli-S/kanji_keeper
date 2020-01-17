@@ -2,7 +2,7 @@ class ChatRoomUsersController < ApplicationController
   def create
     @chat_room = ChatRoom.find(params[:chat_room_id])
     @user = User.find(params[:user_id])
-    @chat_room_user = ChatRoomUser.new(user: @user, chat_room: @chat_room)
+    @chat_room_user = ChatRoomUser.new(user: @user, chat_room: @chat_room).first_or_create
 
     if !@chat_room_user.save
       flashes[:alert] = "Invalid chat room user, please contact Cli if you think this is a mistake."

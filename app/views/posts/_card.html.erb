@@ -54,7 +54,7 @@
     <div class="inner-card">
       <ul>
         <li class="big-kanji"><span class="furigana-card add-furigana"><%= post.expression %></span></li>
-        <li class="italic-meaning"><%= post.meaning %></li>
+        <li class="italic-meaning">"<%= post.meaning %>"</li>
         <% unless post.content.blank? %>
           <p class="card-content-alignment"><%= post.content %></p>
         <% end %>
