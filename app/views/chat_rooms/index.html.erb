@@ -1,21 +1,20 @@
 <h1 id="chat-rooms-header">chat rooms</h1>
 <div id="chat-room-layout">
   <div id="chat-list-and-box">
-    <div id="new-chat-room-link">
-      <%= link_to 'new chat room', new_chat_room_path %>  <i class="fas fa-plus-circle"></i>
+    <div id="chat-list-top-bar">
+      <div>
+        <%= link_to 'kanji keeper chat', '#' %>
+      </div>
+      <div id="new-chat-room-link">
+        <%= link_to 'new chat', new_chat_room_path %>  <i class="fas fa-plus-circle"></i>
+      </div>
     </div>
     <div id="chat-room-list">
-      <% @chat_rooms.each do |chat_room| %>
+      <% current_user.chat_rooms.each do |chat_room| %>
       <div class="individual-chats">
       <ul>
         <li><%= link_to "#{chat_room.title}", chat_room %></li>
         <%# link_to "#{chat_room.title}", chat_room_path(chat_room) %>
-        <li>
-          <%= link_to 'edit', edit_chat_room_path(chat_room) %>
-          <%= link_to 'destroy', chat_room, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <%= link_to 'join', chat_room_chat_room_users_path(chat_room), method: :post %>
-          <%= link_to 'leave', chat_room_chat_room_users_path(chat_room), method: :delete %>
-        </li>
       </ul>
       </div>
       <% end %>

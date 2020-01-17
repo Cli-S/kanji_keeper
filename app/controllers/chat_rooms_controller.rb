@@ -33,6 +33,18 @@ class ChatRoomsController < ApplicationController
     @messages = Message.all
   end
 
+  def edit
+
+  end
+
+  def destroy
+    @chat_room_owner = ChatRoom.find(params[:id]).user_id
+    if current_user.id == ChatRoom.find(params[:id]).user_id
+      @chat_room = ChatRoom.find(params[:id])
+      @chat_room.destroy!
+    end
+  end
+
   private
 
   def chat_room_params
