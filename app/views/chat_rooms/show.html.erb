@@ -1,12 +1,29 @@
-<%# form_for(@chat_room_users) do |f| %>
-  <%# f.email_field :email, :placeholder => "invite a user", :required => true %>
-  <%# f.submit "add user to chat room" %>
-<%# end %>
+<div id="public-chat-layout">
+  <div id="public-chat-online">
+    <div></div>
+  </div>
+  <div id="public-chat-messages">
+    <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+      <%= render @chat_room.messages %>
+    </div>
+  </div>
+  <div id="public-chat-type-here">
+    <form>
+      <label>Say something:</label><br/>
+      <input type="text" data-behavior="room_speaker">
+    </form>
+  </div>
+</div>
+
+<!-- original
+
 <div>
   <%= link_to 'edit', edit_chat_room_path(@chat_room) %>
-  <%= link_to 'leave', chat_room_chat_room_users_path(@chat_room), method: :delete %>
+  <% if current_user.id != ChatRoom.find(params[:id]).user_id%>
+    <%= link_to 'leave', chat_room_chat_room_users_path(@chat_room), method: :delete %>
+  <% end %>
   <% if current_user.id == ChatRoom.find(params[:id]).user_id %>
-    <%= link_to 'destroy', @chat_room, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'destroy', @chat_room, method: :delete, data: { confirm: 'This chat will be permanently deleted for all users in it. Are you sure?' } %>
   <% end %>
   <%# link_to 'join', chat_room_chat_room_users_path(chat_room), method: :post %>
 </div>
@@ -24,3 +41,14 @@
   <label>Say something:</label><br/>
   <input type="text" data-behavior="room_speaker">
 </form>
+
+-->
+
+<!-- fluff
+
+<%# form_for(@chat_room_users) do |f| %>
+  <%# f.email_field :email, :placeholder => "invite a user", :required => true %>
+  <%# f.submit "add user to chat room" %>
+<%# end %>
+
+--> 

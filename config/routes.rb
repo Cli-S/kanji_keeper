@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: "users/sessions" }
   root 'posts#index'
   #root 'chat_rooms#index'
+  #root :to => 'chat_rooms#show', :id => '36', as: 'chat'
+  get 'chat' => 'chat_rooms#show', :defaults => {:id => 3}
   resources :posts do
     resources :comments, only: [:create, :edit, :update, :destroy]
     resources :favorites, only: [:create, :show, :destroy]
@@ -16,6 +18,7 @@ Rails.application.routes.draw do
   #end
   resources :chat_rooms do
     resource :chat_room_users
+    resources :messages
   end
   get '/user/:id/posts', to: 'posts#user_posts', as: 'user_posts'
 
