@@ -1,10 +1,10 @@
-<div class="message">
-  <p>
+<div id="public-message" class="message">
+  <div>
     <% if message.user.avatar.blank? %>
       <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
     <% else %>
       <%= image_tag(message.user.avatar.to_s, :class => 'avatar') %>
     <% end %>
     <%= message.user.username %>: <%= message.content %><br/><%= message.created_at %>
-  </p>
+  </div>
 </div>

@@ -1,0 +1,45 @@
+#public-chat-layout {
+  display: flex;
+  height: 600px;
+  margin-top: 50px;
+}
+
+#public-chat-online{
+  background-color: red;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  height: 100%;
+  margin-left: 150px;
+  padding: 30px;
+  ul {
+    padding: 0;
+  }
+  width: 30%;
+}
+
+#public-messages-and-type {
+  background-color: pink;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 100%;
+  margin-right: 150px;
+  position: relative;
+  width: 100%;
+}
+
+#public-message {
+
+}
+
+#public-chat-messages {
+  padding: 30px;
+}
+
+#public-chat-type-here {
+  background-color: white;
+  border-bottom-right-radius: 20px;
+  bottom: 0;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+}

@@ -1,17 +1,23 @@
 <div id="public-chat-layout">
   <div id="public-chat-online">
-    <div></div>
+  <ul>
+    <li>Cli</li>
+    <li>Hoinkle</li>
+    <li>Handa</li>
+  </ul>
   </div>
-  <div id="public-chat-messages">
-    <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-      <%= render @chat_room.messages %>
+  <div id="public-messages-and-type">
+    <div id="public-chat-messages">
+      <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+        <%= render @chat_room.messages %>
+      </div>
     </div>
-  </div>
-  <div id="public-chat-type-here">
-    <form>
-      <label>Say something:</label><br/>
-      <input type="text" data-behavior="room_speaker">
-    </form>
+    <div id="public-chat-type-here">
+      <form>
+        <label>Say something:</label><br/>
+        <input type="text" data-behavior="room_speaker">
+      </form>
+    </div>
   </div>
 </div>
 
