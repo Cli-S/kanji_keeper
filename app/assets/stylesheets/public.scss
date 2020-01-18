@@ -14,7 +14,7 @@
   ul {
     padding: 0;
   }
-  width: 30%;
+  width: 25%;
 }
 
 #public-messages-and-type {
@@ -23,6 +23,7 @@
   border-bottom-right-radius: 20px;
   height: 100%;
   margin-right: 150px;
+  overflow-x:hidden;
   position: relative;
   width: 100%;
 }
@@ -32,7 +33,6 @@
 }
 
 #public-chat-messages {
-  padding: 30px;
 }
 
 #public-chat-type-here {
@@ -42,4 +42,12 @@
   padding: 20px;
   position: absolute;
   width: 100%;
+}
+
+.individual-public-message {
+  background-color: white;
+  max-width: inherit;
+  padding: 20px;
+  width: 100%;
+  word-wrap:break-word;
 }

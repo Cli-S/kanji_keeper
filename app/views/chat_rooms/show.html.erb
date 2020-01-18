@@ -1,10 +1,15 @@
 <div id="public-chat-layout">
   <div id="public-chat-online">
-  <ul>
-    <li>Cli</li>
-    <li>Hoinkle</li>
-    <li>Handa</li>
-  </ul>
+    <% @user.each do |user| %>
+    <div id="public-user-info">
+    <% if user.avatar.blank? %>
+      <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
+    <% else %>
+      <%= image_tag(user.avatar.to_s, :class => 'avatar') %>
+    <% end %>
+      <%= user.username %>
+    </div>
+    <% end %>
   </div>
   <div id="public-messages-and-type">
     <div id="public-chat-messages">

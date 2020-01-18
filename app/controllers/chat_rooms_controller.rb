@@ -31,6 +31,8 @@ class ChatRoomsController < ApplicationController
     @chat_room_user = ChatRoomUser.new
     @message = Message.new
     @messages = Message.all
+
+    @user = User.all
   end
 
   def edit

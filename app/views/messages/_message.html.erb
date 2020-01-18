@@ -1,10 +1,17 @@
 <div id="public-message" class="message">
-  <div>
+  <div class="individual-public-message">
     <% if message.user.avatar.blank? %>
       <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
     <% else %>
       <%= image_tag(message.user.avatar.to_s, :class => 'avatar') %>
     <% end %>
-    <%= message.user.username %>: <%= message.content %><br/><%= message.created_at %>
+    <%= message.user.username %>: <%= message.content %>
+    <div id="chat-date-time-format">
+      <% if message.created_at.to_date == Date.current %>
+        <div><%= message.created_at.strftime("Today at %l:%M %p") %></div>
+      <% else %>
+        <div><%= message.created_at.strftime("%m/%d/%Y") %></div>
+      <% end %>
+    </div>
   </div>
 </div>
