@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'posts#index'
   #root 'chat_rooms#index'
   #root :to => 'chat_rooms#show', :id => '36', as: 'chat'
-  get 'chat' => 'chat_rooms#show', :defaults => {:id => 36}
+  get 'chat' => 'chat_rooms#show', :defaults => {:id => 37}
   resources :posts do
     resources :comments, only: [:create, :edit, :update, :destroy]
     resources :favorites, only: [:create, :show, :destroy]

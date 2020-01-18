@@ -1,3 +1,4 @@
+<h2 id="public-chat-header">kanji keeper chat</h2>
 <div id="public-chat-layout">
   <div id="public-chat-online">
     <% @user.each do |user| %>
@@ -19,8 +20,8 @@
     </div>
     <div id="public-chat-type-here">
       <form>
-        <label>Say something:</label><br/>
-        <input type="text" data-behavior="room_speaker">
+        <label></label>
+        <input type="text" data-behavior="room_speaker" id="public-text-box">
       </form>
     </div>
   </div>

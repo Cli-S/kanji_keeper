@@ -1,11 +1,17 @@
+#public-chat-header {
+  font-weight: bold;
+  text-align: center;
+}
+
 #public-chat-layout {
   display: flex;
   height: 600px;
-  margin-top: 50px;
+  margin-top: 2%;
 }
 
 #public-chat-online{
-  background-color: red;
+  background-color: white;
+  border-right: 1.5px solid pink;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
   height: 100%;
@@ -18,14 +24,14 @@
 }
 
 #public-messages-and-type {
-  background-color: pink;
+  background-color: white;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   height: 100%;
   margin-right: 150px;
   overflow-x:hidden;
-  position: relative;
   width: 100%;
+  position: relative;
 }
 
 #public-message {
@@ -33,12 +39,27 @@
 }
 
 #public-chat-messages {
+  
+}
+
+.flexy { // user image, name, and date
+  display:flex;
+}
+
+.rowy {
+  
 }
 
 #public-chat-type-here {
   background-color: white;
   border-bottom-right-radius: 20px;
-  bottom: 0;
+  width: 100%;
+}
+
+#public-text-box {
+  background-color: red;
+  border: 0;
+  height: 70px;
   padding: 20px;
   position: absolute;
   width: 100%;
@@ -49,5 +70,9 @@
   max-width: inherit;
   padding: 20px;
   width: 100%;
-  word-wrap:break-word;
+}
+
+#message-content {
+  word-wrap: normal;
+  overflow: hidden;
 }
