@@ -1,6 +1,6 @@
 <div id="public-message" class="message">
   <div class="individual-public-message">
-    <div class="flexy">
+    <div>
       <div id="chat-user-image">
         <% if message.user.avatar.blank? %>
           <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
@@ -18,9 +18,9 @@
             <div><%= message.user.username %> <%= message.created_at.strftime("%m/%d/%Y") %> </div>
           <% end %>
         </div>
-        <div id="message-content">
+        <p id="message-content">
           <%= message.content %>
-        </div>
+        </p>
       </div>
     </div>
   </div>
