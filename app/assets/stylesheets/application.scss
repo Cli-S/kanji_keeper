@@ -59,6 +59,10 @@ html, body {
   @media screen and (max-width: 800px) {
     padding: 0;
   }
+
+  @media screen and (max-width: 425px) {
+    font-size: 20px;
+  }
 }
 
 a:link {
@@ -91,6 +95,18 @@ ul {
     white-space: nowrap;
     padding: 15px 20px 9px 20px;
   }
+
+  @media screen and (max-width: 425px) {
+    padding: 15px 20px 9px 20px;
+  }
+
+  @media screen and (max-width: 380px) {
+    padding: 15px 10px 9px 10px;
+  }
+
+  @media screen and (max-width: 360px) {
+    padding: 15px 36px 9px 36px;
+  }
 }
 
 .cherry-logo {
@@ -102,6 +118,19 @@ ul {
   justify-content: flex-end;
   align-items: center;
   font-size: 15px;
+
+  @media screen and (max-width: 425px) {
+    font-size: 12px
+  }
+}
+
+.chat-icon {
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+.nav-link {
+  padding-bottom: 10px;
 }
 
 .left-nav {
