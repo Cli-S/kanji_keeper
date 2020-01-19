@@ -32,10 +32,14 @@ function hasIdOrNot() {
       }
     });
 
-    function scrollBottom() {
-      return $('#public-chat-messages').scrollTop($('#public-chat-messages')[0].scrollHeight);
-    };    
   }
 }
 
+function scrollBottom() {
+  if (document.querySelector('#public-chat-messages')) {
+    $('#public-chat-messages').scrollTop($('#public-chat-messages')[0].scrollHeight);
+  }
+};  
+
 hasIdOrNot();
+scrollBottom();

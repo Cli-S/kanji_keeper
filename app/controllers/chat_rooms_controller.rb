@@ -30,7 +30,7 @@ class ChatRoomsController < ApplicationController
     @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
     @chat_room_user = ChatRoomUser.new
     @message = Message.new
-    @messages = Message.all
+    @messages = Message.order(created_at: :asc)
 
     @user = User.all
   end

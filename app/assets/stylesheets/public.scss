@@ -82,4 +82,9 @@ p {
 
 #messages {
   height: 500px;
+  // start chat at bottom of page
+  // height: 100%;
+  // display: flex;
+  // flex-direction: column-reverse;
+  // overflow-y: scroll;
 }
