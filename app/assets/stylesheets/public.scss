@@ -48,7 +48,7 @@ html {
 #public-chat-messages {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  height: 500px;
+  height: 475px;
   overflow-y: scroll;
 }
 
@@ -67,30 +67,32 @@ html {
   border: 0;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  height: 70px;
+  height: 125px;
   padding: 20px;
   position: absolute;
   width: 100%;
 }
 
 .individual-public-message {
+  display: flex;
   background-color: pink;
   max-width: inherit;
   padding: 20px;
 }
 .outside-individual-public-message {
-  margin: 20px;
+  margin: 50px;
 }
 
 #message-content {
 }
 
 p {
+  margin: 0;
   word-break: break-all;
 }
 
 #messages {
-  height: 500px;
+  height: 475px;
   // start chat at bottom of page
   // height: 100%;
   // display: flex;
