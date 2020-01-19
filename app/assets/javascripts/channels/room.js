@@ -14,7 +14,8 @@ function hasIdOrNot() {
 
       received(data) {
         // Called when there's incoming data on the websocket for this channel
-        return $('#messages').append(data['message']);
+        $('#messages').append(data['message']);
+        scrollBottom();
       },
 
       speak(message, chat_room_id) {
@@ -30,6 +31,10 @@ function hasIdOrNot() {
         return event.preventDefault();
       }
     });
+
+    function scrollBottom() {
+      return $('#public-chat-messages').scrollTop($('#public-chat-messages')[0].scrollHeight);
+    };    
   }
 }
 
