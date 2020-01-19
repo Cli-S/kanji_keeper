@@ -10,6 +10,10 @@ mark {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 500px) {
+    width: 400px;
+  }
 }
 
 #contact-content {
@@ -21,6 +25,7 @@ mark {
 }
 
 .contact-line-height {
+  margin-bottom: 25px;
   margin-top: 50px;
 }
 

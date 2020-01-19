@@ -77,6 +77,9 @@
   padding: 25px 58px 0px 40px;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 800px) {
+    flex-direction: row-reverse;
+  }
 }
  
 .lock-margin {
@@ -113,6 +116,10 @@
 .bottom-card-padding {
   padding: 0 45px 0 45px;
   white-space: normal;
+
+  @media screen and (max-width: 800px) {
+    padding: 0 35px 0 35px;
+  }
 }
  
 .card-additional-info {
@@ -124,6 +131,7 @@
 
   @media screen and (max-width: 800px) {
     flex-direction: row-reverse;
+    padding: 45px 35px 0 45px;
   }
 }
  
