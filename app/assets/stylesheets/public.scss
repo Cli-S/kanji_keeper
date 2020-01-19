@@ -32,6 +32,7 @@ html {
 
 #public-messages-and-type {
   background-color: white;
+  border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   margin-left: 15%;
@@ -45,6 +46,8 @@ html {
 }
 
 #public-chat-messages {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   height: 500px;
   overflow-y: scroll;
 }
@@ -62,6 +65,8 @@ html {
 #public-text-box {
   background-color: red;
   border: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   height: 70px;
   padding: 20px;
   position: absolute;
@@ -69,8 +74,12 @@ html {
 }
 
 .individual-public-message {
-  background-color: white;
+  background-color: pink;
   max-width: inherit;
+  padding: 20px;
+}
+.outside-individual-public-message {
+  margin: 20px;
 }
 
 #message-content {

@@ -1,6 +1,6 @@
 <div id="public-message" class="message">
-  <div class="individual-public-message">
-    <div>
+  <div class="outside-individual-public-message">
+    <div class="individual-public-message">
       <div id="chat-user-image">
         <% if message.user.avatar.blank? %>
           <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
@@ -8,20 +8,27 @@
           <%= image_tag(message.user.avatar.to_s, :class => 'avatar') %>
         <% end %>
       </div>
-      <div class="rowy">
-        <div id="chat-name-and-date">
-          <% if message.created_at.to_date == Date.current %>
-            <div><%= message.user.username %> <%= message.created_at.strftime("today at %l:%M %p") %> </div>
-          <% elsif message.created_at.to_date == Date.current - 1 %>
-            <div><%= message.user.username %> <%= message.created_at.strftime("yesterday at %l:%M %p") %> </div>
-          <% else %>
-            <div><%= message.user.username %> <%= message.created_at.strftime("%m/%d/%Y") %> </div>
-          <% end %>
-        </div>
-        <p id="message-content">
-          <%= message.content %>
-        </p>
+      <div id="chat-username">
+        <% if message.created_at.to_date == Date.current %>
+          <div><%= message.user.username %> <%= message.created_at.strftime("today at %l:%M %p") %> </div>
+        <% elsif message.created_at.to_date == Date.current - 1 %>
+          <div><%= message.user.username %> <%= message.created_at.strftime("yesterday at %l:%M %p") %> </div>
+        <% else %>
+          <div><%= message.user.username %> <%= message.created_at.strftime("%m/%d/%Y") %> </div>
+        <% end %>
       </div>
+      <p id="message-content">
+        <%= message.content %>
+      </p>
+    </div>
+    <div>
+      <% if message.created_at.to_date == Date.current %>
+          <div><%= message.created_at.strftime("today at %l:%M %p") %></div>
+        <% elsif message.created_at.to_date == Date.current - 1 %>
+          <div><%= message.created_at.strftime("yesterday at %l:%M %p") %></div>
+        <% else %>
+          <div><%= message.created_at.strftime("%m/%d/%Y") %></div>
+        <% end %>
     </div>
   </div>
 </div>
