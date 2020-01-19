@@ -83,6 +83,26 @@ html {
   margin: 50px;
 }
 
+.current-user-messages {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.other-user-messages {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.current-user-date {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.other-user-date {
+  display: flex;
+  justify-content: flex-start;
+}
+
 #message-content {
 }
 

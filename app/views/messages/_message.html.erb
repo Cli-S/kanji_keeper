@@ -1,6 +1,10 @@
 <div id="public-message" class="message">
   <div class="outside-individual-public-message">
-    <div>
+  <% if message.user.username == current_user.username %>
+    <div class="current-user-messages">
+  <% else %>
+    <div class="other-user-messages">
+  <% end %>
       <div class="individual-public-message">
         <div id="chat-user-image">
           <% if message.user.avatar.blank? %>
@@ -17,7 +21,11 @@
         </div>
       </div>
     </div>
-    <div>
+    <% if message.user.username == current_user.username %>
+      <div class="current-user-date">
+    <% else %>
+      <div class="other-user-date">
+    <% end %>
       <% if message.created_at.to_date == Date.current %>
           <div><%= message.created_at.strftime("today at %l:%M %p") %></div>
         <% elsif message.created_at.to_date == Date.current - 1 %>
