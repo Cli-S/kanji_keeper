@@ -1,3 +1,9 @@
+const currentUserId = document.querySelector("meta[name='currentUserId']").content;
+
+document.querySelectorAll(".message").forEach((message) => {
+  styleMessageAccordingToCurrentUser(message, currentUserId);
+});
+
 function hasIdOrNot() {
   if (document.getElementById("messages") != null) {
     const chatRoomId = document.querySelector("#messages").dataset.chatRoomId;
@@ -15,6 +21,8 @@ function hasIdOrNot() {
       received(data) {
         // Called when there's incoming data on the websocket for this channel
         $('#messages').append(data['message']);
+        const newMessageElement = document.querySelector(".message:last-child")
+        styleMessageAccordingToCurrentUser(newMessageElement, currentUserId);
         scrollBottom();
       },
 
@@ -39,7 +47,23 @@ function scrollBottom() {
   if (document.querySelector('#public-chat-messages')) {
     $('#public-chat-messages').scrollTop($('#public-chat-messages')[0].scrollHeight);
   }
-};  
+};
+
+function styleMessageAccordingToCurrentUser(messageElement, currentUserId) {
+  const individualPublicMessage = messageElement.querySelector(".individual-public-message");
+  const userMessage = messageElement.querySelector(".user-messages");
+  const userDate = messageElement.querySelector(".user-date");
+
+  if (messageElement.dataset.senderId === currentUserId) {
+    individualPublicMessage.classList.add("current");
+    userMessage.classList.add("current");
+    userDate.classList.add("current");
+  } else {
+    individualPublicMessage.classList.add("other");
+    userMessage.classList.add("other");
+    userDate.classList.add("other");
+  }
+}
 
 hasIdOrNot();
 scrollBottom();

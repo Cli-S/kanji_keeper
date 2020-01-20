@@ -73,34 +73,47 @@ html {
   width: 100%;
 }
 
+
 .individual-public-message {
   display: flex;
-  background-color: pink;
   max-width: inherit;
   padding: 20px;
+
+  &.current {
+    background-color: skyblue;
+  }
+
+  &.other {
+    background-color: pink;
+  }
 }
+
 .outside-individual-public-message {
   margin: 50px;
 }
 
-.current-user-messages {
+.user-messages {
   display: flex;
-  justify-content: flex-end;
+
+  &.current {
+    justify-content: flex-end;
+  }
+
+  &.other {
+    justify-content: flex-start;
+  }
 }
 
-.other-user-messages {
+.user-date {
   display: flex;
-  justify-content: flex-start;
-}
+  
+  &.current {
+    justify-content: flex-end;
+  }
 
-.current-user-date {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.other-user-date {
-  display: flex;
-  justify-content: flex-start;
+  &.other {
+    justify-content: flex-start;
+  }
 }
 
 #message-content {
