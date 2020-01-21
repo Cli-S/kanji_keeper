@@ -9,8 +9,8 @@
             <%= image_tag(message.user.avatar.to_s, :class => 'avatar') %>
           <% end %>
         </div>
-        <div id="chat-username">
-          <%= message.user.username %>
+        <div id="chat-username-and-message">
+          <div class="username-bolden"><%= message.user.username %></div>
           <p id="message-content">
           <%= message.content %>
           </p>
