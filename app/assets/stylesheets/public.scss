@@ -70,9 +70,19 @@ html {
   width: 100%;
 }
 
+#chat-actions-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
 #fav-scissors {
   color: #313840;
   margin-left: 1%;
+}
+
+#fav-ghost {
+  color: #313840;
+  margin-right: 1%;
 }
 
 #dashed-border {
