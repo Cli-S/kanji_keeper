@@ -1,13 +1,32 @@
-.old-and-new-comments {
-  margin-left: 50px;
-  background-color: white;
+#comments {
   height: 100%;
+  margin-left: 5%;
+  max-height: 630px;
+  max-width: 40%;
+  overflow-y: scroll;
+  width: 100%;
 }
 
-.post-comments {
-  padding: 40px 40px 0 40px;
+.comment-outer {
+  background-color: white;
+  border: 1px dotted skyblue;
+  margin-bottom: 30px;
+  padding: 15px;
 }
 
-.post-a-comment {
-  padding: 0 40px 40px 40px;
+.post-comment {
+  border: 1.5px dashed pink;
+  display: flex;
+  padding: 25px;
+}
+
+#comment-avatar {
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+#comment-date {
+  display: flex;
 }

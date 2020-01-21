@@ -4,28 +4,38 @@
       <%= render partial: "card", locals: { post: @post } %>
     </div>
   </div>
-  <div class="old-and-new-comments">
-    <div class="post-comments">
-      <h3>Comments (<%= @post.comments.count %>)</h3>
+  <div id="comments">
       <% @post.comments.each do |comment| %>
-        <% unless comment.user.avatar.blank? %>
-            <%= image_tag(comment.user.avatar.to_s, :class => 'avatar') %>
+      <div class="comment-outer">
+        <div class="post-comment">
+          <div id="comment-avatar">
+            <% if comment.user.avatar.blank? %>
+                <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
+              <% else %>
+                <%= image_tag(comment.user.avatar.to_s, :class => 'avatar') %>
+              <% end %>
+          </div>
+          <div id="comment-user-and-content">
+            <%= comment.user.username %>:
+            <%= comment.content %>
+          </div>
+          <div id="comment-date">
+            <% if comment.updated_at != comment.created_at %>
+              <%= comment.created_at.strftime("%d/%m/%Y") %> (edited)
+            <% else %>
+              <%= comment.created_at.strftime("%d/%m/%Y") %>
+            <% end %>
+          </div>
+          <% if user_signed_in? && current_user == comment.user %>
+          <div id="comment-options">
+            <%= link_to "Edit", edit_post_comment_path(@post, comment) %>
+            <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
+          </div>
           <% end %>
-        <%= comment.user.username %>: <br/>
-        <%= comment.content %></li><br/>
-        <% if comment.updated_at != comment.created_at %>
-          <%= comment.created_at.strftime("%d/%m/%Y") %> (edited)
-        <% else %>
-          <%= comment.created_at.strftime("%d/%m/%Y") %>
-        <% end %>
-        <%= link_to "Edit", edit_post_comment_path(@post, comment) %>
-        <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
-        <br/>
-        <br/>
+        </div>
+      </div>
       <% end %>
-    </div>
-    <div class="post-a-comment">
-      <h3>Post a comment</h3>
+    <div class="new-comment">
       <%= form_for([@post, @comment]) do |f| %>
         <%= f.text_field :content %>
         <%= f.submit %>
