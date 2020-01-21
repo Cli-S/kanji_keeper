@@ -1,6 +1,7 @@
 html {
   overflow:   scroll;
 }
+
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
@@ -8,7 +9,10 @@ html {
 
 #public-chat-header {
   font-weight: bold;
+  // position: absolute;
   text-align: center;
+  // top: 60%;
+  // transform: rotate(270deg);
 }
 
 #public-chat-layout {
@@ -36,10 +40,21 @@ html {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   box-shadow: 0 0 15px rgba(66, 66, 66, 0.1);
-  margin-left: 15%;
-  margin-right: 15%;
+  margin: 0 15%;
   position: relative;
   width: 100%;
+
+  @media screen and (max-width: 430px) {
+    margin: 0;
+    padding: 0;
+    width: max-content;
+  }
+
+  @media screen and (max-width: 360px) {
+    height: auto;
+    max-width: 400px;
+    width: 100%;
+  }
 }
 
 #public-chat-messages {
@@ -124,7 +139,7 @@ html {
 }
 
 .outside-individual-public-message {
-  margin: 50px;
+  margin: 15px 60px;
 }
 
 .user-messages {
