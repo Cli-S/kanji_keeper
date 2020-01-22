@@ -27,9 +27,11 @@
   <div class="top-card" div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= post.photo.to_s %>);">
     <div class="top-card-features">
       <div>
-        <% unless post.user.avatar.blank? %>
-          <%= image_tag(post.user.avatar.to_s, :class => "avatar") %>
-        <% end %>
+        <% if post.user.avatar.blank? %>
+              <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
+          <% else %>
+            <%= image_tag(post.user.avatar.to_s, :class => 'avatar') %>
+          <% end %>
         <%= post.user.username %>
       </div>
       <% if user_signed_in? %> 

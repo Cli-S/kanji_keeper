@@ -199,6 +199,10 @@ ul {
   padding: 0 20px 0 20px;
 }
 
+.word-definition {
+  word-break: break-word;
+}
+
 #new-post-button {
   text-align: center;
   display: flex;
