@@ -1,12 +1,20 @@
 Rails.application.routes.draw do
+  unauthenticated :user do
+    root :to => 'static_pages#home'
+  end
+
+  authenticated :user do
+    root :to => 'posts#index', :as => "posts"
+  end
+
+  #root 'chat_rooms#index'
+  #root :to => 'chat_rooms#show', :id => '36', as: 'chat'
+  
   get 'rooms/show'
   #get '/faq', to: 'static_pages#faq'
   get '/contact', to: 'static_pages#contact'
   #get '/about', to: 'static_pages#about'
   devise_for :users, controllers: { sessions: "users/sessions" }
-  root 'posts#index'
-  #root 'chat_rooms#index'
-  #root :to => 'chat_rooms#show', :id => '36', as: 'chat'
   get 'chat' => 'chat_rooms#show', :defaults => {:id => 3}
   resources :posts do
     resources :comments, only: [:create, :edit, :update, :destroy]

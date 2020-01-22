@@ -1,0 +1,61 @@
+#description-and-demo {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+#landing-header {
+  font-weight: bold;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+#website-description {
+  margin: 2%;
+  padding: 2%;
+  width: 30%;
+}
+
+#under-landing-header {
+  line-height: 1.7;
+  margin: 0;
+}
+
+#join-now {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#mobile-demo {
+  height: auto;
+  width: 400px;
+}
+
+#landing-create-posts {
+  align-items: center;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+}
+
+#post-creation-border {
+  border-right: 3px dashed white;
+  border-top: 3px dashed white;
+  margin: 10px;
+  width: 100%;
+}
+
+#post-creation-text { 
+  font-weight: 600;
+  line-height: 1.7;
+  margin: 0 auto;
+  mark {
+    background-color: white;
+  }
+  overflow: hidden;
+  padding: 6% 0;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+}

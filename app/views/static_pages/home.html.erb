@@ -1,0 +1,25 @@
+<div id="landing-page-layout">
+  <div id="description-and-demo">
+    <div id="website-description">
+      <h2 id="landing-header">connect with a <mark>community</mark> of Japanese learners</h2>
+      <h5 id="under-landing-header"><i>kanji keeper</i> is a language learning website for Japanese. 
+      It makes it easier to keep track of new words and expressions 
+      you pick up on a daily basis. Join now and meet new study buddies from all over the world!</h5>
+      <div id="join-now">
+        <div class="theta" >
+          <%= link_to new_user_registration_path do %>
+            <div class="btn btn-tetrary">join now!</div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div id="image-demo">
+      <img src="<%= asset_path('mobile_demo.png') %>" id="mobile-demo" />
+    </div>
+  </div>
+  <div id="landing-create-posts">
+    <div id="post-creation-border">
+      <h4 id="post-creation-text"><mark>share</mark> your knowledge of interesting Japanese words, slangs, and expressions, and <mark>learn</mark> from other users</h4>
+    </div>
+  </div>
+</div>
