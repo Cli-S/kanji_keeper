@@ -29,7 +29,8 @@
 
 #mobile-demo {
   height: auto;
-  width: 400px;
+  margin-bottom: 3%;
+  width: 300px;
 }
 
 #landing-create-posts {
@@ -98,4 +99,57 @@
   display: flex;
   font-weight: 600;
   justify-content: center;
+}
+
+#chat-text-and-image {
+
+}
+
+#chat-demo-text {
+  align-items: center;
+  display: flex;
+  font-weight: 600;
+  justify-content: center;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+#chat-image-demo {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+}
+
+#chat-demo {
+  height: auto;
+  width: 700px;
+}
+
+#make-account {
+  align-items: center;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+}
+
+#make-account-border {
+  border-bottom: 3px dashed white;
+  border-left: 3px dashed white;
+  margin: 10px;
+  width: 100%;
+}
+
+#make-account-text {
+  font-weight: 600;
+  line-height: 1.7;
+  margin: 0 auto;
+  mark {
+    background-color: white;
+  }
+  overflow: hidden;
+  padding: 6% 0;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
 }
