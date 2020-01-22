@@ -59,3 +59,43 @@
   width: 100%;
   white-space: nowrap;
 }
+
+#furigana-image-and-text {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#furigana-demo {
+  height: auto;
+  margin-top: 2%;
+  width: 650px;
+}
+
+#furigana-demo-text {
+  align-items: center;
+  display: flex;
+  font-weight: 600;
+  justify-content: center;
+}
+
+#kanji-image-and-text {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#kanji-image-demo {
+
+}
+
+#kanji-demo {
+  box-shadow: 0 0 15px rgba(66, 66, 66, 0.2);
+  height: auto;
+  width: 350px;
+}
+
+#kanji-demo-text {
+  align-items: center;
+  display: flex;
+  font-weight: 600;
+  justify-content: center;
+}

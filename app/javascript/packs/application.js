@@ -56,7 +56,7 @@ kuroshiro.init(new KuromojiAnalyzer({ dictPath: "/dict" })).then(async () => {
         const joiningDef = definition['meanings'].join(', ');
         insertDefinition.innerHTML += `${joiningDef}`;
       });
-      insertJisho.innerHTML += `<a href="https://jisho.org/search?utf8=✓&keyword=${randomKanji}">Learn more</a>`
+      insertJisho.innerHTML += `<a href="https://jisho.org/search?utf8=✓&keyword=${randomKanji}">learn more</a>`
     });
   }
 });  

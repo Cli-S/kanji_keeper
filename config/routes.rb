@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   end
 
   authenticated :user do
-    root :to => 'posts#index', :as => "posts"
+    root :to => 'posts#index'
   end
 
   #root 'chat_rooms#index'
