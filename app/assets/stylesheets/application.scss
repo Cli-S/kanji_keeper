@@ -95,6 +95,14 @@ ul {
     color: #313840;
   }
 
+  @media screen and (max-width: 750px) {
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 35px;
+  }
+
   @media screen and (max-width: 486px) {
     white-space: nowrap;
     padding: 15px 20px 9px 20px;
@@ -115,20 +123,93 @@ ul {
   @media screen and (max-width: 340px) {
     padding: 15px 20px 9px 20px;
   }
+
+  @media screen and (max-width: 550px) {
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 490px) {
+    font-size: 45px;
+    padding: 15px 35px 9px 35px;
+  }
+}
+
+.signed-out-logo {
+  @media screen and (max-width: 425px) {
+    font-size: 45px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 50px;
+  }
 }
 
 .cherry-logo {
   padding: 0 3px 4px 4px;
 }
 
-.flex-nav {
+.flex-nav { // user is signed in
   display: flex;
   justify-content: flex-end;
   align-items: center;
   font-size: 15px;
 
+  @media screen and (max-width: 850px) {
+    font-size: 19px;
+  }
+
   @media screen and (max-width: 425px) {
     font-size: 12px
+  }
+}
+
+.flex-nav-signed-out {
+  display: flex;
+  font-size: 18px;
+
+  @media screen and (max-width: 801px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 750px) {
+    font-size: 22px;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 25px;
+    white-space: nowrap;
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: 490px) {
+    font-size: 35px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 40px;
+  }
+}
+
+#signed-out-sign-up {
+  margin-left: 25px;
+
+  @media screen and (max-width: 650px) {
+    margin-left: 35px;
+  }
+
+  @media screen and (max-width: 550px) {
+    margin-left: 40px;
+  }
+
+  @media screen and (max-width: 490px) {
+    margin-left: 70px;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin-left: 100px;
   }
 }
 

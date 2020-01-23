@@ -45,6 +45,7 @@
     h5 {
       font-size: 1.5em;
     }
+    width: 34%;
   }
 
   @media screen and (max-width: 550px) {
@@ -54,6 +55,7 @@
     h5 {
       font-size: 2em;
     }
+    width: 37%;
   }
 
   @media screen and (max-width: 450px) {
@@ -64,6 +66,7 @@
     h5 {
       font-size: 2em;
     }
+    width: 45%;
   }
 
   @media screen and (max-width: 400px) {
@@ -74,6 +77,11 @@
     h5 {
       font-size: 2.5em;
     }
+    width: 55%;
+  }
+
+  @media screen and (max-width: 350px) {
+    width: 45%;
   }
 }
 
@@ -98,23 +106,27 @@
   width: 300px;
 
   @media screen and (max-width: 650px) {
-    width: 240px;
+    width: 300px;
   }
 
   @media screen and (max-width: 550px) {
-    width: 300px;
+    width: 375px;
   }
   
   @media screen and (max-width: 500px) {
-    width: 270px;
+    width: 400px;
   }
 
   @media screen and (max-width: 450px) {
-    width: 280px;
+    width: 340px;
   }
 
   @media screen and (max-width: 400px) {
     width: 350px;
+  }
+
+  @media screen and (max-width: 350px) {
+    width: 420px;
   }
 }
 
