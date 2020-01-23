@@ -14,12 +14,37 @@
 #website-description {
   margin: 2%;
   padding: 2%;
-  width: 30%;
+
+  @media screen and (min-width: 1200px) {
+    width: 30%; 
+  }
+
+  @media screen and (max-width: 1299px) {
+    width: 38%;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 1.5em;
+    }
+    h5 {
+      font-size: 1em;
+    }
+  }
 }
 
 #under-landing-header {
   line-height: 1.7;
   margin: 0;
+  margin-bottom: 3%;
+
+  @media screen and (max-width: 420px) {
+    margin-bottom: 6%;
+  }
 }
 
 #join-now {
@@ -31,6 +56,18 @@
   height: auto;
   margin-bottom: 3%;
   width: 300px;
+
+  @media screen and (max-width: 650px) {
+    width: 240px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    width: 200px;
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 175px;
+  }
 }
 
 #landing-create-posts {
