@@ -1,3 +1,10 @@
+
+  body, html { 
+    height: auto;
+    margin: 0;
+    width: 100%; 
+  }
+
 #description-and-demo {
   align-items: center;
   display: flex;
@@ -27,12 +34,45 @@
     width: 60%;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
+    width: 46%;
+  }
+
+  @media screen and (max-width: 650px) {
     h2 {
-      font-size: 1.5em;
+      font-size: 2em;
     }
     h5 {
-      font-size: 1em;
+      font-size: 1.5em;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    h2 {
+      font-size: 2em;
+    }
+    h5 {
+      font-size: 2em;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    h2 {
+      font-size: 2.5em;
+    }
+
+    h5 {
+      font-size: 2em;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    h2 {
+      font-size: 2.5em;
+    }
+
+    h5 {
+      font-size: 2.5em;
     }
   }
 }
@@ -60,13 +100,21 @@
   @media screen and (max-width: 650px) {
     width: 240px;
   }
+
+  @media screen and (max-width: 550px) {
+    width: 300px;
+  }
   
   @media screen and (max-width: 500px) {
-    width: 200px;
+    width: 270px;
   }
 
   @media screen and (max-width: 450px) {
-    width: 175px;
+    width: 280px;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 350px;
   }
 }
 
@@ -95,7 +143,6 @@
   padding: 6% 0;
   text-align: center;
   width: 100%;
-  white-space: nowrap;
 }
 
 #furigana-image-and-text {
@@ -188,5 +235,4 @@
   padding: 6% 0;
   text-align: center;
   width: 100%;
-  white-space: nowrap;
 }

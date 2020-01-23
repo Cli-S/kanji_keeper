@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @posts = Post.publics.order(created_at: :desc)
+    @posts = Post.where("private = false or user_id = ?", current_user.id).order(created_at: :desc)
   end
 
   def show

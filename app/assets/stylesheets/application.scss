@@ -26,10 +26,13 @@ body {
 }
 
 html, body {
+  margin: 0;
+  padding: 0;
+  @media screen and (max-width: 900px) {
+    width: fit-content;
+  }
   @media screen and (max-width: 340px) {
-    margin: 0;
-    padding: 0;
-    width: max-content;
+    width: fit-content;
   }
 }
 
@@ -106,7 +109,11 @@ ul {
   }
 
   @media screen and (max-width: 360px) {
-    padding: 15px 36px 9px 36px;
+    padding: 15px 10px 9px 10px;
+  }
+
+  @media screen and (max-width: 340px) {
+    padding: 15px 20px 9px 20px;
   }
 }
 
