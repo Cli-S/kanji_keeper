@@ -19,12 +19,13 @@
     </div>
     <div class="user-date">
       <% if message.created_at.to_date == Date.current %>
-          <div><%= message.created_at.strftime("today at %l:%M %p") %></div>
-        <% elsif message.created_at.to_date == Date.current - 1 %>
-          <div><%= message.created_at.strftime("yesterday at %l:%M %p") %></div>
-        <% else %>
-          <div><%= message.created_at.strftime("%m/%d/%Y") %></div>
-        <% end %>
+        <div><%= message.created_at.strftime("today at %l:%M %p") %></div>
+      <% elsif message.created_at.to_date == Date.current - 1 %>
+        <div><%= message.created_at.strftime("yesterday at %l:%M %p") %></div>
+      <% else %>
+        <div><%= message.created_at.strftime("%m/%d/%Y") %></div>
+      <% end %>
+      <div><%= link_to "delete", chat_room_message_path(message.chat_room, message), method: :delete, class: 'delete-message-margin' %></div>
     </div>
   </div>
 </div>

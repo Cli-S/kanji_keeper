@@ -18,6 +18,7 @@
   border: 1.5px dashed pink;
   display: flex;
   padding: 25px;
+  word-break: break-word;
 }
 
 #comment-avatar {
@@ -27,6 +28,27 @@
   margin-right: 10px;
 }
 
+#comment-content {
+  padding-bottom: 5px;
+}
+
+#comment-date-and-options {
+  display: flex;
+}
+
 #comment-date {
   display: flex;
+}
+
+.comment-date-margin {
+  margin-left: 5px;
+}
+
+#comment-in-post-button {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#comment-in-post-official-button {
 }
