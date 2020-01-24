@@ -31,6 +31,10 @@ body, html {
   }
 
   @media screen and (max-width: 1299px) {
+    width: 40%;
+  }
+
+  @media screen and (max-width: 1199px) {
     width: 38%;
   }
 
@@ -49,7 +53,7 @@ body, html {
     h5 {
       font-size: 1.5em;
     }
-    width: 34%;
+    width: 40%;
   }
 
   @media screen and (max-width: 550px) {
@@ -59,7 +63,7 @@ body, html {
     h5 {
       font-size: 2em;
     }
-    width: 37%;
+    width: 47%;
   }
 
   @media screen and (max-width: 450px) {
@@ -81,11 +85,21 @@ body, html {
     h5 {
       font-size: 2.5em;
     }
-    width: 55%;
+    width: 57%;
   }
 
   @media screen and (max-width: 350px) {
-    width: 45%;
+    width: 47%;
+  }
+
+  @media screen and (max-width: 330px) {
+    h2 {
+      font-size: 3em;
+    }
+    h5 {
+      font-size: 2.7em;
+    }
+    width: 46%;
   }
 }
 
@@ -126,11 +140,15 @@ body, html {
   }
 
   @media screen and (max-width: 400px) {
-    width: 350px;
+    width: 365px;
   }
 
   @media screen and (max-width: 350px) {
-    width: 420px;
+    width: 440px;
+  }
+
+  @media screen and (max-width: 330px) {
+    width: 450px;
   }
 }
 
