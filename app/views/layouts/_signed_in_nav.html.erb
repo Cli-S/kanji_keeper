@@ -1,0 +1,31 @@
+<div id="signed-in-nav-container">
+  <div id="signed-in-nav-logo-link">
+    <%= link_to root_path do %>
+      kanji<%= image_tag "cherry-blossom.png", class: "cherry-logo", size: '24x20' %>keeper
+    <% end %>
+  </div>
+  <div id="signed-in-nav-main-links">
+    <div id="signed-in-nav-margin-comment">
+      <div class="theta" >
+        <%= link_to new_post_path() do %>
+          <div class="btn btn-tetrary">new post</div>
+        <% end %>
+      </div>
+    </div>
+    <div id="signed-in-nav-margin-chat">
+      <%= link_to chat_path do %>
+        <i class="far fa-comment-dots chat-icon"></i>
+      <% end %>
+    </div>
+    <div>
+      <a class="nav-link nav-hack" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-bars lesser-buttons"></i>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <%# link_to 'my profile', user_posts_path(current_user), class: 'dropdown-item' %>
+        <%= link_to 'my account', edit_user_registration_path, class: 'dropdown-item' %>
+        <%= link_to 'logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+      </div>
+    </div>
+  </div>
+</div>

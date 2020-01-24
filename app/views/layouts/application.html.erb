@@ -21,9 +21,7 @@
 
   <body>
     <% if user_signed_in? %>
-      <%= render 'layouts/header_signedin' %>
-    <% else %>
-      <%= render 'layouts/header_signedout' %>
+      <%= render 'layouts/signed_in_nav' %>
     <% end %>
     <%= yield %>
     <%= javascript_pack_tag 'application' %>

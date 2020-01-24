@@ -1,0 +1,25 @@
+#landing-nav-container {
+  a {
+    color: #313840;
+  }
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  padding: 20px 20px 0 20px;
+}
+
+#landing-logo-link {
+  font-size: 25px;
+}
+
+#landing-sign-in-and-out {
+  align-items: center; 
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+#landing-nav-sign-in-margin {
+  margin-right: 50px;
+}

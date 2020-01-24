@@ -1,0 +1,15 @@
+<div id="signed-out-nav-container">
+  <div id="kanji-keeper-logo-link">
+    <%= link_to root_path do %>
+        kanji<%= image_tag "cherry-blossom.png", class: "cherry-logo", width: "10%" %>keeper
+    <% end %>
+  </div>
+  <div id="sign-in-and-up">
+    <div id="sign-in-margin">
+      <%= link_to "sign in", new_user_session_path  %>
+    </div>
+    <div>
+      <%= link_to "sign up", new_user_registration_path  %>
+    </div>
+  </div>
+</div>

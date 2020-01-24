@@ -9,6 +9,9 @@
 @import "user-account";
 @import "public.scss";
 @import "landing-page.scss";
+@import "signed-out-nav.scss";
+@import "landing-nav.scss";
+@import "signed-in-nav.scss";
 
 @font-face {
   font-family: 'KanjiStrokeOrder';
@@ -28,12 +31,6 @@ body {
 html, body {
   margin: 0;
   padding: 0;
-  @media screen and (max-width: 900px) {
-    width: fit-content;
-  }
-  @media screen and (max-width: 340px) {
-    width: fit-content;
-  }
 }
 
 ::selection {
@@ -59,14 +56,6 @@ html, body {
   a {
     color: #313840;
   }
-
-  @media screen and (max-width: 800px) {
-    padding: 0;
-  }
-
-  @media screen and (max-width: 425px) {
-    font-size: 20px;
-  }
 }
 
 a:link {
@@ -85,132 +74,8 @@ ul {
   list-style-type: none;
 }
 
-.kanji-nav {
-  display: flex;
-  justify-content: space-between;
-  font-size: 25px;  
-  padding: 15px 36px 9px 36px;
-  align-items: center;
-  a {
-    color: #313840;
-  }
-
-  @media screen and (max-width: 750px) {
-    font-size: 30px;
-  }
-
-  @media screen and (max-width: 650px) {
-    font-size: 35px;
-  }
-
-  @media screen and (max-width: 486px) {
-    white-space: nowrap;
-    padding: 15px 20px 9px 20px;
-  }
-
-  @media screen and (max-width: 425px) {
-    padding: 15px 20px 9px 20px;
-  }
-
-  @media screen and (max-width: 380px) {
-    padding: 15px 10px 9px 10px;
-  }
-
-  @media screen and (max-width: 360px) {
-    padding: 15px 10px 9px 10px;
-  }
-
-  @media screen and (max-width: 340px) {
-    padding: 15px 20px 9px 20px;
-  }
-
-  @media screen and (max-width: 550px) {
-    font-size: 40px;
-  }
-
-  @media screen and (max-width: 490px) {
-    font-size: 45px;
-    padding: 15px 35px 9px 35px;
-  }
-}
-
-.signed-out-logo {
-  @media screen and (max-width: 425px) {
-    font-size: 45px;
-  }
-
-  @media screen and (max-width: 400px) {
-    font-size: 50px;
-  }
-}
-
 .cherry-logo {
   padding: 0 3px 4px 4px;
-}
-
-.flex-nav { // user is signed in
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-size: 15px;
-
-  @media screen and (max-width: 850px) {
-    font-size: 19px;
-  }
-
-  @media screen and (max-width: 425px) {
-    font-size: 12px
-  }
-}
-
-.flex-nav-signed-out {
-  display: flex;
-  font-size: 18px;
-
-  @media screen and (max-width: 801px) {
-    font-size: 20px;
-  }
-
-  @media screen and (max-width: 750px) {
-    font-size: 22px;
-  }
-
-  @media screen and (max-width: 650px) {
-    font-size: 25px;
-    white-space: nowrap;
-  }
-
-  @media screen and (max-width: 550px) {
-    font-size: 30px;
-  }
-
-  @media screen and (max-width: 490px) {
-    font-size: 35px;
-  }
-
-  @media screen and (max-width: 400px) {
-    font-size: 40px;
-  }
-}
-
-#signed-out-sign-up {
-  margin-left: 25px;
-
-  @media screen and (max-width: 650px) {
-    margin-left: 35px;
-  }
-
-  @media screen and (max-width: 550px) {
-    margin-left: 40px;
-  }
-
-  @media screen and (max-width: 490px) {
-    margin-left: 70px;
-  }
-
-  @media screen and (max-width: 400px) {
-    margin-left: 100px;
-  }
 }
 
 .chat-icon {
@@ -218,35 +83,10 @@ ul {
   margin-left: 30px;
 }
 
-.nav-link {
-  padding-bottom: 10px;
-}
-
-.left-nav {
-  width: 129px;
-  text-align: right;
-}
-
-.nav-signedout-space {
-  display: flex;
-}
-
-.nav-right-space {
-  width: 115px;
-
-  @media screen and (max-width: 800px) {
-    width: 70px;
-  }
-}
-
 .nav-hack {
   width: 44px;
   text-align: right;
   font-size: 24px;
-}
-
-.thicc {
-  font-weight: 600;
 }
 
 .dropdown-menu {

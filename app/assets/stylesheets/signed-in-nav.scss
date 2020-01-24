@@ -1,0 +1,28 @@
+#signed-in-nav-container {
+  a {
+    color: #313840;
+  }
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  padding: 20px 20px 0 20px;
+}
+
+#signed-in-nav-logo-link {
+  font-size: 25px;
+}
+
+#signed-in-nav-main-links {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  white-space: nowrap;
+}
+
+#signed-in-nav-margin-comment {
+  margin-right: 5px;
+}
+
+#signed-in-nav-margin-chat {
+  margin-right: 10px;
+}

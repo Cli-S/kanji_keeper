@@ -1,0 +1,25 @@
+#signed-out-nav-container {
+  a {
+    color: #313840;
+  }
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  padding: 20px 20px 0 20px;
+}
+
+#kanji-keeper-logo-link {
+  font-size: 25px;
+}
+
+#sign-in-and-up {
+  align-items: center; 
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+#sign-in-margin {
+  margin-right: 50px;
+}
