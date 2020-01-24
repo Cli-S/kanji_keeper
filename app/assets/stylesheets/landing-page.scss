@@ -1,9 +1,13 @@
 
-  body, html { 
-    height: auto;
-    margin: 0;
-    width: 100%; 
-  }
+body, html { 
+  height: auto;
+  margin: 0;
+  width: 100%; 
+}
+
+#landing-page-layout {
+  width: fit-content;
+}
 
 #description-and-demo {
   align-items: center;
@@ -31,7 +35,7 @@
   }
 
   @media screen and (max-width: 900px) {
-    width: 60%;
+    width: 55%;
   }
 
   @media screen and (max-width: 800px) {
