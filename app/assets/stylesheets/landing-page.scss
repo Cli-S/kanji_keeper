@@ -177,11 +177,39 @@ body, html {
   padding: 6% 0;
   text-align: center;
   width: 100%;
+
+  @media screen and (max-width: 650px) {
+    font-size: 2em;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 2.4em;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 2.7em;
+  }
+
+  @media screen and (max-width: 330px) {
+    font-size: 3em;
+  }
 }
 
 #furigana-image-and-text {
   display: flex;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 1500px) {
+    display: initial;
+  }
+}
+
+#furigana-demo-image {
+  @media screen and (max-width: 1500px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 #furigana-demo {
@@ -195,6 +223,13 @@ body, html {
   display: flex;
   font-weight: 600;
   justify-content: center;
+
+  @media screen and (max-width: 1500px) {
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+    width: 100%;
+  }
 }
 
 #kanji-image-and-text {
