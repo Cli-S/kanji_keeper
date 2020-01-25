@@ -3,6 +3,7 @@ body, html {
   height: auto;
   margin: 0;
   width: 100%; 
+  word-break:break-all;
 }
 
 #landing-page-layout {
@@ -410,6 +411,7 @@ body, html {
   display: flex;
   justify-content: center;
   margin-bottom: 3%;
+  padding: 1em;
 }
 
 #chat-demo {

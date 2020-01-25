@@ -2,14 +2,50 @@
   a {
     color: #313840;
   }
+  align-items: center;
   display: flex;
   font-weight: bold;
   justify-content: space-between;
   padding: 20px 20px 0 20px;
+
+  @media screen and (max-width: 500px) {
+    padding: 15px 10px 0 15px;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding:  5px 25px 0 25px;
+  }
+
+  @media screen and (max-width: 340px) {
+    padding:  5px 15px 0 15px;
+  }
+}
+
+#kanji-keeper-logo-divs {
+  display: flex;
+  white-space: nowrap;
+  word-break: break-all;
+
+  @media screen and (max-width: 400px) {
+    display: initial;
+  }
 }
 
 #signed-in-nav-logo-link {
-  font-size: 25px;
+  font-size: 1.7em;
+  text-align: center;
+
+  @media screen and (max-width: 500px) {
+    font-size: 1.5em;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.2em;
+  }
+
+  @media screen and (max-width: 340px) {
+    font-size: 1em;
+  }
 }
 
 #signed-in-nav-main-links {
@@ -19,7 +55,13 @@
   white-space: nowrap;
 }
 
-#signed-in-nav-margin-comment {
+#new-post-button {
+  @media screen and (max-width: 500px) {
+    padding: 0.5em;
+  }
+}
+
+#signed-in-nav-margin-newpost {
   margin-right: 5px;
 }
 

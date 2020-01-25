@@ -1,14 +1,16 @@
 <div id="signed-in-nav-container">
   <div id="signed-in-nav-logo-link">
     <%= link_to root_path do %>
-      kanji<%= image_tag "cherry-blossom.png", class: "cherry-logo", size: '24x20' %>keeper
+      <div id="kanji-keeper-logo-divs">
+        <div>kanji</div><div><%= image_tag "cherry-blossom.png", class: "cherry-logo", size: '24x20' %></div><div>keeper</div>
+      </div>
     <% end %>
   </div>
   <div id="signed-in-nav-main-links">
-    <div id="signed-in-nav-margin-comment">
+    <div id="signed-in-nav-margin-newpost">
       <div class="theta" >
         <%= link_to new_post_path() do %>
-          <div class="btn btn-tetrary">new post</div>
+          <div id="new-post-button" class="btn btn-tetrary">new post</div>
         <% end %>
       </div>
     </div>
