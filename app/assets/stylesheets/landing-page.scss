@@ -442,4 +442,26 @@ body, html {
   padding: 6% 0;
   text-align: center;
   width: 100%;
+
+  @media screen and (max-width: 700px) {
+    font-size: 1.6em;
+    padding: 1em;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 1.8em;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 2.4em;
+    padding: 2em;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 2.7em;
+  }
+
+  @media screen and (max-width: 330px) {
+    font-size: 3em;
+  }
 }
