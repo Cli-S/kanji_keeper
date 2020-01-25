@@ -178,8 +178,12 @@ body, html {
   text-align: center;
   width: 100%;
 
+  @media screen and (max-width: 700px) {
+    font-size: 1.6em;
+  }
+
   @media screen and (max-width: 650px) {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   @media screen and (max-width: 500px) {
@@ -216,6 +220,10 @@ body, html {
   height: auto;
   margin-top: 2%;
   width: 650px;
+
+  @media screen and (max-width: 650px) {
+    padding: 1em;
+  }
 }
 
 #furigana-demo-text {
@@ -230,15 +238,72 @@ body, html {
     padding: 3em;
     width: 100%;
   }
+
+  @media screen and (max-width: 750px) {
+    font-size: 21px;
+  }
+
+  @media screen and (max-width: 700px) {
+    display: initial;
+    font-size: 1.6em;
+    line-height: 1.7em;
+    padding: 3em;
+  }
+
+  @media screen and (max-width: 650px) {
+    display: initial;
+    font-size: 1.8em;
+    line-height: 1.7em;
+    padding: 2em;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 2.4em;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 2.7em;
+  }
+
+  @media screen and (max-width: 330px) {
+    font-size: 3em;
+  }
+}
+
+#furigana-demo-div {
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 650px) {
+    display: flex;
+  }
+}
+
+#furigana-text-div {
+  display: flex;
+  text-align: center;
 }
 
 #kanji-image-and-text {
   display: flex;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 910px) {
+    padding: 1em;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 2em;
+  }
+
+  @media screen and (max-width: 330px) {
+    padding: 3em;
+  }
 }
 
 #kanji-image-demo {
-
+  @media screen and (max-width: 1500px) {
+    order: 1;
+  }
 }
 
 #kanji-demo {
@@ -247,11 +312,48 @@ body, html {
   width: 350px;
 }
 
+#kanji-demo-div {
+  display: flex;
+
+  @media screen and (max-width: 1500px) {
+    order: 2;
+  }
+
+  @media screen and (max-width: 700px) {
+    align-items: center;
+    display: flex;
+  }
+}
+
 #kanji-demo-text {
   align-items: center;
   display: flex;
   font-weight: 600;
   justify-content: center;
+  @media screen and (max-width: 700px) {
+    display: initial;
+    font-size: 1.6em;
+    line-height: 1.7em;
+    padding: 22px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 1.8em;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 2.4em;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 2.7em;
+  }
+
+  @media screen and (max-width: 330px) {
+    font-size: 3em;
+    text-align: center;
+  }
 }
 
 #chat-text-and-image {
@@ -265,6 +367,42 @@ body, html {
   justify-content: center;
   margin-bottom: 3%;
   margin-top: 3%;
+
+  @media screen and (max-width: 1500px) {
+    margin: 0;
+    padding: 3em;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 1.6em;
+  }
+
+  @media screen and (max-width: 650px) {
+    display: initial;
+    font-size: 1.8em;
+    line-height: 1.7em;
+    padding: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 2.4em;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 2.7em;
+  }
+
+  @media screen and (max-width: 330px) {
+    font-size: 3em;
+  }
+}
+
+#chat-demo-div {
+  @media screen and (max-width: 650px) {
+    padding: 3em;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 #chat-image-demo {
