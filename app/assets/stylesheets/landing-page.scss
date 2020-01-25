@@ -26,6 +26,7 @@ body, html {
 #website-description {
   margin: 2%;
   padding: 2%;
+  word-break: break-word;
 
   @media screen and (min-width: 1200px) {
     width: 30%; 
@@ -178,6 +179,7 @@ body, html {
   padding: 6% 0;
   text-align: center;
   width: 100%;
+  word-break: break-word;
 
   @media screen and (max-width: 700px) {
     font-size: 1.6em;
@@ -232,6 +234,7 @@ body, html {
   display: flex;
   font-weight: 600;
   justify-content: center;
+  word-break: break-word;
 
   @media screen and (max-width: 1500px) {
     display: flex;
@@ -331,6 +334,8 @@ body, html {
   display: flex;
   font-weight: 600;
   justify-content: center;
+  word-break: break-word;
+
   @media screen and (max-width: 700px) {
     display: initial;
     font-size: 1.6em;
@@ -368,6 +373,7 @@ body, html {
   justify-content: center;
   margin-bottom: 3%;
   margin-top: 3%;
+  word-break: break-word;
 
   @media screen and (max-width: 1500px) {
     margin: 0;
@@ -444,6 +450,7 @@ body, html {
   padding: 6% 0;
   text-align: center;
   width: 100%;
+  word-break: break-word;
 
   @media screen and (max-width: 700px) {
     font-size: 1.6em;

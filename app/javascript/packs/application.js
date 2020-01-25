@@ -60,3 +60,9 @@ kuroshiro.init(new KuromojiAnalyzer({ dictPath: "/dict" })).then(async () => {
     });
   }
 });  
+
+const cliConsole = [
+  `\n %c made by Cli ✨ c.someponpakdi@gmail.com`,
+  'background-image: linear-gradient(to right, #FF768A, #90cedb); padding: 10px 0; font-family: courier;'
+];
+window.console.log(...cliConsole);
