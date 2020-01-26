@@ -1,148 +1,140 @@
-#landing-page-layout {
-  width: fit-content;
+#main-div-container {
+  display: flex;
+  margin-top: 2%;
+  width: 100%;
+
+  @media screen and (max-width: 650px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-#description-and-demo {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-top: 2%;
+.landing-font {
+  font-size: 20px;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 710px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 15px;
+  }
 }
 
 #landing-header {
   font-weight: bold;
-  line-height: 1.5;
-  word-break: break-word;
-}
-
-#website-description {
-  margin: 2%;
-  padding: 2%;
+  font-size: 25px;
+  line-height: 1.7;
+  text-align: center;
   word-break: break-word;
 
-  @media screen and (min-width: 1200px) {
-    width: 30%; 
-  }
-
-  @media screen and (max-width: 1299px) {
-    width: 40%;
-  }
-
-  @media screen and (max-width: 1199px) {
-    width: 38%;
-  }
-
-  @media screen and (max-width: 900px) {
-    width: 55%;
-  }
-
-  @media screen and (max-width: 800px) {
-    width: 46%;
+  @media screen and (max-width: 1000px) {
+    font-size: 20px;
   }
 
   @media screen and (max-width: 650px) {
-    h2 {
-      font-size: 2em;
-    }
-    h5 {
-      font-size: 1.5em;
-    }
-    width: 40%;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
-  @media screen and (max-width: 550px) {
-    h2 {
-      font-size: 2em;
-    }
-    h5 {
-      font-size: 2em;
-    }
-    width: 47%;
-  }
-
-  @media screen and (max-width: 450px) {
-    h2 {
-      font-size: 2.5em;
-    }
-
-    h5 {
-      font-size: 2em;
-    }
-    width: 45%;
+  @media screen and (max-width: 500px) {
+    font-size: 18px;
   }
 
   @media screen and (max-width: 400px) {
-    h2 {
-      font-size: 2.5em;
-    }
-
-    h5 {
-      font-size: 2.5em;
-    }
-    width: 57%;
+    font-size: 15px;
   }
 
-  @media screen and (max-width: 350px) {
-    width: 47%;
-  }
-
-  @media screen and (max-width: 330px) {
-    h2 {
-      font-size: 3em;
-    }
-    h5 {
-      font-size: 2.7em;
-    }
-    width: 46%;
+  @media screen and (max-width: 320px) {
+    font-size: 14px;
   }
 }
 
-#under-landing-header {
-  line-height: 1.7;
-  margin: 0;
-  margin-bottom: 3%;
+#big-sakura-and-description {
+  margin: 0 0 4% 15%;
+  max-width: 45%;
+  padding: 2%;
+  word-break: break-word;
 
-  @media screen and (max-width: 420px) {
-    margin-bottom: 6%;
+  @media screen and (max-width: 650px) {
+    order: 1;
+    margin: 4% 0;
+    width: 55%;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin: 0;
+  }
+}
+
+#big-sakura {
+  width: 35%;
+}
+
+#big-sakura-div {
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+#website-description {
+}
+
+#under-landing-header {
+  line-height: 2.5;
+  margin-bottom: 3%;
+  width: 100%;
+
+  @media screen and (max-width: 600px) {
+    line-height: 2em;
   }
 }
 
 #join-now {
   display: flex;
   justify-content: flex-end;
+
+  @media screen and (max-width: 650px) {
+    justify-content: center;
+    margin-top: 7%;
+  }
+}
+
+#image-demo {
+  @media screen and (max-width: 850px) {
+    margin-top: 7%;
+  }
+
+  @media screen and (max-width: 650px) {
+    display: flex;
+    justify-content: center;
+    order: 2;
+    margin-bottom: 2em;
+  }
 }
 
 #mobile-demo {
   height: auto;
+  margin: 10%;
   margin-bottom: 3%;
-  width: 300px;
+  width: 70%;
 
   @media screen and (max-width: 650px) {
-    width: 300px;
-  }
-
-  @media screen and (max-width: 550px) {
-    width: 375px;
-  }
-  
-  @media screen and (max-width: 500px) {
-    width: 400px;
-  }
-
-  @media screen and (max-width: 450px) {
-    width: 340px;
-  }
-
-  @media screen and (max-width: 400px) {
-    width: 365px;
-  }
-
-  @media screen and (max-width: 350px) {
-    width: 440px;
-  }
-
-  @media screen and (max-width: 330px) {
-    width: 450px;
+    margin: 0;
+    width: 55%;
   }
 }
 
@@ -167,111 +159,23 @@
     background-color: white;
   }
   margin: 0 auto;
-  overflow: hidden;
   padding: 6% 0;
   text-align: center;
-  width: 100%;
   word-break: break-word;
-
-  @media screen and (max-width: 700px) {
-    font-size: 1.6em;
-  }
-
-  @media screen and (max-width: 650px) {
-    font-size: 1.8em;
-  }
-
-  @media screen and (max-width: 500px) {
-    font-size: 2.4em;
-  }
-
-  @media screen and (max-width: 400px) {
-    font-size: 2.7em;
-  }
-
-  @media screen and (max-width: 330px) {
-    font-size: 3em;
-  }
 }
 
 #furigana-image-and-text {
   display: flex;
   justify-content: space-evenly;
-
-  @media screen and (max-width: 1500px) {
-    display: initial;
-  }
-}
-
-#furigana-demo-image {
-  @media screen and (max-width: 1500px) {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
 }
 
 #furigana-demo {
-  height: auto;
-  margin-top: 2%;
-  width: 650px;
-
-  @media screen and (max-width: 650px) {
-    padding: 1em;
-  }
-}
-
-#furigana-demo-text {
-  align-items: center;
-  display: flex;
-  font-weight: 600;
-  justify-content: center;
-  word-break: break-word;
-
-  @media screen and (max-width: 1500px) {
-    display: flex;
-    justify-content: center;
-    padding: 3em;
-    width: 100%;
-  }
-
-  @media screen and (max-width: 750px) {
-    font-size: 21px;
-  }
-
-  @media screen and (max-width: 700px) {
-    display: initial;
-    font-size: 1.6em;
-    line-height: 1.7em;
-    padding: 3em;
-  }
-
-  @media screen and (max-width: 650px) {
-    display: initial;
-    font-size: 1.8em;
-    line-height: 1.7em;
-    padding: 2em;
-  }
-
-  @media screen and (max-width: 500px) {
-    font-size: 2.4em;
-  }
-
-  @media screen and (max-width: 400px) {
-    font-size: 2.7em;
-  }
-
-  @media screen and (max-width: 330px) {
-    font-size: 3em;
-  }
+  width: 80%;
 }
 
 #furigana-demo-div {
   display: flex;
   justify-content: center;
-  @media screen and (max-width: 650px) {
-    display: flex;
-  }
 }
 
 #furigana-text-div {
@@ -282,43 +186,20 @@
 #kanji-image-and-text {
   display: flex;
   justify-content: space-evenly;
-
-  @media screen and (max-width: 910px) {
-    padding: 1em;
-  }
-
-  @media screen and (max-width: 700px) {
-    padding: 2em;
-  }
-
-  @media screen and (max-width: 330px) {
-    padding: 3em;
-  }
 }
 
 #kanji-image-demo {
-  @media screen and (max-width: 1500px) {
-    order: 1;
-  }
+
 }
 
 #kanji-demo {
   box-shadow: 0 0 15px rgba(66, 66, 66, 0.2);
   height: auto;
-  width: 350px;
+  width: 80%;
 }
 
 #kanji-demo-div {
   display: flex;
-
-  @media screen and (max-width: 1500px) {
-    order: 2;
-  }
-
-  @media screen and (max-width: 700px) {
-    align-items: center;
-    display: flex;
-  }
 }
 
 #kanji-demo-text {
@@ -327,31 +208,6 @@
   font-weight: 600;
   justify-content: center;
   word-break: break-word;
-
-  @media screen and (max-width: 700px) {
-    display: initial;
-    font-size: 1.6em;
-    line-height: 1.7em;
-    padding: 22px;
-    text-align: center;
-  }
-
-  @media screen and (max-width: 650px) {
-    font-size: 1.8em;
-  }
-
-  @media screen and (max-width: 500px) {
-    font-size: 2.4em;
-  }
-
-  @media screen and (max-width: 400px) {
-    font-size: 2.7em;
-  }
-
-  @media screen and (max-width: 330px) {
-    font-size: 3em;
-    text-align: center;
-  }
 }
 
 #chat-text-and-image {
@@ -366,42 +222,10 @@
   margin-bottom: 3%;
   margin-top: 3%;
   word-break: break-word;
-
-  @media screen and (max-width: 1500px) {
-    margin: 0;
-    padding: 3em;
-  }
-
-  @media screen and (max-width: 700px) {
-    font-size: 1.6em;
-  }
-
-  @media screen and (max-width: 650px) {
-    display: initial;
-    font-size: 1.8em;
-    line-height: 1.7em;
-    padding: 0;
-  }
-
-  @media screen and (max-width: 500px) {
-    font-size: 2.4em;
-  }
-
-  @media screen and (max-width: 400px) {
-    font-size: 2.7em;
-  }
-
-  @media screen and (max-width: 330px) {
-    font-size: 3em;
-  }
 }
 
 #chat-demo-div {
-  @media screen and (max-width: 650px) {
-    padding: 3em;
-    text-align: center;
-    width: 100%;
-  }
+
 }
 
 #chat-image-demo {
@@ -414,7 +238,7 @@
 
 #chat-demo {
   height: auto;
-  width: 900px;
+  width: 80%;
 }
 
 #make-account {
@@ -438,31 +262,7 @@
   mark {
     background-color: white;
   }
-  overflow: hidden;
   padding: 6% 0;
   text-align: center;
-  width: 100%;
   word-break: break-word;
-
-  @media screen and (max-width: 700px) {
-    font-size: 1.6em;
-    padding: 1em;
-  }
-
-  @media screen and (max-width: 650px) {
-    font-size: 1.8em;
-  }
-
-  @media screen and (max-width: 500px) {
-    font-size: 2.4em;
-    padding: 2em;
-  }
-
-  @media screen and (max-width: 400px) {
-    font-size: 2.7em;
-  }
-
-  @media screen and (max-width: 330px) {
-    font-size: 3em;
-  }
 }

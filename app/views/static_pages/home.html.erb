@@ -1,11 +1,18 @@
 <div id="landing-page-layout">
 <%= render 'layouts/landing_nav' %>
-  <div id="description-and-demo">
+<div id="main-div-container">
+  <div id="big-sakura-and-description">
+    <div id="big-sakura-div">
+      <img src="<%= asset_path('big_sakura.png') %>" id="big-sakura" />
+    </div>
     <div id="website-description">
-      <h2 id="landing-header">connect with a <mark>community</mark> of Japanese learners</h2>
-      <h5 id="under-landing-header"><i>kanji keeper</i> is a language learning website for Japanese. 
-      It makes it easier to keep track of new kanji characters and expressions 
-      you pick up on a daily basis. Join now and meet new study buddies from all over the world!</h5>
+      <div id="landing-header">
+        connect with a <mark>community</mark> of Japanese learners
+      </div>
+      <div id="under-landing-header" class="landing-font"><i>kanji keeper</i> is a language learning website for Japanese. 
+        It makes it easier to keep track of new kanji characters and expressions 
+        you pick up on a daily basis. Join now and meet new study buddies from all over the world!
+      </div>
       <div id="join-now">
         <div class="theta" >
           <%= link_to new_user_registration_path do %>
@@ -14,13 +21,14 @@
         </div>
       </div>
     </div>
-    <div id="image-demo">
-      <img src="<%= asset_path('mobile_demo.png') %>" id="mobile-demo" />
-    </div>
+  </div>
+  <div id="image-demo">
+    <img src="<%= asset_path('mobile_demo.png') %>" id="mobile-demo" />
+  </div>
   </div>
   <div id="landing-create-posts">
     <div id="post-creation-border">
-      <h5 id="post-creation-text"><mark>share</mark> your knowledge of interesting Japanese words, slangs, and expressions, and <mark>learn</mark> from other users</h5>
+      <div id="post-creation-text" class="landing-font"><mark>share</mark> your knowledge of interesting Japanese words, slangs, and expressions, and <mark>learn</mark> from other users</div>
     </div>
   </div>
   <div id="furigana-image-and-text">
@@ -29,13 +37,13 @@
     </div>
     <div id="furigana-demo-div">
       <div id="furigana-text-div">
-        <h5 id="furigana-demo-text">automatically generated <mark>furigana reading aids</mark> for unfamiliar kanji characters</h5>
+        <div id="furigana-demo-text" class="landing-font">automatically generated <mark>furigana reading aids</mark> for unfamiliar kanji characters</div>
       </div>
     </div>
   </div>
   <div id="kanji-image-and-text">
     <div id="kanji-demo-div">
-      <h5 id="kanji-demo-text">learn a new word every day with the <mark>daily kanji</mark> sidebar</h5>
+      <div id="kanji-demo-text" class="landing-font">learn a new word every day with the <mark>daily kanji</mark> sidebar</div>
     </div>
     <div id="kanji-image-demo">
       <img src="<%= asset_path('daily_kanji_demo.png') %>" id="kanji-demo" />
@@ -43,7 +51,7 @@
   </div>
   <div id="chat-text-and-image">
     <div id="chat-demo-div">
-      <h5 id="chat-demo-text">meet <mark>language learning partners</mark> through the kanji keeper chat</h5>
+      <div id="chat-demo-text" class="landing-font">meet <mark>language learning partners</mark> through the kanji keeper chat</div>
     </div>
     <div id="chat-image-demo">
       <img src="<%= asset_path('chat_demo.png') %>" id="chat-demo" />
@@ -53,7 +61,7 @@
     <div id="make-account">
       <div id="make-account-border">
         <div id="make-account-div">
-          <h5 id="make-account-text">make a <i>kanji keeper</i> account to get access to all website features!</h5>
+          <div id="make-account-text" class="landing-font">make a <i>kanji keeper</i> account to get access to all website features!</div>
         </div>
       </div>
     </div>
