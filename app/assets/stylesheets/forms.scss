@@ -11,11 +11,23 @@ body#sign-in-body {
   outline: none;
 }
 
+.signed-out-header {
+  word-break: keep-all;
+}
+
 .signed-out-pages {
   background-color: white;
   padding: 60px 50px 0 50px;
   text-align: center;
   width: 100%;
+
+  @media screen and (max-width: 400px) {
+    padding: 60px 25px 0 25px;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 60px 0 0 0px;
+  }
 }
 
 .forms-layout {

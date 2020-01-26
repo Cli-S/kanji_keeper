@@ -18,6 +18,10 @@
   font-size: 18px;
   justify-content: center;
   white-space: nowrap;
+
+  @media screen and (max-width: 340px) {
+    font-size: 16px;
+  }
 }
 
 #sign-in-margin {
