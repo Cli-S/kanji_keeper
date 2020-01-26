@@ -4,6 +4,7 @@
   width: 100%;
 
   @media screen and (max-width: 650px) {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,6 +136,7 @@
   }
 
   @media screen and (max-width: 650px) {
+    align-items: center;
     display: flex;
     justify-content: center;
     order: 2;
@@ -196,6 +198,7 @@
 }
 
 #furigana-image-div {
+  align-items: center;
   display: flex;
   justify-content: center;
 
@@ -241,6 +244,7 @@
 }
 
 #kanji-image-div {
+  align-items: center;
   display: flex;
   justify-content: center;
 }
