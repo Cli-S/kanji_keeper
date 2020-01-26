@@ -36,12 +36,6 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-
-  @media screen and (max-width: 360px) {
-    margin: 0;
-    padding: 0;
-    width: max-content;
-  }
 }
 
 mark {
@@ -115,6 +109,8 @@ ul {
   max-width: 1000px;
 
   @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
     margin-top: 30px;
   }
 }
