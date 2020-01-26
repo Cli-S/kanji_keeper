@@ -94,7 +94,7 @@
 }
 
 #under-landing-header {
-  line-height: 2.5;
+  line-height: 2;
   margin-bottom: 3%;
   width: 100%;
 
@@ -162,25 +162,60 @@
   padding: 6% 0;
   text-align: center;
   word-break: break-word;
-}
 
-#furigana-image-and-text {
-  display: flex;
-  justify-content: space-evenly;
-}
+  @media screen and (max-width: 1000px) {
+    padding: 10% 0;
+  }
 
-#furigana-demo {
-  width: 80%;
+  @media screen and (max-width: 650px) {
+    padding: 13% 5%;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 20% 0;
+  }
 }
 
 #furigana-demo-div {
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 650px) {
+    margin: 1em 1em 0 1em;
+  }
+}
+
+#furigana-demo-image {
+  margin-top: 4%;
+  width: 60%;
+
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
 }
 
 #furigana-text-div {
   display: flex;
+  font-weight: 600;
+  justify-content: center;
+  padding: 6% 0;
   text-align: center;
+
+  @media screen and (max-width: 1000px) {
+    padding: 10% 0;
+  }
+
+  @media screen and (max-width: 650px) {
+    padding: 13% 5%;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 20% 0;
+  }
+}
+
+#furigana-demo-text {
+
 }
 
 #kanji-image-and-text {
