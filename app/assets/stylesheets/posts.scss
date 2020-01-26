@@ -24,8 +24,8 @@
 }
  
 .my-posts-layout { //user posts
-  width: 39%;
   margin: 0 auto;
+  width: 39%;
 }
 
 .my-posts-header {
@@ -33,13 +33,13 @@
 }
 
 .kanji-card-container {
-   position: relative;
+  position: relative;
 }
  
 .kanji-card {
   background-color: white;
-  overflow: hidden;
   box-shadow: 0 0 15px rgba(66, 66, 66, 0.09);
+  overflow: hidden;
   margin-bottom: 40px;
   width: 100%;
  
@@ -65,18 +65,19 @@
 }
  
 .top-card {
-  display: flex;
-  background-size: cover;
   background-position: center;
-  height: 300px;
+  background-size: cover;
   color: white;
+  display: flex;
+  height: 300px;
 }
  
 .top-card-features {
-  width: 100%;
-  padding: 25px 58px 0px 40px;
   display: flex;
   justify-content: space-between;
+  padding: 25px 58px 0px 40px;
+  width: 100%;
+
   @media screen and (max-width: 800px) {
     flex-direction: row-reverse;
   }
@@ -87,8 +88,8 @@
 }
  
 .big-kanji {
-  font-size: 30px;
   font-weight: 600;
+  font-size: 30px;
 }
 
 .furigana-card {
@@ -128,11 +129,11 @@
 }
  
 .card-additional-info {
-  display: flex;
   color: #949494;
+  display: flex;
+  float: right;
   font-size: 12px;
   padding: 20px 45px 0 45px;
-  float: right;
 
   @media screen and (max-width: 800px) {
     flex-direction: row-reverse;
@@ -141,15 +142,15 @@
 }
  
 .card-buttons {
-  padding: 15px 0px;
-  font-size: 15px;
-  display: flex;
-  justify-content: space-between;
+  a{
+    display: inline-block;
+  }
   align-items: center;
   color: #90cedb;
-  a{
-   display: inline-block;
-  }
+  display: flex;
+  font-size: 15px;
+  justify-content: space-between;
+  padding: 15px 0px;
 
   @media screen and (max-width: 800px) {
     flex-direction: row-reverse;
@@ -179,11 +180,11 @@
 }
  
 .user-button {
+  a {
+    color: white;
+  }
   font-size: 15px;
   margin-right: 7px;
-  a {
-     color: white;
-  }
   padding: 7px 14px;
 }
  
@@ -192,13 +193,13 @@
 }
  
 .date-border {
-  display: flex;
   border: 1px solid;
   border-image: linear-gradient(45deg, #FF768A, #90cedb) 1;
-  margin-bottom: 3px;
-  padding: 3px 9px;
+  display: flex;
   font-size: 12px;
   justify-content: flex-end;
+  margin-bottom: 3px;
+  padding: 3px 9px;
 
   @media screen and (max-width: 450px) {
     font-size: 10px;
@@ -212,10 +213,10 @@
 }
  
 .avatar {
+  border-radius: 50%;
+  height: 35px;
   vertical-align: middle;
   width: 35px;
-  height: 35px;
-  border-radius: 50%;
 }
 
  // mobile

@@ -12,42 +12,42 @@ body#sign-in-body {
 }
 
 .signed-out-pages {
+  background-color: white;
   padding: 60px 50px 0 50px;
   text-align: center;
   width: 100%;
-  background-color: white;
 }
 
 .forms-layout {
-  padding: 80px 40px 0 40px;
-  max-width: 396px;
   margin: 0 auto;
+  max-width: 396px;
+  padding: 80px 40px 0 40px;
 }
 
 .fresh-forms-layout {
-  padding: 45px 30px 0 30px;
-  max-width: 396px;
   margin: 0 auto;
+  max-width: 396px;
+  padding: 45px 30px 0 30px;
 }
 
 .avatar-field-design {
   border: none;
-  width: 23%;
   padding: 0 0 10px 45px;
+  width: 23%;
 }
 
 .form-field-design {
-  padding: 8px;
-  width: 100%;
-  margin-bottom: 15px;
   border: 1px solid;
   border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
   input {
     box-sizing: border-box;
     width: 100%;
     text-align: center;
-    }
+  }
+  margin-bottom: 15px;
+  padding: 8px;
   text-align: center;
+  width: 100%;
 }
 
 .input-margin {
@@ -55,23 +55,23 @@ body#sign-in-body {
 }
 
 .fav-icon {
-  width: 32px;
   height: 32px;
   // margin-right: -48px;
-  position: absolute;
   display: inline-block;
   font-size: 14px;
-  opacity: 0.5;
-  top: 13px;
   left: 20px;
+  opacity: 0.5;
   padding-right: 15px;
+  position: absolute;
+  top: 13px;
+  width: 32px;
 }
 
 .fav-icon:before {
   background: -webkit-gradient(linear, left bottom, left top, from(#FF768A), to(#90cedb));
+  display: initial; /* reset Font Awesome's display:inline-block */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: initial; /* reset Font Awesome's display:inline-block */
 }
 
 .user-icon {
@@ -85,27 +85,27 @@ body#sign-in-body {
   font-weight: bold;
   // border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
   height: 50px;
-  margin-top: 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
   padding: 10px;
   width: 50px;
   z-index: 1;
 }
 
 .hidden-icon-input {
-  width: 0.1px;
 	height: 0.1px;
 	opacity: 0;
 	overflow: hidden;
-	position: absolute;
+  position: absolute;
+  width: 0.1px;
   z-index: -1;
 }
 
 ::placeholder {
   color: #7F7F7F;
-  text-align:center;
-  padding-left: 5px;
   font-size: 14px;
+  padding-left: 5px;
+  text-align:center;
 }
 
 .remember-me {
@@ -113,14 +113,14 @@ body#sign-in-body {
 }
 
 .main-form-button {
-  border-radius: 20px;
-  width: 23%;
   background-image: linear-gradient(to right, #FF768A, #F9A488);
   border: none;
-  cursor: pointer;
-  padding: 7px;
+  border-radius: 20px;
   color: white;
+  cursor: pointer;
   margin-top: 20px;
+  padding: 7px;
+  width: 23%;
 }
 
 .main-form-button:hover {
@@ -130,13 +130,13 @@ body#sign-in-body {
 }
 
 .forgot-pass {
-  padding: 20px;
-  text-transform: uppercase;
   a {
     color: #90cedb;
     font-weight: 600;
     font-size: 12px;
   }
+  padding: 20px;
+  text-transform: uppercase;
 }
 
 .sign-up-now {

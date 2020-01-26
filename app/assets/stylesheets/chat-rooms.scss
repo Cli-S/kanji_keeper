@@ -27,12 +27,12 @@
   //border: 1px solid #F5F5F5;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
-  width: 35%;
   margin-left: 150px;
   text-align: left;
   ul {
     padding: 0;
   }
+  width: 35%;
 }
 
 #new-chat-room-link {
@@ -74,9 +74,9 @@
 }
 
 #chat-type-here {
-  bottom: 0;
-  border-top: 1.5px solid #F5F5F5;
   border-bottom-right-radius: 20px;
+  border-top: 1.5px solid #F5F5F5;
+  bottom: 0;
   height: 15%;
   padding: 20px;
   position: absolute;

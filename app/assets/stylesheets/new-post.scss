@@ -1,33 +1,20 @@
-body { 
-  background-image: image-url("graph-paper.svg");
-  background-repeat: repeat;
-}
-
-html, body {
-  @media screen and (max-width: 360px) {
-    margin: 0;
-    padding: 0;
-    width: max-content;
-  }
-}
-
 .new-post-header {
   padding-bottom: 20px;
   text-align: center;
 }
 
 .new-post-card {
-  width: 600px;
+  * {
+    box-sizing: border-box;
+  }
   background-color: white;
-  padding: 60px;
+  border-radius: 20px;
   box-shadow: 0 0 15px rgba(66, 66, 66, 0.09);
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 30px;
-  border-radius: 20px;
-  * {
-    box-sizing: border-box;
-  }
+  padding: 60px;
+  width: 600px;
   @media screen and (max-width: 650px) {
     margin: 0 auto;
     text-align: center;
@@ -39,14 +26,14 @@ html, body {
 }
 
 .new-post-margin {
-  margin-bottom: 20px;
   height: 45px;
+  margin-bottom: 20px;
 }
 
 .new-post-each {
-  width: 400px;
   border: 2px solid;
   border-image: linear-gradient(45deg,#FF768A,#90cedb) 1;
+  width: 400px;
 
   @media screen and (max-width: 650px) {
     margin: 0 auto;
@@ -73,9 +60,6 @@ html, body {
 }
 
 .new-post-button {
-  width: 50%;
-  margin-top: 10px;
-  margin: 0 auto;
   input {
     background: #313840;
     border: 1px solid;
@@ -86,4 +70,7 @@ html, body {
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
   }
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 50%;
 }

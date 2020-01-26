@@ -1,7 +1,3 @@
-html {
-  overflow:   scroll;
-}
-
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
@@ -22,8 +18,8 @@ html {
 
 #public-chat-online{
   background-color: white;
-  border-right: 1.5px solid pink;
   border-bottom-left-radius: 20px;
+  border-right: 1.5px solid pink;
   border-top-left-radius: 20px;
   height: 100%;
   margin-left: 150px;
@@ -94,9 +90,13 @@ html {
 }
 
 #public-text-box {
+  background-color: #ffd2db;
+  background-image: image-url("graph-paper.svg");
+  background-repeat: repeat;
   border: 0;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  box-shadow: 0 0 15px rgba(66, 66, 66, 0.1);
   font-weight: bold;
   height: 125px;
   input {
@@ -105,10 +105,6 @@ html {
   padding: 20px;
   position: absolute;
   width: 100%;
-  box-shadow: 0 0 15px rgba(66, 66, 66, 0.1);
-  background-color: #ffd2db;
-  background-image: image-url("graph-paper.svg");
-  background-repeat: repeat;
 }
 
 #chat-user-image {

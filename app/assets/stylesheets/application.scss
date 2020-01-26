@@ -1,17 +1,18 @@
-@import "chat_rooms.scss";
-@import "posts";
-@import "forms";
-@import "new-post";
-@import "user-profile";
-@import "comment-button";
-@import "comment-page";
-@import "static_pages";
-@import "user-account";
-@import "public.scss";
-@import "landing-page.scss";
-@import "signed-out-nav.scss";
+@import "breakpoint-classes.scss";
+@import "chat-rooms.scss";
+@import "comment-button.scss";
+@import "comment-page.scss";
+@import "forms.scss";
 @import "landing-nav.scss";
+@import "landing-page.scss";
+@import "new-post.scss";
+@import "posts.scss";
+@import "public-chat.scss";
 @import "signed-in-nav.scss";
+@import "signed-out-nav.scss";
+@import "static-pages.scss";
+@import "user-account.scss";
+@import "user-profile.scss";
 
 @font-face {
   font-family: 'KanjiStrokeOrder';
@@ -19,18 +20,32 @@
 }
 
 #error_explanation {
-  text-align: center;
   color: #FF768A;
+  text-align: center;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
   background-color: #f5f5f5;
+  background-image: image-url("graph-paper.svg");
+  background-repeat: repeat;
+  font-family: 'Quicksand', sans-serif;
 }
 
 html, body {
+  height: auto;
   margin: 0;
   padding: 0;
+  width: 100%;
+
+  @media screen and (max-width: 360px) {
+    margin: 0;
+    padding: 0;
+    width: max-content;
+  }
+}
+
+mark {
+  background-color: #FDBBC7;
 }
 
 ::selection {
@@ -51,11 +66,11 @@ html, body {
 }
 
 .logo-font {
-  padding: 8px 0 8px 16px;
-  font-weight: 700;
   a {
     color: #313840;
   }
+  font-weight: 700;
+  padding: 8px 0 8px 16px;
 }
 
 a:link {
@@ -84,20 +99,20 @@ ul {
 }
 
 .nav-hack {
-  width: 44px;
-  text-align: right;
   font-size: 24px;
+  text-align: right;
+  width: 44px;
 }
 
 .dropdown-menu {
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .home-layout {
   display: flex;
-  max-width: 1000px;
   margin: 45px auto 0 auto;
+  max-width: 1000px;
 
   @media screen and (max-width: 800px) {
     margin-top: 30px;
@@ -132,9 +147,9 @@ ul {
 }
 
 #new-post-button {
-  text-align: center;
-  display: flex;
   align-items: center;
+  display: flex;
+  text-align: center;
 }
 
 .navbar-post-button-design {
@@ -142,18 +157,18 @@ ul {
 }
 
 .cool-btn {
+  color: #313840;
   background: none;
   border: 2px solid;
   border-bottom-width: 4px;
+  // font: 700 11px/1 Montserrat, sans-serif;
+  letter-spacing: 0.125em;
   letter-spacing: inherit;
   margin: 1em;
   padding: 1em 2em;
+  text-align: center;
   text-transform: inherit;
   transition: color 1s;
-  font: 700 11px/1 Montserrat, sans-serif;
-  letter-spacing: 0.125em;
-  text-align: center;
-  color: #313840;
   width: 120px;
 }
 
@@ -171,15 +186,15 @@ ul {
 }
 
 .main-buttons {
-  box-shadow: 0px 8px 15px rgba(204, 204, 204, 0.1);
-  background-image: linear-gradient(to right, #FF768A, #F9A488);
-  transition: all 0.2s ease 0s;
-  cursor: pointer;
-  border-radius: 2px;
-  color: white;
   a {
     color: white;
   }
+  background-image: linear-gradient(to right, #FF768A, #F9A488);
+  border-radius: 2px;
+  box-shadow: 0px 8px 15px rgba(204, 204, 204, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
 }
 
 .fa-bars:before {
@@ -187,9 +202,9 @@ ul {
 }
 
 .button-wrap {
-  height: 100%;
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 100%;
   justify-content: center;
 }
 
@@ -201,8 +216,8 @@ ul {
 
 .lesser-buttons {
   transition: all 0.2s ease 0s;
-  cursor: pointer;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .lesser-buttons:hover {
@@ -211,23 +226,23 @@ ul {
 
 #subscription {
   background-color: white;
+  margin-bottom: auto;
+  margin-top: auto;
   padding: 50px;
-  margin-top:auto;
-  margin-bottom:auto;
-  text-align:center;
+  text-align: center;
 }
 
 #contact {
   a {
     color: #313840;
-    cursor: pointer;;
+    cursor: pointer;
   }
   background-color: white;
-  font-weight: bold;
   font-size: 20px;
-  padding: 40px;
-  margin-top: auto;
+  font-weight: bold;
   margin-bottom: auto;
+  margin-top: auto;
+  padding: 40px;
   text-align: center;
 }
 
@@ -242,17 +257,17 @@ ul {
 
 #form-and-button {
   display: flex;
-  margin-top:auto;
-  margin-bottom:auto;
   justify-content: center;
   margin: 30px;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 #subscription-button {
   background-color: #313840;
-  cursor: pointer;
   border: solid 1px #313840;
   color: white;
+  cursor: pointer;
   transition: all 0.3s ease 0s;
 }
 
@@ -262,9 +277,9 @@ ul {
 }
 
 .sakura-avatar {
+  border-radius: 35%; 
+  height: 21px;
+  margin: 0 2px 3px 4px;
   vertical-align: middle;
   width: 24px;
-  height: 21px;
-  border-radius: 35%; 
-  margin: 0 2px 3px 4px;
 }
