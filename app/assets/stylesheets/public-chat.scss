@@ -1,8 +1,3 @@
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
-}
-
 #public-chat-header {
   font-weight: bold;
   // position: absolute;
@@ -14,6 +9,11 @@
 #public-chat-layout {
   display: flex;
   margin-top: 2%;
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+  }
 }
 
 #public-chat-online{
