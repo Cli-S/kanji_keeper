@@ -69,3 +69,7 @@
 #signed-in-nav-margin-chat {
   margin-right: 10px;
 }
+
+.dropdown-item:active {
+  background-color: skyblue; // because boostrap base color on click is dark blue
+}
