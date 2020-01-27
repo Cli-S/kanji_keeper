@@ -63,6 +63,7 @@
 }
 
 #big-sakura-image {
+  height: auto;
   width: 35%;
 }
 
@@ -208,6 +209,7 @@
 }
 
 #furigana-demo-image {
+  height: auto;
   margin-top: 2%;
   width: 60%;
 
@@ -300,7 +302,8 @@
 }
 
 #chat-demo-image {
-  width: 80%;
+  height: auto;
+  width: 70%;
 
   @media screen and (max-width: 650px) {
     width: 100%;
