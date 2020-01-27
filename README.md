@@ -20,7 +20,7 @@ Features
 
 > ![alt text](curiosity.png)
 
-* A few gems: CarrierWave for user upload files, Cloudinary for user image storage, Devise for authentication, ...
+* A few gems: CarrierWave for user upload files, Cloudinary for user image storage, Devise for authentication, Rinku for links...
 
 * Real-time chat: Action Cable integrates full-duplex communications with WebSockets with the rest of the application. Since the connection is persistent, users can submit their messages at the same time and still see their respective messages appear immediately
 

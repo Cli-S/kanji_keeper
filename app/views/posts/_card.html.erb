@@ -24,7 +24,7 @@
       </div>
     </div>
   <% else %>
-  <div class="top-card" div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= post.photo.to_s %>);">
+  <div class="top-card card-image-padding" div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= post.photo.to_s %>);">
     <div class="top-card-features">
       <div>
         <% if post.user.avatar.blank? %>
