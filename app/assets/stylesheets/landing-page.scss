@@ -65,6 +65,10 @@
 #big-sakura-image {
   height: auto;
   width: 35%;
+
+  @media screen and (min-width: 3000px) {
+    width: 20%;
+  }
 }
 
 #website-description {
