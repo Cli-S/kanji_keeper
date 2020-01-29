@@ -53,6 +53,7 @@ function styleMessageAccordingToCurrentUser(messageElement, currentUserId) {
   const individualPublicMessage = messageElement.querySelector(".individual-public-message");
   const userMessage = messageElement.querySelector(".user-messages");
   const userDate = messageElement.querySelector(".user-date");
+  const userDelete = messageElement.querySelector(".message-delete");
 
   if (messageElement.dataset.senderId === currentUserId) {
     individualPublicMessage.classList.add("current");
@@ -62,6 +63,7 @@ function styleMessageAccordingToCurrentUser(messageElement, currentUserId) {
     individualPublicMessage.classList.add("other");
     userMessage.classList.add("other");
     userDate.classList.add("other");
+    userDelete.classList.add("invisible-delete");
   }
 }
 
