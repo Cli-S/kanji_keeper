@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/show'
   unauthenticated :user do
     root :to => 'static_pages#home'
   end
