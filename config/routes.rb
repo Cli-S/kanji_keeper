@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :favorites, only: [:create, :show, :destroy]
   end
   resources :favorites, only: [:index]
+  get '/users/:username', to: 'users#show'
   #resources :chat_rooms, only: [:new, :create, :show, :index] do
     #resources :chat_room_users, only: [:create]
   #end
