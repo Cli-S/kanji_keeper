@@ -12,5 +12,6 @@ class User < ApplicationRecord
   has_many :chat_rooms, dependent: :destroy, through: :chat_room_users
   scope :all_except, ->(user) { where.not(id: user) }
   has_many :messages, dependent: :destroy
+  has_many :notifications
   mount_uploader :avatar, PhotoUploader
 end
