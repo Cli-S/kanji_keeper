@@ -6,6 +6,7 @@
 @import "landing-page.scss";
 @import "mobile-landing.scss";
 @import "new-post.scss";
+@import "notifications.scss";
 @import "posts.scss";
 @import "public-chat.scss";
 @import "signed-in-nav.scss";
@@ -90,6 +91,10 @@ ul {
 .chat-icon {
   font-size: 30px;
   margin-left: 30px;
+}
+
+.notif-icon {
+  font-size: 27px;
 }
 
 .nav-hack {
