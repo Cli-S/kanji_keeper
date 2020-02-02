@@ -1,0 +1,19 @@
+<div class="modal fade" id="notif-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center d-block">
+        <h5 class="modal-title">notifications</h5>
+      </div>
+      <div class="modal-body notification-container">
+        <% @user_notifications.each do |notification| %>
+          <div class="individual-notification"><%= notification.user.username %> has commented on your <%= link_to notification.comment.post.expression, post_path(notification.comment.post_id) %> post!</div>
+          <div id="x-icon-div"><i class="fas fa-times" id="x-icon"></i></div>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

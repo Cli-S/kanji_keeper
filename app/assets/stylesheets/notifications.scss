@@ -1,8 +1,24 @@
-#notifications-container {
-  text-align: center;
+.notification-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .individual-notification {
   background-color: white;
-  padding: 40px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#x-icon-div {
+  padding: 40px 0;
+  text-align: center;
+}
+
+#x-icon {
+  color: grey;
+}
+
+#x-icon:hover {
+  color: pink;
+  cursor: pointer;
 }

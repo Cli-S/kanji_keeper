@@ -3,6 +3,7 @@
     <% @posts.each do |post| %>
     <div class="kanji-card-container">
       <%= render partial: "card", locals: { post: post } %>
+      <%= render partial: "modal" %>
     </div>
     <% end %>
   </div>
