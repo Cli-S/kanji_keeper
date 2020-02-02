@@ -22,6 +22,7 @@
   <body>
     <% if user_signed_in? %>
       <%= render 'layouts/signed_in_nav' %>
+      <%= render partial: 'layouts/modal' %>
     <% end %>
     <%= yield %>
     <%= javascript_pack_tag 'application' %>

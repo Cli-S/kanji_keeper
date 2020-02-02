@@ -3,8 +3,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.where("private = false or user_id = ?", current_user.id).order(created_at: :desc)
-    
-    @user_notifications = current_user.notifications
   end
 
   def show
