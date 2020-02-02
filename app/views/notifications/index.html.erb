@@ -1,5 +1,6 @@
-<div>
+<div id="notifications-container">
+  <h2>notifications</h2>
   <% @user_notifications.each do |notification| %>
-    <div><%= notification.user.username %> has commented on your <%= link_to notification.comment.post.expression, post_path(notification.comment.post_id) %> post</div>
+    <div class="individual-notification"><%= notification.user.username %> has commented on your <%= link_to notification.comment.post.expression, post_path(notification.comment.post_id) %> post!</div>
   <% end %>
 </div>
