@@ -20,9 +20,12 @@
       <% end %>
     </div>
     <div id="signed-in-nav-margin-notif" data-toggle="modal" data-target="#notif-modal">
-      <%# link_to notifications_path do %>
+      <% if @user_notifications.length > 0 %>
+        <span class="badge badge-pill animated infinite pulse"><%= @user_notifications.count %></span>
         <i class="far fa-sticky-note notif-icon"></i>
-      <%# end %>
+      <% else %>
+        <i class="far fa-sticky-note notif-icon"></i>
+      <% end %>
     </div>
     <div>
       <a class="nav-link nav-hack" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
