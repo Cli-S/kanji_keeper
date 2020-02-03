@@ -6,6 +6,8 @@
 .notification-container {
   display: flex;
   flex-direction: column;
+  height: 400px;
+  overflow-y: scroll;
 }
 
 #notification-and-x {
@@ -21,6 +23,7 @@
   background-color: white;
   padding: 40px 0;
   text-align: center;
+  width: 70%;
 }
 
 #x-icon-div {
@@ -29,7 +32,7 @@
 }
 
 #x-icon {
-  color: grey;
+  color: #313840;
 }
 
 #x-icon:hover {
