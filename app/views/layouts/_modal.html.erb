@@ -16,8 +16,10 @@
       </div>
       <div class="modal-footer">
         <div class="theta">
-          <button><%= link_to "clear notifications", destroy_all_notifications_path(), method: :delete %></button>
-          <button data-dismiss="modal" class="btn btn-tetrary black-btn">close</button>
+          <div><%= link_to "clear all", destroy_all_notifications_path(), method: :delete, :class => 'btn btn-tetrary black-btn' %></div>
+        </div>
+        <div class="theta">
+          <div data-dismiss="modal" class="btn btn-tetrary black-btn">close</div>
         </div>
       </div>
     </div>
