@@ -1,8 +1,11 @@
 <div class="modal fade" id="notif-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header text-center d-block">
+       <div class="modal-header header-and-x">
         <h5 class="modal-title">notifications</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
       <div class="modal-body notification-container">
         <% @user_notifications.each do |notification| %>
@@ -17,9 +20,6 @@
       <div class="modal-footer">
         <div class="theta">
           <div><%= link_to "clear all", destroy_all_notifications_path(), method: :delete, :class => 'btn btn-tetrary black-btn' %></div>
-        </div>
-        <div class="theta">
-          <div data-dismiss="modal" class="btn btn-tetrary black-btn">close</div>
         </div>
       </div>
     </div>

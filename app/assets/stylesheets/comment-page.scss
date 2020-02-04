@@ -1,3 +1,13 @@
+#show-post-card {
+  @media screen and (max-width: 800px) {
+    margin: 5%;
+  }
+}
+
+#card-and-comment {
+
+}
+
 #comments {
   height: 100%;
   margin-left: 5%;
@@ -5,6 +15,13 @@
   max-width: 40%;
   overflow-y: scroll;
   width: 100%;
+
+  @media screen and (max-width: 800px) {
+    margin-left: 0;
+    max-height: initial;
+    max-width: 75%;
+    overflow-y: initial;
+  }
 }
 
 .comment-outer {
@@ -51,4 +68,5 @@
 }
 
 #comment-in-post-official-button {
+
 }
