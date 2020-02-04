@@ -1,20 +1,27 @@
 #show-post-card {
+  margin: 0 auto;
+  width: 40%;
   @media screen and (max-width: 800px) {
     margin: 5%;
   }
 }
 
 #card-and-comment {
+  display: initial;
+}
 
+#show-post-card {
+}
+
+.new-comment {
+  margin-bottom: 40px;
 }
 
 #comments {
   height: 100%;
-  margin-left: 5%;
+  margin: 0 auto;
   max-height: 630px;
-  max-width: 40%;
-  overflow-y: scroll;
-  width: 100%;
+  width: 40%;
 
   @media screen and (max-width: 800px) {
     margin-left: 0;
@@ -65,6 +72,9 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  input {
+    width: 100%;
+  }
 }
 
 #comment-in-post-official-button {

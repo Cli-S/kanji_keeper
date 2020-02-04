@@ -5,6 +5,14 @@
     </div>
   </div>
   <div id="comments">
+    <div class="new-comment">
+      <%= form_for([@post, @comment]) do |f| %>
+        <div id="comment-in-post-button">
+          <%= f.text_field :content %>
+          <%= f.submit 'post comment', :class => 'comment-in-post-official-button' %>
+        </div>
+      <% end %>
+    </div>
       <% @post.comments.each do |comment| %>
       <div class="comment-outer">
         <div class="post-comment">
@@ -41,13 +49,5 @@
         </div>
       </div>
       <% end %>
-    <div class="new-comment">
-      <%= form_for([@post, @comment]) do |f| %>
-        <div id="comment-in-post-button">
-          <%= f.text_field :content %>
-          <%= f.submit 'post comment', :class => 'comment-in-post-official-button' %>
-        </div>
-      <% end %>
-    </div>
   </div>
 </div>
