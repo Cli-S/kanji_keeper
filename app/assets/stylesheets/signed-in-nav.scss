@@ -13,12 +13,12 @@
     padding: 15px 10px 0 15px;
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 450px) {
     padding:  5px 25px 0 25px;
   }
 
-  @media screen and (max-width: 340px) {
-    padding:  5px 15px 0 15px;
+  @media screen and (max-width: 370px) {
+    padding:  5px 12px 0 12px;
   }
 }
 
@@ -27,7 +27,7 @@
   white-space: nowrap;
   word-break: break-all;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 520px) {
     display: initial;
   }
 }
@@ -82,8 +82,48 @@
 
 .badge {
   background-color: skyblue;
+  cursor: pointer;
   position: absolute;
   right: 61px;
   top: 25px;
   z-index: 1;
+
+  @media screen and (max-width: 520px) {
+    top: 39px;
+  }
+
+  @media screen and (max-width: 500px) {
+    right: 51px;
+    top: 31px;
+  }
+
+  @media screen and (max-width: 450px) {
+    right: 66px;
+    top: 21px;
+  }
+
+  @media screen and (max-width: 400px) {
+    right: 65px;
+    top: 13px;
+  }
+
+  @media screen and (max-width: 370px) {
+    right: 53px;
+  }
+
+  @media screen and (max-width: 340px) {
+    top: 10px;
+  }
+
+  @media screen and (max-width: 335px) {
+    right: 50px;
+  }
+
+  @media screen and (max-width: 330px) {
+    right: 47px;
+  }
+
+  @media screen and (max-width: 325px) {
+    right: 45px;
+  }
 }

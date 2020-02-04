@@ -4,4 +4,10 @@ class NotificationsController < ApplicationController
     @notification.destroy!
     redirect_to root_path
   end
+
+  def destroy_all
+    @user_notifications = current_user.notifications
+    @user_notifications.destroy_all
+    redirect_to root_path
+  end
 end

@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   resources :favorites, only: [:index]
   get '/users/:username', to: 'users#show'
   resources :notifications, only: [:index, :destroy]
+  delete '/destroy_all_notifications', to: 'notifications#destroy_all'
   #resources :chat_rooms, only: [:new, :create, :show, :index] do
     #resources :chat_room_users, only: [:create]
   #end
