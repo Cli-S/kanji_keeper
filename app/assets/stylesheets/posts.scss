@@ -96,6 +96,10 @@
 .big-kanji {
   font-weight: 600;
   font-size: 30px;
+
+  @media screen and (max-width: 500px) {
+    font-size: 27px;
+  }
   
   @media screen and (max-width: 320px) {
     font-size: 25px;
@@ -118,9 +122,12 @@
 .italic-meaning {
     font-style: italic;
     word-break: break-word;
+  
+  @media screen and (max-width: 500px) {
+    font-size: 0.9em;
+  }
 
   @media screen and (max-width: 320px) {
-    font-size: 15px;
     text-align: left;
   }
 }
@@ -130,6 +137,10 @@
   text-align: right;
   white-space: pre-wrap;
   word-break: break-word;
+
+  @media screen and (max-width: 500px) {
+    padding: 20px 0 0 0;
+  }
 
   @media screen and (max-width: 400px) {
     text-align: left;
