@@ -4,7 +4,7 @@
 
 Features
 
-* Basic CRUD app with favoriting and privating features for posts
+* Basic CRUD app with favoriting, privating, and notifications features for posts
 
 * Front-end: HTML, CSS, JavaScript, Bootstrap 4, animate.css, jQuery
 
