@@ -64,18 +64,17 @@
     </div>
     <div class="card-buttons">
       <div>
-        <div class="theta">
-          <%= link_to "comment", post_path(post), class: 'btn btn-tetrary' %>
+        <div class="theta card-buttons-div">
           <% if user_signed_in? && current_user == post.user %>
           <div id="edit-and-delete">
             <span class="link-margin lesser-buttons"><%= link_to "edit", edit_post_path(post), class: 'to-the-left' %></span>
-            <span class="link-margin lesser-buttons"><%= link_to "delete", post_path(post), method: :delete, class: 'to-the-left' %></span>
+            <span class="link-margin lesser-buttons"><%= link_to "delete", post_path(post), method: :delete, class: 'to-the-left to-the-right' %></span>
           </div>
           <% end %>
+            <div id="home-comment-button-div">
+              <%= link_to "comment", post_path(post), class: 'btn btn-tetrary home-comment-button' %>
+            </div>
         </div>
-      </div>
-      <div>
-        <span class="date-border"><%= time_ago_in_words(post.created_at).upcase %> AGO</span>
       </div>
     </div>
   </div>

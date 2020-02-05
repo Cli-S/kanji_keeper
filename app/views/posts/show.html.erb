@@ -1,15 +1,17 @@
 <div class="home-layout" id="card-and-comment">
   <div id="show-post-card"> 
     <div class="kanji-card-container">
-      <%= render partial: "card", locals: { post: @post } %>
+      <%= render partial: "show_card", locals: { post: @post } %>
     </div>
   </div>
   <div id="comments">
     <div class="new-comment">
       <%= form_for([@post, @comment]) do |f| %>
         <div id="comment-in-post-button">
-          <%= f.text_field :content %>
-          <%= f.submit 'post comment', :class => 'comment-in-post-official-button' %>
+          <%= f.text_field :content, placeholder: "leave a comment for this post" %>
+          <div id="comment-button-div">
+            <%= f.submit 'post comment', :class => 'comment-in-post-official-button' %>
+          </div>
         </div>
       <% end %>
     </div>

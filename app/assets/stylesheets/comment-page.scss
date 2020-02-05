@@ -21,6 +21,9 @@
 
 .new-comment {
   margin-bottom: 40px;
+  input {
+    padding: 20px;
+  }
 }
 
 #comments {
@@ -89,6 +92,6 @@
   }
 }
 
-#comment-in-post-official-button {
-
+#comment-button-div {
+  width: 40%;
 }

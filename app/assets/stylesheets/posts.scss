@@ -185,27 +185,24 @@
   a{
     display: inline-block;
   }
-  align-items: center;
   color: #90cedb;
-  display: flex;
   font-size: 15px;
-  justify-content: space-between;
   padding: 15px 0px;
 
-  @media screen and (max-width: 800px) {
-    justify-content: center, space-between;
+  @media screen and (max-width: 365px) {
+    font-size: 14px;
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 345px) {
+    font-size: 13px;
+  }
+
+  @media screen and (max-width: 335px) {
     font-size: 12px;
   }
 
-  @media screen and (max-width: 350px) {
-    font-size: 10px;
-  }
-
-  @media screen and (max-width: 320px) {
-    font-size: 9px;
+  @media screen and (max-width: 321px) {
+    font-size: 11px;
   }
 }
  
@@ -218,8 +215,14 @@
   }
 }
 
+.to-the-right {
+  margin-right: 20px;
+}
+
 #edit-and-delete {
   display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
   padding-top: 5px;
 }
 
