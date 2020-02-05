@@ -242,15 +242,19 @@
 .link-margin {
   margin-right: 10px;
 }
+
+#date-border-div {
+  display: flex;
+  justify-content: flex-end;
+}
  
 .date-border {
   border: 1px solid;
   border-image: linear-gradient(45deg, #FF768A, #90cedb) 1;
-  display: flex;
   font-size: 12px;
-  justify-content: flex-end;
-  margin-bottom: 3px;
+  margin-bottom: 7px;
   padding: 3px 9px;
+  width: fit-content;
 
   @media screen and (max-width: 450px) {
     font-size: 10px;

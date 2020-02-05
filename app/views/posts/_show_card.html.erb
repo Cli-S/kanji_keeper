@@ -68,11 +68,11 @@
           <div id="edit-and-delete">
             <span class="link-margin lesser-buttons"><%= link_to "edit", edit_post_path(post) %></span>
             <span class="link-margin lesser-buttons"><%= link_to "delete", post_path(post), method: :delete, class: 'to-the-left to-the-right' %></span>
-            <div>
-              <span class="date-border"><%= time_ago_in_words(post.created_at).upcase %> AGO</span>
-            </div>
-          </div>
         <% end %>
+          <div id="date-border-div">
+            <span class="date-border"><%= time_ago_in_words(post.created_at).upcase %> AGO</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
