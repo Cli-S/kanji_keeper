@@ -112,6 +112,10 @@
   padding: 20px;
   position: absolute;
   width: 100%;
+
+  @media screen and (max-width: 400px) {
+    height: 80px;
+  }
 }
 
 #chat-user-image {
