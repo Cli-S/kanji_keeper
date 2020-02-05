@@ -185,6 +185,7 @@
   a{
     display: inline-block;
   }
+  align-items: baseline;
   color: #90cedb;
   font-size: 15px;
   padding: 15px 0px;
@@ -212,6 +213,12 @@
 
   @media screen and (max-width: 450px) {
     margin-left: 18px;
+  }
+}
+
+.smol-padding {
+  @media screen and (max-width: 350px) {
+    padding-right: 10px;
   }
 }
 
@@ -257,13 +264,11 @@
   width: fit-content;
 
   @media screen and (max-width: 450px) {
-    font-size: 10px;
     padding: 3px 6px;
-    margin-bottom: 4px;
   }
 
-  @media screen and (max-width: 320px) {
-    font-size: 8px;
+  @media screen and (max-width: 345px) {
+    font-size: 9px;
   }
 }
 
