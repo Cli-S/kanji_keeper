@@ -22,6 +22,12 @@
   margin: 10px;
 }
 
+.modal-everything {
+  @media screen and (max-width: 350px) {
+    height: 500px;
+  }
+}
+
 .individual-notification {
   background-color: white;
   padding: 40px 0;

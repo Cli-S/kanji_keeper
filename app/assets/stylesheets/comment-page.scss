@@ -1,8 +1,14 @@
 #show-post-card {
   margin: 0 auto;
-  width: 40%;
-  @media screen and (max-width: 800px) {
-    margin: 5%;
+  margin-top: 5%;
+  width: 650px;
+
+  @media screen and (min-width: 1500px) {
+    width: 40%;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 90%;
   }
 }
 
@@ -21,13 +27,19 @@
   height: 100%;
   margin: 0 auto;
   max-height: 630px;
-  width: 40%;
+  width: 650px;
+
+  @media screen and (min-width: 1500px) {
+    width: 40%;
+  }
 
   @media screen and (max-width: 800px) {
-    margin-left: 0;
     max-height: initial;
-    max-width: 75%;
     overflow-y: initial;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: 90%;
   }
 }
 
