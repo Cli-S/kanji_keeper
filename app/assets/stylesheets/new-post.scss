@@ -2,6 +2,10 @@
   padding-bottom: 20px;
   text-align: center;
 
+  @media screen and (max-width: 330px) {
+    font-size: 25px;
+  }
+
   @media screen and (max-width: 325px) {
     padding: 10px;
   }
