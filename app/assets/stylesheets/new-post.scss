@@ -1,6 +1,10 @@
 .new-post-header {
   padding-bottom: 20px;
   text-align: center;
+
+  @media screen and (max-width: 325px) {
+    padding: 10px;
+  }
 }
 
 .new-post-card {
@@ -17,11 +21,28 @@
   width: 600px;
   @media screen and (max-width: 650px) {
     margin: 0 auto;
+    margin-top: 5%;
     text-align: center;
-    width: 95%;
+    width: 100%;
     ul {
       padding: 0;
     } 
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 45px;
+  }
+
+  @media screen and (max-width: 370px) {
+    padding: 40px;
+  }
+
+  @media screen and (max-width: 350px) {
+    padding: 30px;
+  }
+
+  @media screen and (max-width: 325px) {
+    padding: 21px;
   }
 }
 
@@ -39,7 +60,7 @@
     margin: 0 auto;
     margin-top: 15px;
     text-align: center;
-    width: 95%; 
+    width: 100%; 
   }
 }
 
