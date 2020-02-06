@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   def redirect_to_domain
     domain = ENV["DOMAIN"] 
 
-    if domain && request.host == "kanjikeeper.herokuapp.com"
+    if domain && request.host == "kanjikeeper.herokuapp.com" || request.host == "kanjikeeper.com"
       redirect_to "https://" + domain + request.path, status: :moved_permanently
     end
   end
