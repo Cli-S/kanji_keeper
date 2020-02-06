@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_user_notifications
-  before_action :redirect_to_domain
+  before_filter :redirect_to_preferred_host
 
   protected
 
@@ -19,11 +19,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def redirect_to_domain
-    domain = ENV["DOMAIN"] 
-
-    if domain && request.host == "kanjikeeper.herokuapp.com"
-      print domain + request.path, status: :moved_permanently
+  PREFERRED_HOST = 'www.kanjikeeper.com'
+  def redirect_to_preferred_host
+    if Rails.env.production? && request.host != PREFERRED_HOST
+      redirect_to(host: PREFERRED_HOST)
     end
   end
 end
