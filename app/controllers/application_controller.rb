@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_user_notifications
+  before_action :redirect_to_domain
 
   protected
 
@@ -15,6 +16,14 @@ class ApplicationController < ActionController::Base
       @user_notifications = current_user.notifications
     else
       @user_notifications = []
+    end
+  end
+
+  def redirect_to_domain
+    domain = ENV["DOMAIN"] 
+
+    if domain && request.host == "kanjikeeper.herokuapp.com"
+      print domain + request.path, status: :moved_permanently
     end
   end
 end
