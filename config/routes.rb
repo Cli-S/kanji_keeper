@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'rooms/show'
   #get '/faq', to: 'static_pages#faq'
   get '/contact', to: 'static_pages#contact'
+  get '/resources', to: 'static_pages#resources'
+  get '/hiragana', to: 'static_pages#hiragana'
   #get '/about', to: 'static_pages#about'
   devise_for :users, controllers: { sessions: "users/sessions" }
   get 'chat' => 'chat_rooms#show', :defaults => {:id => 3}

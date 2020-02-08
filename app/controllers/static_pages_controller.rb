@@ -1,12 +1,15 @@
 class StaticPagesController < ApplicationController
   before_action :authenticate_user!, :except => [:home]
 
-  def home
+  def contact
   end
-
+  
   def faq
   end
 
-  def guide
+  def hiragana
+  end
+
+  def home
   end
 end
