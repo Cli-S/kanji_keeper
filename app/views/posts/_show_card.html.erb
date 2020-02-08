@@ -9,7 +9,7 @@
           <% if post.user.avatar.blank? %>
               <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
           <% else %>
-            <%= image_tag(post.user.avatar.to_s, :class => 'avatar') %>
+            <%= cl_image_tag(post.user.avatar.to_s, :class => 'avatar', secure: true) %>
           <% end %>
           <%= post.user.username %>
         </div>
@@ -30,7 +30,7 @@
         <% if post.user.avatar.blank? %>
               <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
           <% else %>
-            <%= image_tag(post.user.avatar.to_s, :class => 'avatar') %>
+            <%= cl_image_tag(post.user.avatar.to_s, :class => 'avatar', secure: true) %>
           <% end %>
         <%= post.user.username %>
       </div>

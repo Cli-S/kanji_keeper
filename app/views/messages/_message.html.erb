@@ -6,7 +6,7 @@
           <% if message.user.avatar.blank? %>
             <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
           <% else %>
-            <%= image_tag(message.user.avatar.to_s, :class => 'avatar') %>
+            <%= cl_image_tag(message.user.avatar, :class => 'avatar', secure: true) %>
           <% end %>
         </div>
         <div id="chat-username-and-message">
