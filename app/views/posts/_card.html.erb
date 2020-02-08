@@ -9,7 +9,7 @@
           <% if post.user.avatar.blank? %>
               <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
           <% else %>
-            <%= image_tag(post.user.avatar.to_s, :class => 'avatar') %>
+            <%= cl_image_tag(post.user.avatar, :class => 'avatar', secure: true) %>
           <% end %>
           <%= post.user.username %>
         </div>
@@ -24,13 +24,13 @@
       </div>
     </div>
   <% else %>
-  <div class="top-card card-image-padding" div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= post.photo.to_s %>);">
+  <div class="top-card card-image-padding" div style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= cloudinary_url(post.photo, secure: true) %>);">
     <div class="top-card-features">
       <div>
         <% if post.user.avatar.blank? %>
               <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
           <% else %>
-            <%= image_tag(post.user.avatar.to_s, :class => 'avatar') %>
+            <%= cl_image_tag(post.user.avatar, :class => 'avatar', secure: true) %>
           <% end %>
         <%= post.user.username %>
       </div>
