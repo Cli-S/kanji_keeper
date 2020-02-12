@@ -10,8 +10,10 @@ class CommentsController < ApplicationController
     @notification = Notification.new()
     @post = Post.find(params[:post_id])
     @notification.user = @post.user
-    @notification.comment = @comment # or @notification.comment_id = @comment.id
-    @notification.save!
+    if @notification.user != current_user
+      @notification.comment = @comment # or @notification.comment_id = @comment.id
+      @notification.save!
+    end
   end
 
   def edit
