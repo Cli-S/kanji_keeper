@@ -45,6 +45,11 @@ mark {
   background-color: #FDBBC7;
 }
 
+input:focus {
+  outline: 3px solid pink;
+  box-shadow: 5px 10px skyblue;
+}
+
 ::selection {
   background:  #FDBBC7 // #fcd6ca;    WebKit/Blink Browsers 
 }
