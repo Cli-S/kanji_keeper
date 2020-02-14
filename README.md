@@ -10,6 +10,8 @@ Features
 
 * Back-end: Ruby on Rails
 
+* Created with web security in mind: forces HTTPS for the website and all user submitted images
+
 * Daily kanji: randomly shows a new word from a json file of joyo kanji (list of 2,136 characters) each day. The data is provided by https://kanjiapi.dev/
 
 * Stroke order: additionally, the daily kanji shows the correct stroke order for writing the word through a font style from https://www.nihilist.org.uk/
