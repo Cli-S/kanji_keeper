@@ -12,24 +12,24 @@
       <%= f.text_field :username, autofocus: true, autocomplete: "username", :class => 'form-field-design form-width edit-account-form' %>
     </div>
 
+    <div class="field">
+      <%= f.text_field :bio, autofocus: true, placeholder: 'profile description', autocomplete: "profile description", :class => 'form-field-design form-width edit-account-form' %>
+    </div>
+
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
     <% end %>
 
     <div class="field">
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: "enter new password if needed (leave blank otherwise)", :class => 'form-field-design form-width edit-account-form' %>
-      <% if @minimum_password_length %>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "new password (leave blank if not needed)", :class => 'form-field-design form-width edit-account-form' %>
+      <!-- <% if @minimum_password_length %>
         <br />
         <em><%= @minimum_password_length %> characters minimum</em>
-      <% end %>
+      <% end %> -->
     </div>
 
     <div class="field">
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "confirm new password (leave blank otherwise)", :class => 'form-field-design form-width edit-account-form' %>
-    </div>
-
-    <div class="field">
-      <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "confirm current password to save changes", :class => 'form-field-design form-width edit-account-form' %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "confirm new password (if needed)", :class => 'form-field-design form-width edit-account-form' %>
     </div>
 
     <div class="field">
@@ -37,6 +37,10 @@
       <label class="browser-avatar-label needs-bottom-margin">
         <%= f.file_field :avatar, autofocus: true, :class => 'avatar-field-design hidden-icon-input' %>+
       </label>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "enter current password to save changes", :class => 'form-field-design form-width edit-account-form' %>
     </div>
 
     <div class="actions theta">

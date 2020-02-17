@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/show'
   unauthenticated :user do
     root :to => 'static_pages#home'
   end
@@ -24,7 +23,7 @@ Rails.application.routes.draw do
     resources :favorites, only: [:create, :show, :destroy]
   end
   resources :favorites, only: [:index]
-  get '/users/:username', to: 'users#show'
+  get '/users/:username', to: 'users#show', as: 'user'
   resources :notifications, only: [:index, :destroy]
   delete '/destroy_all_notifications', to: 'notifications#destroy_all'
   #resources :chat_rooms, only: [:new, :create, :show, :index] do
