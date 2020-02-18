@@ -4,18 +4,26 @@
       <% if @user.avatar.blank? %>
         <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
       <% else %>
-        <%= cl_image_tag(@user.avatar, :class => 'avatar', secure: true) %>
+        <%= cl_image_tag(@user.avatar, :class => 'profile-avatar', secure: true) %>
       <% end %>
     </div>
   </div>
   <div class="user-profile-bio-div">
-    <h2><%= @user.username %>'s profile</h2>
     <div>
-      <% if @user.bio.blank? %>
-        <div>user hasn't added a bio yet :'(</div>
-      <% else %>
-        <%= @user.bio %>
-      <% end %>
+      <h2 class="profile-username-header"><%= @user.username %>'s profile</h2>
+        <% if @user.bio.blank? %>
+          <div>user hasn't added a bio yet :'(</div>
+        <% else %>
+          <%= @user.bio %>
+        <% end %>
+      </div>
+    <div class="profile-stats">
+      <div>
+        <div>posts count</div>
+      </div>
+      <div>
+        <div>favorites count</div>
+      </div>
     </div>
   </div>
 </div>
