@@ -2,7 +2,7 @@
   <div class="user-profile-image-div">
     <div>
       <% if @user.avatar.blank? %>
-        <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
+        <%= image_tag "cherry-blossom.png", class: 'empty-avatar' %>
       <% else %>
         <%= cl_image_tag(@user.avatar, :class => 'profile-avatar', secure: true) %>
       <% end %>
@@ -23,7 +23,7 @@
         <% if current_user.username === @user.username %>
           <div><%= link_to @posts.count, user_posts_path(current_user) %></div>
         <% else %>
-          <%= @post.count %>
+          <%= @posts.count %>
         <% end %>
       </div>
       <div>
