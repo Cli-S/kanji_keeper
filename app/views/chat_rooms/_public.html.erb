@@ -1,6 +1,6 @@
 <div>
   <%= link_to 'edit', edit_chat_room_path(@chat_room) %>
-  <% if current_user.id != ChatRoom.find(params[:id]).user_id%>
+  <% if current_user.id != ChatRoom.find(params[:id]).user_id %>
     <%= link_to 'leave', chat_room_chat_room_users_path(@chat_room), method: :delete %>
   <% end %>
   <% if current_user.id == ChatRoom.find(params[:id]).user_id %>

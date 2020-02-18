@@ -3,5 +3,9 @@ class UsersController < ApplicationController
     #@user = User.find_by_username(params[:username])
     #@user = User.where(username: params[:username]).first or [0]
     @user = User.find_by(username: params[:username])
+
+    @posts = @user.posts
+
+    @favorites = @user.favorites
   end
 end

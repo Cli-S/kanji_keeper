@@ -19,10 +19,20 @@
       </div>
     <div class="profile-stats">
       <div>
-        <div>posts count</div>
+        <div>posts</div>
+        <% if current_user.username === @user.username %>
+          <div><%= link_to @posts.count, user_posts_path(current_user) %></div>
+        <% else %>
+          <%= @post.count %>
+        <% end %>
       </div>
       <div>
-        <div>favorites count</div>
+        <div>favorites</div>
+        <% if current_user.username === @user.username %>
+          <div><%= link_to @favorites.count, favorites_path %></div>
+        <% else %>
+          <%= @favorites.count %>
+        <% end %>
       </div>
     </div>
   </div>

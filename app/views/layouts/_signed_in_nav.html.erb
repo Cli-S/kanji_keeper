@@ -33,7 +33,7 @@
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <%= link_to 'my profile', user_path(current_user.username), class: 'dropdown-item' %>
-        <%# link_to 'my profile', user_posts_path(current_user), class: 'dropdown-item' %>
+        <%= link_to 'posts', user_posts_path(current_user), class: 'dropdown-item' %>
         <%= link_to 'resources', resources_path, class: 'dropdown-item' %>
         <%= link_to 'my account', edit_user_registration_path, class: 'dropdown-item' %>
         <%= link_to 'logout', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>

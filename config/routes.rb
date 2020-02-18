@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   end
   get '/user/:id/posts', to: 'posts#user_posts', as: 'user_posts'
 
+
   mount ActionCable.server, at: '/cable'
 =begin 
   (same thing as nested routes)
