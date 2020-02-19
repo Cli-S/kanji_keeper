@@ -10,7 +10,7 @@
           <% end %>
         </div>
         <div id="chat-username-and-message">
-          <div class="username-bolden"><%= message.user.username %></div>
+          <div class="username-bolden"><%= link_to message.user.username, user_path(message.user.username), class: 'chat-profile-url' %></div>
           <p id="message-content">
           <%= message.content %>
           </p>

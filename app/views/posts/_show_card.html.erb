@@ -11,7 +11,7 @@
           <% else %>
             <%= cl_image_tag(post.user.avatar, :class => 'avatar', secure: true) %>
           <% end %>
-          <%= post.user.username %>
+          <%= link_to post.user.username, user_path(post.user.username), class: 'profile-url' %>
         </div>
         <% if user_signed_in? %> 
           <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
@@ -32,7 +32,7 @@
           <% else %>
             <%= cl_image_tag(post.user.avatar, :class => 'avatar', secure: true) %>
           <% end %>
-        <%= post.user.username %>
+        <%= link_to post.user.username, user_path(post.user.username), class: 'profile-url-with-img' %>
       </div>
       <% if user_signed_in? %> 
         <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>

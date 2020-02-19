@@ -20,16 +20,16 @@
         <div class="post-comment">
           <div id="comment-avatar">
             <% if comment.user.avatar.blank? %>
-                <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
+                <div><%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %></div>
               <% else %>
-                <%= cl_image_tag(comment.user.avatar, :class => 'avatar', secure: true) %>
+                <div><%= cl_image_tag(comment.user.avatar, :class => 'avatar', secure: true) %></div>
               <% end %>
           </div>
           <div>
             <div id="comment-user-and-content">
-              <%= comment.user.username %>:
+              <%= link_to comment.user.username, user_path(comment.user.username), class: 'profile-url' %>:
               <div id="comment-content">
-                <%= comment.content %>
+                <div><%= comment.content %></div>
               </div>
             </div>
             <div id="comment-date-and-options">
