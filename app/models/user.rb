@@ -14,4 +14,5 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :notifications
   mount_uploader :avatar, PhotoUploader
+  validates :bio, length: { maximum: 150 }
 end
