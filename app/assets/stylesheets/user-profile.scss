@@ -1,29 +1,33 @@
 .user-profile-container {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 0 15px rgba(66, 66, 66, 0.09);
   display: flex;
-  height: auto;
+  height: 500px;
   margin: 0 auto;
-  padding: 7% 10%;
+  margin-top: 5%;
   text-align: center;
-  width: 75%;
+  width: 60%;
 }
 
 .user-profile-image-div {
-  background-color: white;
-  height: 500px;
-  width: 50%;
   align-items: center;
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
   display: flex;
   justify-content: center;
+  width: 500px;
 }
 
 .user-profile-bio-div {
   background-color: white;
-  box-shadow: 0 0 15px rgba(66, 66, 66, 0.09);
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   display: flex;
   flex-direction: column;
-  height: 500px;
   padding: 5%;
   width: 100%;
 }
