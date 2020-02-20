@@ -61,6 +61,7 @@
   @media screen and (max-width: 1260px) {
     border-bottom-left-radius: 20px;
     border-top-right-radius: 0px;
+    box-shadow: 0 0 15px rgba(66, 66, 66, 0.09);
     margin: 0 auto;
     margin-bottom: 6%;
     padding: 6%;
@@ -89,6 +90,7 @@
   @media screen and (max-width: 1260px) {
     border-bottom-left-radius: 0px;
     border-top-right-radius: 20px;
+    box-shadow: 0 0 15px rgba(66, 66, 66, 0.09);
     height: auto;
   }
 
