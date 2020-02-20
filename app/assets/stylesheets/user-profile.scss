@@ -7,9 +7,23 @@
   display: flex;
   height: 500px;
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 7%;
   text-align: center;
   width: 60%;
+
+  @media screen and (max-width: 1260px) {
+    box-shadow: none;
+    flex-direction: column;
+    width: initial;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 300px;
+  }
 }
 
 .user-profile-image-div {
@@ -20,6 +34,19 @@
   display: flex;
   justify-content: center;
   width: 500px;
+
+  @media screen and (max-width: 1260px) {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 300px;
+  }
 }
 
 .user-profile-bio-div {
@@ -30,6 +57,23 @@
   flex-direction: column;
   padding: 5%;
   width: 100%;
+
+  @media screen and (max-width: 1260px) {
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
+    margin: 0 auto;
+    margin-bottom: 6%;
+    padding: 6%;
+    width: 500px;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 300px;
+  }
 }
 
 .profile-avatar {
@@ -40,6 +84,20 @@
   justify-content: flex-start;
   object-fit: cover;
   width: 500px;
+
+  @media screen and (max-width: 1260px) {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 20px;
+    height: auto;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 300px;
+  }
 }
 
 .empty-avatar {
@@ -50,8 +108,8 @@
   font-weight: 600;
 }
 
-.profile-bio {
-
+.user-bio-content {
+  padding: 8%;
 }
 
 .profile-stats {

@@ -67,12 +67,19 @@
   margin-right: 10px;
 }
 
-#comment-content {
+.comment-content {
   padding-bottom: 5px;
+  width: 100%;
+}
+
+#comment-user-and-content {
+  align-items: center;
+  display: flex;
 }
 
 #comment-date-and-options {
   display: flex;
+  width: 100%;
 }
 
 #comment-date {
@@ -80,7 +87,8 @@
 }
 
 .comment-date-margin {
-  margin-left: 5px;
+  margin-left: 10px;
+  word-break: initial;
 }
 
 #comment-in-post-button {

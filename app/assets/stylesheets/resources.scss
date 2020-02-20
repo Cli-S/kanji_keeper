@@ -1,6 +1,10 @@
 #resources-container {
   padding: 2%;
   text-align: center;
+
+  @media screen and (max-width: 900px) {
+    margin-top: 5%;
+  }
 }
 
 #resources-header {

@@ -14,7 +14,7 @@
         <% if @user.bio.blank? %>
           <div>user hasn't added a bio yet :'(</div>
         <% else %>
-          <div><%= @user.bio %></div>
+          <div class="user-bio-content"><%= @user.bio %></div>
         <% end %>
       </div>
     <div class="profile-stats">

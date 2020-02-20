@@ -66,7 +66,7 @@
       <div>
         <% if user_signed_in? && current_user == post.user %>
           <div id="edit-and-delete">
-            <span class="link-margin lesser-buttons"><%= link_to "edit", edit_post_path(post) %></span>
+            <span class="link-margin lesser-buttons"><%# link_to "edit", edit_post_path(post) %></span>
             <span class="link-margin lesser-buttons"><%= link_to "delete", post_path(post), method: :delete, class: 'to-the-left to-the-right' %></span>
         <% end %>
           <div id="date-border-div">

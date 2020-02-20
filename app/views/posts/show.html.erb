@@ -18,32 +18,32 @@
       <% @post.comments.each do |comment| %>
       <div class="comment-outer">
         <div class="post-comment">
-          <div id="comment-avatar">
-            <% if comment.user.avatar.blank? %>
-                <div><%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %></div>
-              <% else %>
-                <div><%= cl_image_tag(comment.user.avatar, :class => 'avatar', secure: true) %></div>
-              <% end %>
-          </div>
           <div>
             <div id="comment-user-and-content">
-              <%= link_to comment.user.username, user_path(comment.user.username), class: 'profile-url' %>:
-              <div id="comment-content">
-                <div><%= comment.content %></div>
+              <div id="comment-avatar">
+                <% if comment.user.avatar.blank? %>
+                  <div><%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %></div>
+                <% else %>
+                  <div><%= cl_image_tag(comment.user.avatar, :class => 'avatar', secure: true) %></div>
+                <% end %>
               </div>
+              <%= link_to comment.user.username, user_path(comment.user.username), class: 'profile-url' %>:
+            </div>
+            <div>
+              <div class="comment-content"><%= comment.content %></div>
             </div>
             <div id="comment-date-and-options">
               <div id="comment-date">
                 <% if comment.updated_at != comment.created_at %>
-                  <%= comment.created_at.strftime("%A, %b %d") %> (edited)
+                  <div><%= comment.created_at.strftime("%A, %b %d") %> (edited)</div>
                 <% else %>
-                  <%= comment.created_at.strftime("%A, %b %d") %>
+                  <div><%= comment.created_at.strftime("%A, %b %d") %></div>
                 <% end %>
               </div>
               <% if user_signed_in? && current_user == comment.user %>
               <div id="comment-options">
-                <%= link_to "Edit", edit_post_comment_path(@post, comment), class: 'comment-date-margin' %>
-                <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
+                <%# link_to "Edit", edit_post_comment_path(@post, comment), class: 'comment-date-margin' %>
+                <div><%= link_to "delete", post_comment_path(@post, comment), method: :delete, class: 'comment-date-margin' %></div>
               </div>
               <% end %>
             </div>
