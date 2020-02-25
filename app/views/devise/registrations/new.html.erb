@@ -31,8 +31,8 @@
             </label>
           </div>
           <br />
+          <%= render "devise/shared/error_messages", resource: resource %>
           <div class="actions theta">
-            <%= render "devise/shared/error_messages", resource: resource %>
             <%= f.submit "sign up", :class => 'btn btn-tetrary black-btn' %>
           </div>
         </div>
