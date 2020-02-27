@@ -1,16 +1,10 @@
-<div class="profile-layout">
-  <div class="profile-sidebar">
-    <div>hi</div>
-  </div>
-  <div class="profile-posts-layout">
-    <h3 class="my-posts-header">
-      my posts (work in progress page)
-    </h3>
+<div class="home-layout" id="card-and-comment">
+  <div id="show-post-card">
+    <h2 id="header-user-all-posts"><%= current_user.username %>'s posts</h2>
     <% @posts.each do |post| %>
       <div class="kanji-card-container">
         <%= render partial: "card", locals: { post: post } %>
       </div>
     <% end %>
-      <%= link_to 'favorites', favorites_path %>
   </div>
 </div>
