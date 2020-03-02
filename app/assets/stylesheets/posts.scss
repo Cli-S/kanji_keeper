@@ -12,6 +12,10 @@
     white-space: nowrap;
     width: 100%;
   }
+
+  @media screen and (min-width: 2000px) {
+    width: 65%;
+  }
 }
  
 .sidebar-layout {

@@ -24,6 +24,10 @@
   @media screen and (max-width: 500px) {
     width: 300px;
   }
+
+  @media screen and (min-width: 2000px) {
+    width: 50%;
+  }
 }
 
 .user-profile-image-div {

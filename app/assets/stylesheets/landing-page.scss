@@ -66,6 +66,10 @@
   height: auto;
   width: 35%;
 
+  @media screen and (min-width: 2000px) {
+    width: 25%;
+  }
+
   @media screen and (min-width: 3000px) {
     width: 20%;
   }
@@ -220,6 +224,10 @@
   @media screen and (max-width: 650px) {
     width: 100%;
   }
+
+  @media screen and (min-width: 2000px) {
+    width: 45%;
+  }
 }
 
 #furigana-text-div {
@@ -267,6 +275,10 @@
   @media screen and (max-width: 320px) {
     width: 85%;
   }
+
+  @media screen and (min-width: 2000px) {
+    width: 27%;
+  }
 }
 
 #kanji-text-div {
@@ -311,6 +323,10 @@
 
   @media screen and (max-width: 650px) {
     width: 100%;
+  }
+
+  @media screen and (min-width: 2000px) {
+    width: 50%;
   }
 }
 

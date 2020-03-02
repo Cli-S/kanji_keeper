@@ -10,6 +10,10 @@
   @media screen and (max-width: 700px) {
     width: 90%;
   }
+
+  @media screen and (min-width: 2000px) {
+    width: 27%;
+  }
 }
 
 #card-and-comment {
@@ -32,10 +36,6 @@
   max-height: 630px;
   width: 650px;
 
-  @media screen and (min-width: 1500px) {
-    width: 40%;
-  }
-
   @media screen and (max-width: 800px) {
     max-height: initial;
     overflow-y: initial;
@@ -43,6 +43,14 @@
 
   @media screen and (max-width: 700px) {
     width: 90%;
+  }
+
+  @media screen and (min-width: 1500px) {
+    width: 40%;
+  }
+
+  @media screen and (min-width: 2000px) {
+    width: 27%;
   }
 }
 

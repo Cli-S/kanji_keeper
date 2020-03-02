@@ -65,6 +65,10 @@
   @media screen and (max-width: 350px) {
     height: 325px;
   }
+
+  @media screen and (min-width: 2000px) {
+    height: 700px;
+  }
 }
 
 #public-chat-type-here {

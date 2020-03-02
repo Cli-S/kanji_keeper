@@ -30,18 +30,30 @@ body#sign-in-body {
   @media screen and (max-width: 320px) {
     padding: 60px 0 0 0px;
   }
+
+  @media screen and (min-width: 2000px) {
+    padding: 170px 50px 0 50px;
+  }
 }
 
 .forms-layout {
   margin: 0 auto;
   max-width: 396px;
   padding: 80px 40px 0 40px;
+
+  @media screen and (min-width: 2000px) {
+    max-width: 500px;
+  }
 }
 
 .fresh-forms-layout {
   margin: 0 auto;
   max-width: 396px;
   padding: 45px 30px 0 30px;
+
+  @media screen and (min-width: 2000px) {
+    max-width: 500px;
+  }
 }
 
 .avatar-field-design {

@@ -3,6 +3,10 @@
   max-width: 396px;
   padding: 45px 30px 0 30px;
   text-align: center;
+
+  @media screen and (min-width: 2000px) {
+    max-width: 500px;
+  }
 }
 
 .edit-account-header {
