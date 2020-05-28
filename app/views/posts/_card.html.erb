@@ -16,9 +16,9 @@
         <% if user_signed_in? %> 
           <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
           <% if before_fav %>
-            <%= link_to ('<i class="fas fa-heart lesser-buttons"></i>').html_safe, post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete, :class => "top-fav" %>
+            <%= link_to ('<i class="fas fa-heart lesser-buttons"></i>').html_safe, post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete, :class => "top-fav", 'aria-label' => 'unfavorite post' %>
           <% else %>
-            <%= link_to ('<i class="far fa-heart lesser-buttons"></i>').html_safe, post_favorites_path(post, { redirect_to: root_path }), method: :post, :class => "top-fav" %>
+            <%= link_to ('<i class="far fa-heart lesser-buttons"></i>').html_safe, post_favorites_path(post, { redirect_to: root_path }), method: :post, :class => "top-fav", 'aria-label' => 'favorite post' %>
           <% end %>
         <% end %>
       </div>
@@ -37,9 +37,9 @@
       <% if user_signed_in? %> 
         <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
         <% if before_fav %>
-          <%= link_to ('<i class="fas fa-heart lesser-buttons"></i>').html_safe, post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete %>
+          <%= link_to ('<i class="fas fa-heart lesser-buttons"></i>').html_safe, post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete, 'aria-label' => 'unfavorite post' %>
         <% else %>
-          <%= link_to ('<i class="far fa-heart lesser-buttons"></i>').html_safe, post_favorites_path(post, { redirect_to: root_path }), method: :post %>
+          <%= link_to ('<i class="far fa-heart lesser-buttons"></i>').html_safe, post_favorites_path(post, { redirect_to: root_path }), method: :post, 'aria-label' => 'favorite post' %>
         <% end %>
       <% end %>
     </div>
@@ -58,7 +58,7 @@
         <li class="big-kanji"><span class="furigana-card add-furigana"><%= post.expression %></span></li>
         <li class="italic-meaning">"<%= post.meaning %>"</li>
         <% unless post.content.blank? %>
-          <p class="card-content-alignment post-content-urls"><%= Rinku.auto_link(post.content, :all, 'target="_blank"').html_safe %></p>
+          <li class="card-content-alignment post-content-urls"><%= Rinku.auto_link(post.content, :all, 'target="_blank"').html_safe %></li>
         <% end %>
       </ul>
     </div>
