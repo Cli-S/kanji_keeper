@@ -7,9 +7,9 @@
       <div class="top-card-features">
         <div>
           <% if post.user.avatar.blank? %>
-              <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
+              <%= image_tag "cherry-blossom.png", class: 'sakura-avatar', alt: 'default user icon' %>
           <% else %>
-            <%= cl_image_tag(post.user.avatar, :class => 'avatar', secure: true) %>
+            <%= cl_image_tag(post.user.avatar, :class => 'avatar', secure: true, alt: 'user icon') %>
           <% end %>
           <%= link_to post.user.username, user_path(post.user.username), class: 'profile-url' %>
         </div>
@@ -28,9 +28,9 @@
     <div class="top-card-features">
       <div>
         <% if post.user.avatar.blank? %>
-              <%= image_tag "cherry-blossom.png", class: 'sakura-avatar' %>
+              <%= image_tag "cherry-blossom.png", class: 'sakura-avatar', alt: 'default user icon' %>
           <% else %>
-            <%= cl_image_tag(post.user.avatar, :class => 'avatar', secure: true) %>
+            <%= cl_image_tag(post.user.avatar, :class => 'avatar', secure: true, alt: 'user icon') %>
           <% end %>
         <%= link_to post.user.username, user_path(post.user.username), class: 'profile-url-with-img' %>
       </div>
@@ -65,7 +65,7 @@
     <div class="card-buttons smol-padding">
       <div>
         <% if user_signed_in? && current_user == post.user %>
-          <div id="edit-and-delete">
+          <div class="edit-and-delete">
             <span class="link-margin lesser-buttons"><%# link_to "edit", edit_post_path(post) %></span>
             <span class="link-margin lesser-buttons"><%= link_to "delete", post_path(post), method: :delete, class: 'to-the-left to-the-right' %></span>
         <% end %>
