@@ -1,5 +1,5 @@
 .new-post-header {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   text-align: center;
 
   @media screen and (max-width: 330px) {
@@ -98,4 +98,8 @@
   margin: 0 auto;
   margin-top: 10px;
   width: 50%;
+}
+
+.new-post-label {
+  text-align: center;
 }
