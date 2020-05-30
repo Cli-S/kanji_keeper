@@ -2,9 +2,9 @@
   <div class="user-profile-image-div">
     <div>
       <% if @user.avatar.blank? %>
-        <%= image_tag "cherry-blossom.png", class: 'empty-avatar' %>
+        <%= image_tag "cherry-blossom.png", class: 'empty-avatar', alt: 'default user profile icon' %>
       <% else %>
-        <%= cl_image_tag(@user.avatar, :class => 'profile-avatar', secure: true) %>
+        <%= cl_image_tag(@user.avatar, :class => 'profile-avatar', secure: true, alt: 'user profile icon') %>
       <% end %>
     </div>
   </div>

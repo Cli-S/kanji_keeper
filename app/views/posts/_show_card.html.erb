@@ -16,7 +16,7 @@
         <% if user_signed_in? %> 
           <% before_fav = post.favorites.find { |fav| fav.user_id == current_user.id }  %>
           <% if before_fav %>
-            <%= link_to ('<i class="fas fa-heart lesser-buttons"></i>').html_safe, post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete, :class => "top-fav". 'aria-label' => 'unfavorite post' %>
+            <%= link_to ('<i class="fas fa-heart lesser-buttons"></i>').html_safe, post_favorite_path(post, before_fav, { redirect_to: root_path }), method: :delete, :class => "top-fav", 'aria-label' => 'unfavorite post' %>
           <% else %>
             <%= link_to ('<i class="far fa-heart lesser-buttons"></i>').html_safe, post_favorites_path(post, { redirect_to: root_path }), method: :post, :class => "top-fav", 'aria-label' => 'favorite post' %>
           <% end %>
