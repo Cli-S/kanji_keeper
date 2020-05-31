@@ -4,28 +4,29 @@
     <h2 class="signed-out-header animated infinite pulse slower">create an account</h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <div class="fresh-forms-layout">
+          <%= f.label :email, 'Email:' %>
           <div class="field input-margin">
             <span class="far fa-envelope fav-icon"></span>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", :class => 'form-field-design form-width' %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'form-field-design form-width' %>
           </div>
-
+          <%= f.label :username, 'Username:' %>
           <div class="field input-margin">
             <span class="far fa-user fav-icon"></span>
-            <%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder: "username", :class => 'form-field-design form-width' %>
+            <%= f.text_field :username, autofocus: true, autocomplete: "username", :class => 'form-field-design form-width' %>
           </div>
-
+          <%= f.label :password, 'Password:'%>
           <div class="field input-margin">
             <span class="fas fa-unlock-alt fav-icon"></span>
-            <%= f.password_field :password, autocomplete: "new-password", placeholder: "password", :class => 'form-field-design form-width' %>
+            <%= f.password_field :password, autocomplete: "new-password", :class => 'form-field-design form-width' %>
           </div>
-
+          <%= f.label :password_confirmation %>
           <div class="field input-margin">
             <span class="fas fa-unlock-alt fav-icon"></span>
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "passsword confirmation", :class => 'form-field-design form-width' %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", :class => 'form-field-design form-width' %>
           </div>
 
           <div class="field">
-            <div class="user-icon">select a profile image:</div>
+            <div class="user-icon"><%= label :avatar, 'select a profile image:' %></div>
             <label class="browser-avatar-label">
               <%= f.file_field :avatar, autofocus: true, :class => "avatar-field-design hidden-icon-input" %> +
             </label>
